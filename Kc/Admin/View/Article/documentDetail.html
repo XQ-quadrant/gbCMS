@@ -1,0 +1,118 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+                    <h2 class="modal-title">Modal title</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Text in a modal</h2>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                    <h2>Tooltips in a modal</h2>
+                    <p><a href="#" class="tooltips" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltips" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                    <hr>
+                    <h2>Overflowing text to show scroll behavior</h2>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p><img src="images/pic3.jpg" class="img-responsive" alt="Fountain" class="img-rounded img-responsive"></p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <div ><!--class="modal-dialog"-->
+        <div class="modal-content" style="width: 750px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title">Modal title</h2>
+            </div>
+            <div class="modal-body"  >
+                <div style="position:relative;display:block">
+                    <h2>{$title}</h2>
+                    <!--<div style="position:absolute; right:80px">
+                        <ul class="list-unstyled list-inline" >
+                            <li><a href="#" class="text-muted">12<sup>th</sup> March, 2015</a></li>
+                            <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+                            <li><a href="#" class="text-muted">More</a></li>
+                        </ul>
+                    </div>-->
+                    <div class="wid_blog-desc">
+                        <div class="wid_blog-left">
+                            <img src="images/1.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="wid_blog-right" style="position:relative;">
+                            <h2>Lorem Ipsum</h2>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+                            <ul class="list-unstyled list-inline" style="float:right;margin:20px;">
+                                <li><a href="#" class="text-muted">{$author}</a></li>
+                                <li><a href="#" class="text-muted">12<sup>th</sup> March, 2015</a></li>
+                                <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                                <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <hr >
+
+                {$content}
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+
+
+</block>
+<block name="script">
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+    <script>
+        $('#submit').click(function() {
+            //alert('kk');
+            //var name = $('#name').val();
+            //var password = $('#password').val();
+            var myForm = $('form');
+            $.ajax({
+                url: '__URL__/addAtc',
+                type: 'post',//提交的方式
+                dataType:'json',
+                data: myForm.serialize(),
+                success: function(data) {
+                    //alert(9);
+                    alert(data);
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+    </script>
+</block>

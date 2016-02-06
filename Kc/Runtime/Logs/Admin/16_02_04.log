@@ -1,0 +1,2283 @@
+[ 2016-02-04T00:10:55+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.045316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.045553s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.4670s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0524s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0013s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080848s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2016-02-04T00:10:59+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T00:11:00+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-02-04T00:12:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T00:12:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-02-04T00:12:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+
+[ 2016-02-04T00:13:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.026217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026621s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.4777s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0025s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.483405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.483516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-02-04T00:13:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+
+[ 2016-02-04T00:13:52+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+
+[ 2016-02-04T00:13:52+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-02-04T00:16:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.005725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005892s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0888s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0223s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2016-02-04T00:16:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+
+[ 2016-02-04T00:16:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T00:26:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2016-02-04T00:26:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+
+[ 2016-02-04T00:26:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T00:26:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+
+[ 2016-02-04T00:26:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+
+[ 2016-02-04T00:27:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2016-02-04T00:27:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T00:27:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-02-04T00:29:50+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0005s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000209s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2016-02-04T00:29:50+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T00:29:50+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+
+[ 2016-02-04T00:37:55+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0010s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2016-02-04T00:37:55+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+
+[ 2016-02-04T00:37:55+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2016-02-04T00:38:36+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0003s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2016-02-04T00:38:36+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+
+[ 2016-02-04T00:38:36+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+
+[ 2016-02-04T00:38:36+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T00:38:36+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T00:42:27+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0005s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T00:45:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-02-04T00:45:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2016-02-04T00:45:58+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0009s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 72 行.
+SQL: INSERT INTO `document` (`title`,`author`,`content`,`status`,`createtime`) VALUES ('色彩三刀流！为新手量身打造的UI界面配色方法','test','&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;如何快速选择或搭配颜色？今天&lt;a href=&quot;http://weibo.com/603323403&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding-right: 10px; background-image: url(&amp;quot;images/blank.gif&amp;quot;); background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 100% 0%; background-repeat: no-repeat;&quot;&gt;@Micu设计&lt;/a&gt;&amp;nbsp;和大家介绍在界面中最为常用的三个方法，简单实用，附上大量的优秀实例，特别适合刚入门的色彩新手，学起来！&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;快过年了，大家手头上的事都很多，于是很多同学要设计活动页面或者APP界面大改版等，那么如何快速的选择或搭配颜色呢？“选择”和“搭配颜色”，听到这两个词汇的时候，是不是从潜意识上就会有反感，心理琢磨着，这绝对是个坑！肯定得翻来覆去的折腾一把。其实很多初学设计师都会碰到同样的问题。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;那我们就横刀直入的来说说这三招吧。&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;第一刀：色不过三&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;经常很多大神在网上说&lt;span class=&quot;wp_keywordlink_affiliate&quot;&gt;&lt;a href=&quot;http://www.uisdc.com/tag/%e9%85%8d%e8%89%b2&quot; title=&quot;查看 配色 中的全部文章&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding: 0px 2px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;配色&lt;/a&gt;&lt;/span&gt;不要超过三种色，在这我只说三遍，色不过三，色不过三，色不过三！不管是做平面也好，还是网页，还是做APP等设计，都需要遵守这个基本的道理。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;那啥才算是不超过三种颜色的搭配呢？&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在这里很多人都会认为就是不要超过三种不同的颜色值。其实不然，不超过三种颜色的搭配，是指不超过三种色相的搭配。在单个色相中可以运用颜色明度或饱和度做色彩的丰富性，而色相不要过三！&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;如果设计的界面的颜色太多，炫酷的眼花缭乱是个什么样的效果？下面我们来看看一家知名的招聘网站。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;我想你和我一样顿时泪流满面了~&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;是的，我们单纯的就想找份合适的工作，过上幸福美好的生活。并没有那么简单，一进入主页面，刹那间，狗皮膏药铺面而来。这种感觉，我的小心脏顿时崩溃了……就一小小块面积，一个城市地址就出现了三种颜色。难道这样真的好吗？&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172945&quot; alt=&quot;136020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/136020160202.jpg&quot; width=&quot;796&quot; height=&quot;574&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;我们来做一个对比。有一种设计，叫别人家的设计。绿色永远是品牌色，红色就是网站的装点色，这就叫传承。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;统一的主色彩风格的导向，能加强用户对产品的记忆程度，也然产品的体验感更加舒适和自然。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172946&quot; alt=&quot;236020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/236020160202.jpg&quot; width=&quot;800&quot; height=&quot;600&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;那是不是越简洁的颜色就最好？&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;那咱就只用一种颜色得了。下图中单一颜色和多种色相颜色&lt;span class=&quot;wp_keywordlink_affiliate&quot;&gt;&lt;a href=&quot;http://www.uisdc.com/tag/%e9%85%8d%e8%89%b2&quot; title=&quot;查看 配色 中的全部文章&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding: 0px 2px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;配色&lt;/a&gt;&lt;/span&gt;下的对比，我们可以看到在单一颜色下的设计更为统一，画面更为和谐。在多种颜色下界面中的功能模块更为明确，区分性更强，所以说在使用多种颜色的时候还需要考虑产品的内容与核心。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172947&quot; alt=&quot;336020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/336020160202.jpg&quot; width=&quot;800&quot; height=&quot;703&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;三色搭配，只要控制在不超过三种色相的范围即可。学过画画的商业设计师，应该都清楚知道颜色的明度、暗度、饱和度。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;运用单色的设计，会显得单调乏味。而整体颜色饱和度过低会导致画面沉闷而不透气。明快的颜色和明暗的色彩搭配能使画面显得层次感丰富而又有朝气。&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;做精致的颜色，提炼格调&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在界面设计中，色彩是设计中的重中之重，是否正确和完整的表现出产品气质至关重要。单一的色相，丰富的明度和饱和度能使界面看的有层次感和丰富性。而精简的色，处理器来也会跟容易统一和把控。在用色时，颜色越少越好，但要保证正确的传达出需要表现的功能和元素为前提。在我们每添加一种颜色的时候都需要好好的考虑一下，有没有必要。因为再复杂的设计，也不会多个三种主色彩。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;以下界面为了区分更多的内容区域运用了三种颜色，但因为颜色过度导致页面分割凌乱，红色在页面中就是多余的，功能分割相对也是多余的。可以用两种颜色时候，就不要用到三种颜色。可以用一种颜色的时候就不要用三种颜色。简洁，会使作品更为成熟。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172948&quot; alt=&quot;436020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/436020160202.jpg&quot; width=&quot;800&quot; height=&quot;707&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在桌面图标设计中，常常也会用到两色和三色的搭配形式。这样的&lt;span class=&quot;wp_keywordlink_affiliate&quot;&gt;&lt;a href=&quot;http://www.uisdc.com/tag/%e9%85%8d%e8%89%b2&quot; title=&quot;查看 配色 中的全部文章&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding: 0px 2px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;配色&lt;/a&gt;&lt;/span&gt;能使图标显得简约而不乏味。&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;第二刀：确定主色&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在运用色彩进行设计的时候，心里要有数。色彩的主次关系能定作品的性。优秀的作品色彩就是那么的清晰，&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;记住色彩功能的划分：主要色、辅助色、装点色。&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;主色的魅力&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;主色决定设计的风格。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在设计中色彩充当了重要的情感元素，那主色就是作品的文化方向。我们在设计初期需要对项目有明确的了解后提炼选择出最为贴切的主色进行定位。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;每种颜色承载的文化都是不同的，会领导了整个界面设计的方向。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;网页设计、移动界面设计、banner设计、平面设计……不同的媒介，主色的运用规律各不相同。网页设计和界面设计，通常主色运用在结构和装饰。而Banner和海报为了更为醒目，主色通常运用在背景颜色上。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在界面设计中常将品牌LOGO的颜色定为主色彩，并且在不同的界面中主色彩出现的面积也会随之变化。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;下图我们可以看到大众点评、百度外卖、美团应用都将产品LOGO的颜色进行了延续，将logo颜色定义为主色彩，有效的统一了产品的传播性。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172949&quot; alt=&quot;536020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/536020160202.jpg&quot; width=&quot;790&quot; height=&quot;1520&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;同时还发现，这几个产品的界面设计主色面积使用也是非常一致。首页中使用的主色彩面积较大，导航条全部填充了主色。在二级页面中则使用的面积较少，将主色点缀到界面中。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;我们可以这样去理解，在用户使用产品时，更希望用户记忆产品。而在用户进入了信息页面时则更注重易用性，希望用户能找到自己需要的东西。所以主色在首页使用的面积较多，而二级页面使用在关键的操作点上。从产品角度出发，我们在使用主色的时候要考虑页面的内容关系，理解界面的层次与功能性质。从视觉出发，选择了饱和度较高的色彩做为主色时，要考虑因为颜色面积过多而造成的视觉疲劳。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172953&quot; alt=&quot;636020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/636020160202.jpg&quot; width=&quot;800&quot; height=&quot;533&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在banner和海报的设计中主色的面积一般会运用在背景色中，相对面积较大。可谓是直奔主题式。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172957&quot; alt=&quot;736020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/736020160202.png&quot; width=&quot;640&quot; height=&quot;248&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;img class=&quot;alignnone size-full wp-image-172991&quot; alt=&quot;hb20160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/hb20160202.png&quot; width=&quot;640&quot; height=&quot;305&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;第三刀：从对比色中找辅助色&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;通常大家觉得只要色彩面积最多就是主色。其实不然，人们的阅读心理是有差异的，如果颜色饱和度较低容易被相对面积少的高饱和度颜色抢眼，所以在定义界面主色的时候要悬着饱和度（纯度）高的颜色作为主色会比较的稳定。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在界面设计汇总使用互补色彩的对比是最为强烈的。这种色彩能使用户的视觉产生强烈的刺激，情感浓烈，给人留下鲜明的印象。这种方式是最易于传播的。适合在夸张的、张扬的场景下使用。但这种颜色用的太过于平凡容易造成用户的视觉疲劳。给人一种不安定的感觉。那么在使用这样的搭配方式时需要控制使用的位置和信息的面积了，核心的地方可以这样去使用。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;主要的三对互补色：红绿、蓝橙、黄紫&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;我们可以看到很多APP的icon为了吸引用户的注意就用到了强烈对比的互补色&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;番茄快点、QQ空间、相机360&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172960&quot; alt=&quot;836020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/836020160202.jpg&quot; width=&quot;700&quot; height=&quot;429&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;img class=&quot;alignnone size-full wp-image-172965&quot; alt=&quot;936020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/936020160202.jpg&quot; width=&quot;800&quot; height=&quot;697&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;h4 style=&quot;font-family: &amp;#39;microsoft yahei&amp;#39;, arial, sans-serif; margin: 10px 0px 20px; color: rgb(51, 51, 51); line-height: 1.333em; font-size: 1.5em; padding: 25px 0px 0px; white-space: normal;&quot;&gt;&lt;strong&gt;色彩中还会运用到冷暖对比&lt;/strong&gt;&lt;/h4&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;冷暖对比色是自然平衡的规律，可以在设计中大量使用，这样的配色会使作品非常的出彩，不显单调。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172978&quot; alt=&quot;1136020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1136020160202.jpg&quot; width=&quot;707&quot; height=&quot;528&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;我们先看看一下几款APP的icon设计：&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;下面这款APP的名称叫KOI，很喜欢这款应用配色，运用到了冷暖配色，起了非常好的点缀效果，看起来灵动而醒目。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172979&quot; alt=&quot;1236020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1236020160202.png&quot; width=&quot;183&quot; height=&quot;183&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;Tweetbot的icon也用到了冷暖颜色的对比，是不是醒目又可爱啊，大家可以去试试这种搭配，百试百灵。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172980&quot; alt=&quot;1336020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1336020160202.png&quot; width=&quot;209&quot; height=&quot;206&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;Seedling&amp;nbsp;Comic&amp;nbsp;Studio，这款icon运用到了冷暖搭配显得由为的精彩，视线里面集中到了中心点上。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172981&quot; alt=&quot;1436020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1436020160202.png&quot; width=&quot;225&quot; height=&quot;227&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;在设计中，冷色与暖色的对比是界面设计中最为广泛的使用方法，效果也非常的出众。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;色彩好比就是阴阳太极，冷与暖的两级平衡还原了生活中的和谐。用这样的配色效果让用户感觉舒服平和。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;冷暖色彩搭配的方法基本没有啥缺点，使用在设计中，技巧性比较多，对设计的细腻感受要求比较高。&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;虽然支付宝的主图标发生了改变，变成了简洁的蓝色支付宝，但主页面中还是利用到了冷色与暖色的搭配，很好的区分了分类，并且让页面中丰富的分类变得不是那么得零散。很多设计师每次碰到满版分类图标的时候很头大，处理的时候容易把页面搞花了，建议使用冷暖的方式去调整，将页面平衡好。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172982&quot; alt=&quot;1536020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1536020160202.png&quot; width=&quot;418&quot; height=&quot;742&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;img class=&quot;alignnone size-full wp-image-172983&quot; alt=&quot;1636020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1636020160202.jpg&quot; width=&quot;800&quot; height=&quot;353&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;当时米醋哥在设计360防丢器的时候就用了两个色，红色和蓝色的冷暖搭配。将360字体样式融入到建筑中取用了暖红色，而寻找位置的大头针运用了冷蓝色。&lt;/p&gt;&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-172984&quot; alt=&quot;1736020160202&quot; src=&quot;http://image.uisdc.com/wp-content/uploads/2016/02/1736020160202.jpg&quot; width=&quot;800&quot; height=&quot;2341&quot; style=&quot;border: 1px solid rgb(230, 230, 230); vertical-align: middle; display: block; margin: 0px 0px 1.75em; max-width: 100%; height: auto; padding: 16px; text-align: center; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal; background-color: rgb(246, 246, 246);&quot;/&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;好了，先写到这里。回顾一下今天我们讲的知识点。&lt;/p&gt;&lt;ol style=&quot;margin-bottom: 1.75em; margin-left: 3.1em; padding: 0px; color: rgb(82, 82, 82); font-family: Arial, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 21px; white-space: normal;&quot; class=&quot; list-paddingleft-2&quot;&gt;&lt;li&gt;&lt;p&gt;色不过三&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;主色的定义，及面积&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;找辅助色，还记的有那几对辅助色吗？&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;今天和大家分享的这不仅是运用在界面中，更是选择颜色时至为重要的三个点！实用性极高！看似简单，大家运用起来还要多加分析哦~&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;作者微信公众号：MICU设计&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;&lt;strong&gt;【配色达人速成三部曲】&lt;/strong&gt;&lt;/p&gt;&lt;blockquote style=&quot;margin: 0px 1.75em; quotes: none; overflow: hidden; padding: 0px 0px 0px 35px; font-size: 12px; font-family: Arial, sans-serif; color: rgb(142, 142, 142); line-height: 1.8; white-space: normal; background-image: url(&amp;quot;images/quote.png&amp;quot;); background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 4px; background-repeat: no-repeat;&quot;&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px;&quot;&gt;&lt;strong&gt;Step 1：打好色彩基础是关键呦！&lt;/strong&gt;&lt;br/&gt;&lt;a href=&quot;http://www.uisdc.com/head-first-color-theory&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding-right: 10px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;《设计师配色宝典！教你从零开始学配色（一）》&lt;/a&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px;&quot;&gt;&lt;strong&gt;Step 2：进阶技巧！向高手模仿是捷径！&lt;/strong&gt;&lt;br/&gt;&lt;a href=&quot;http://www.uisdc.com/use-picture-create-swatches&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding-right: 10px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;《配色弱有救了！教你利用图片创建独有的色彩方案》&lt;/a&gt;&lt;/p&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px;&quot;&gt;&lt;strong&gt;Step 3：直接开挂！不保证顶尖但一定正确！&lt;/strong&gt;&lt;br/&gt;&lt;a href=&quot;http://www.uisdc.com/6-rules-webdesign-color&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 164, 211); text-decoration: none; transition: all 0.18s ease-out; letter-spacing: 0px; padding-right: 10px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;&quot;&gt;《秒变配色高手！怎么都不会错的6条网页设计配色原则》&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p style=&quot;margin-top: 20px; margin-bottom: 20px; font-stretch: normal; font-size: 1.2em; line-height: 1.8; font-family: Tahoma, Verdana, 宋体; letter-spacing: 0.25px; color: rgb(82, 82, 82); white-space: normal;&quot;&gt;&lt;strong&gt;作者：&lt;/strong&gt;MICU设计&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','1','') [ RunTime:0.0534s ]
+
+[ 2016-02-04T00:46:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-02-04T00:46:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-02-04T00:46:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+
+[ 2016-02-04T00:46:17+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T00:46:17+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2016-02-04T00:46:17+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T00:48:42+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+
+[ 2016-02-04T00:49:31+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0019s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006861s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T00:49:31+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T00:49:31+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-02-04T00:49:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0015s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2016-02-04T00:49:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T00:49:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-02-04T00:49:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+
+[ 2016-02-04T00:49:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-02-04T00:50:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0016s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007588s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T00:50:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+
+[ 2016-02-04T00:50:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+
+[ 2016-02-04T00:50:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-02-04T00:50:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-02-04T00:52:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0015s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2016-02-04T00:52:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-02-04T00:52:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+
+[ 2016-02-04T00:52:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-02-04T00:52:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-02-04T00:53:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2016-02-04T00:53:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+
+[ 2016-02-04T00:53:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-02-04T00:54:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000230s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2016-02-04T00:54:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-02-04T00:54:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T00:54:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T00:54:59+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2016-02-04T00:54:59+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T00:54:59+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+
+[ 2016-02-04T00:56:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-02-04T00:56:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T00:56:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+
+[ 2016-02-04T01:12:37+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000110s ]
+INFO: [ app_init ] --END-- [ RunTime:0.020627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006412s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006779s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0015s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.025029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013630s ]
+
+[ 2016-02-04T01:12:50+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+ERR: 参数错误或者未定义:mid
+
+[ 2016-02-04T01:13:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0010s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000049s ]
+
+[ 2016-02-04T01:13:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-02-04T01:13:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+
+[ 2016-02-04T01:15:37+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 210 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-02-04T01:15:37+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-02-04T01:15:37+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-02-04T01:16:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000054s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php:38) /var/www/html/kechuang4/ThinkPHP/Library/Think/View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php:38) /var/www/html/kechuang4/ThinkPHP/Library/Think/View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php:38) /var/www/html/kechuang4/ThinkPHP/Library/Think/View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2016-02-04T01:16:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-02-04T01:16:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+
+[ 2016-02-04T01:16:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-02-04T01:16:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+
+[ 2016-02-04T01:16:29+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000345s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T01:16:29+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-02-04T01:16:29+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T01:16:29+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-02-04T01:17:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0010s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T01:17:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+
+[ 2016-02-04T01:17:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+
+[ 2016-02-04T01:17:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-02-04T01:17:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T01:20:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2016-02-04T01:20:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T01:20:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T01:23:33+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T01:23:33+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-02-04T01:23:33+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-02-04T01:23:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-02-04T01:23:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2016-02-04T01:23:45+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+
+[ 2016-02-04T01:24:56+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-02-04T01:24:56+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T01:24:56+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+
+[ 2016-02-04T01:26:49+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2016-02-04T01:26:49+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+
+[ 2016-02-04T01:26:49+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+
+[ 2016-02-04T01:26:49+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-02-04T01:26:49+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-02-04T01:27:48+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+
+[ 2016-02-04T01:28:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] trim() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T01:28:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+
+[ 2016-02-04T01:28:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T01:28:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+
+[ 2016-02-04T01:28:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+
+[ 2016-02-04T01:28:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] trim() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000114s ]
+
+[ 2016-02-04T01:28:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T01:28:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+
+[ 2016-02-04T01:28:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2016-02-04T01:29:41+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0004s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2] trim() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2016-02-04T01:29:41+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T01:29:41+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-02-04T01:30:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0017s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007971s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000175s ]
+
+[ 2016-02-04T01:30:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T01:30:03+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-02-04T01:30:44+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2016-02-04T01:31:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000231s ]
+
+[ 2016-02-04T01:33:10+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0012s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000209s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000325s ]
+
+[ 2016-02-04T01:33:23+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000252s ]
+
+[ 2016-02-04T01:33:25+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000112s ]
+
+[ 2016-02-04T01:37:25+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0012s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+
+[ 2016-02-04T01:37:28+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+
+[ 2016-02-04T01:37:29+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+ERR: 参数错误或者未定义:mid
+
+[ 2016-02-04T01:37:30+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0014s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2016-02-04T01:37:32+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000188s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000303s ]
+
+[ 2016-02-04T01:38:13+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000142s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000230s ]
+
+[ 2016-02-04T01:38:14+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+
+[ 2016-02-04T01:38:14+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-02-04T01:39:02+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0012s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2016-02-04T01:39:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2016-02-04T01:39:05+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000148s ]
+
+[ 2016-02-04T01:39:06+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-02-04T01:39:06+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0009s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000182s ]
+
+[ 2016-02-04T01:39:16+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] htmlspecialchars_decode() expects parameter 1 to be string, array given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8] Undefined variable: content /var/www/html/kechuang4/Kc/Runtime/Cache/Admin/84a9fe48feaa68757d7a66a941356f02.php 第 211 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000221s ]
+
+[ 2016-02-04T01:39:16+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+
+[ 2016-02-04T01:39:16+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+
+[ 2016-02-04T01:39:16+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-02-04T01:39:16+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-02-04T01:41:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0010s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000242s ]
+
+[ 2016-02-04T01:41:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+
+[ 2016-02-04T01:41:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-02-04T01:41:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2016-02-04T01:41:20+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+
+[ 2016-02-04T01:42:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000219s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0005s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-02-04T01:42:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+
+[ 2016-02-04T01:42:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+
+[ 2016-02-04T01:42:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+
+[ 2016-02-04T01:42:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+
+[ 2016-02-04T03:10:38+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006787s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007194s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0007s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.024123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.024194s ]
+
+[ 2016-02-04T03:21:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0005s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000125s ]
+
+[ 2016-02-04T03:21:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T03:21:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+
+[ 2016-02-04T03:21:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+
+[ 2016-02-04T03:21:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000210s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-02-04T03:21:22+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+
+[ 2016-02-04T03:22:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0007s ]
+SQL: select status from document WHERE id=1 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2016-02-04T03:22:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+
+[ 2016-02-04T03:22:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T03:22:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+
+[ 2016-02-04T03:22:08+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+
+[ 2016-02-04T03:22:19+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000184s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0007s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2016-02-04T03:22:40+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000056s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000174s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0010s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 74 行.
+SQL: INSERT INTO `document` (`title`,`author`,`content`,`status`,`createtime`) VALUES ('test2','xq','&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;这里写你的初始化内容 **I`m bad guy!**
+
+ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;','1','') [ RunTime:0.0334s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=2 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000108s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000102s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T03:22:46+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+SQL: select status from document WHERE id=2 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/blank.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-02-04T03:22:51+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/quote.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-02-04T03:23:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000166s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0006s ]
+SQL: select status from document WHERE id=2 [ RunTime:0.0001s ]
+SQL: SELECT * FROM `document` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000195s ]
+
+[ 2016-02-04T03:23:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-02-04T03:23:39+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+
+[ 2016-02-04T03:25:04+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0008s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0008s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given /var/www/html/kechuang4/Kc/Admin/Controller/ArticleController.class.php 第 74 行.
+SQL: INSERT INTO `document` (`title`,`author`,`content`,`status`,`createtime`) VALUES ('外交部谈朝欲射星：耳光打在谁脸上谁心里清楚','中国日报张陨璧、郑晨','&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;中国日报北京2月3日电（记者 张陨璧、郑晨）2月3日，&lt;span class=&quot;infoMblog&quot; style=&quot;position: relative; z-index: 9;&quot;&gt;&lt;a class=&quot;a-tips-Article-QQ&quot; href=&quot;http://t.qq.com/wj_xlt#pref=qqcom.keyword&quot; rel=&quot;wj_xlt&quot; reltitle=&quot;外交部&quot; target=&quot;_blank&quot; style=&quot;outline: none; color: rgb(0, 0, 0); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(83, 109, 166);&quot;&gt;外交部&lt;/a&gt;&lt;/span&gt;发言人陆慷在例行记者会上就美方称朝鲜发射星声明是“一记耳光”的言论答记者问表示，在有关国家一味主张施压和制裁的呼声中，朝鲜一次次进行了核试验，从这个意义上讲，朝鲜确实打了有关国家一记耳光，这个耳光打在谁的脸上、谁心里清楚。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　有记者问：2月2日，美国助理国务卿拉塞尔称，朝鲜利用弹道导弹技术进行发射将是严重违反国际义务的行动，进一步有力证明应对朝采取更严厉制裁。朝最新声明是对&lt;span class=&quot;infoMblog&quot; style=&quot;position: relative; z-index: 9;&quot;&gt;&lt;a class=&quot;a-tips-Article-QQ&quot; href=&quot;http://t.qq.com/WorldFoodProgramme#pref=qqcom.keyword&quot; rel=&quot;WorldFoodProgramme&quot; reltitle=&quot;联合国&quot; target=&quot;_blank&quot; style=&quot;outline: none; color: rgb(0, 0, 0); text-decoration: none; border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(83, 109, 166);&quot;&gt;联合国&lt;/a&gt;&lt;/span&gt;安理会、中国和国际社会的蔑视，是给反对对朝实施更多制裁的国家一记耳光。请问发言人对此有何评论？&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　陆慷说：“朝鲜不顾国际社会普遍反对再次进行核试验，中国政府在第一时间就表明了坚决反对的严正立场。刚才我已说过，朝鲜本应有和平利用太空权利，但当前朝方这一权利受到安理会决议的限制。我们希望朝方保持克制。”&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　“同时，当前形势下，摆在国际社会面前最紧追的任务，是如何能够切实推进朝鲜半岛无核化进程、切实维护半岛和平稳定，而不是任何其它。克里国务卿上周访华时也明确公开表示，制裁本身不是目的，” 陆慷说。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　陆慷指出，事实上，如果我们大家回顾一下朝鲜半岛核问题的演变历程，就不难意识到，为推进朝鲜半岛无核化进程，我们曾经有过很好的“9·19”共同声明，在这个声明中，朝鲜明确承诺“放弃一切核武器及现有核计划，早日重返《不扩散核武器条约》，并回到国际原子能机构保障监督。”我们也曾有过很好的“2·13”共同文件，在这个文件中，朝鲜明确承诺了弃核的目标和具体步骤。&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　陆慷表示：“中方作为六方会谈主席国，为真正推进朝鲜半岛无核化进程、为促成有关各方达成上述共识作出了极为艰辛的努力。但令人十分遗憾的是，由于众所周知的、并非中方的原因，上述共识未能得到落实，六方会谈陷入停顿。而恰恰是在六方会谈陷入停顿的这几年中，在有关国家一味主张施压和制裁的呼声中，朝鲜一次次进行了核试验。从这个意义上讲，朝鲜确实打了有关国家一记耳光。这个耳光打在谁的脸上、谁心里清楚。”&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　陆慷说：“我们希望有关国家通过谈判解决半岛核问题，不希望看到使紧张局势升级的局面出现。但如果有关方面执意这么做，我们也拦不住。不过有一点中方必须严肃强调，作为半岛近邻，我们绝不会允许半岛生乱、生战；我们也绝不会允许任何国家在国际社会推动半岛无核化这个大目标中夹带任何私货。”&lt;/p&gt;&lt;p style=&quot;margin-top: 0px; margin-bottom: 29px; padding: 0px; line-height: 28px; font-family: 宋体, Arial, sans-serif; font-size: 15.9996px; white-space: normal; background-color: rgb(255, 255, 255);&quot;&gt;　　陆慷最后表示：“我愿重申，中国政府坚持实现半岛无核化坚定不移，坚持维护半岛和平稳定坚定不移，坚持通过对话解决半岛核问题坚定不移。”&lt;a href=&quot;http://www.qq.com/?pref=article&quot; target=&quot;_blank&quot; title=&quot;点击进入腾讯首页&quot; id=&quot;backqqcom&quot; style=&quot;outline: none; color: rgb(81, 112, 166); text-decoration: none; border-style: none none dotted; border-bottom-width: 1px; border-bottom-color: rgb(83, 109, 166); white-space: nowrap;&quot;&gt;&lt;img src=&quot;http://www.qq.com/favicon.ico&quot; width=&quot;16&quot; height=&quot;16&quot; style=&quot;border: none; vertical-align: text-top; max-width: 640px;&quot;/&gt;&lt;span style=&quot;padding-left: 5px; font-size: 14px;&quot;&gt;返回腾讯网首页&amp;gt;&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;br/&gt;&lt;/p&gt;','1','') [ RunTime:0.0564s ]
+
+[ 2016-02-04T03:25:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.0005s ]
+SQL: select status from document WHERE id=3 [ RunTime:0.0005s ]
+SQL: SELECT * FROM `document` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2016-02-04T03:25:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+
+[ 2016-02-04T03:25:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+
+[ 2016-02-04T03:25:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-02-04T03:25:11+08:00 ] ::1 /kechuang4/index.php/Admin/Article/detail/mid/1/id/images/1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-02-04T12:28:31+08:00 ] ::1 /kechuang4/index.php/Admin/Article/addAtc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007353s ]
+INFO: Run Admin\Behaviors\testBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007891s ]
+SQL: SHOW COLUMNS FROM `cate` [ RunTime:0.0009s ]
+SQL: SELECT `model` FROM `cate` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `model` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `model` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014384s ]
+
