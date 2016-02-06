@@ -17,14 +17,20 @@ use Think\Controller;
 class ArticleController extends Controller
 {
     public function index($cate,$id){
-        $article =
-        $this->display();
+        //$article =
+        //$this->display();
     }
 
     public function listView($cate){
-        $list= M('cate_atc');
-        $list->where(['cate'=>$cate])->select();
+        $cate_atc= M('cate_atc');
+        $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->page($_GET['p'].',25')->select();
 
+        $count= $cate_atc->where('status=1')->count();
+        $Page = new \Think\Page($count,25);
+        $show = $Page->show();
+        $this->assign('page',$show);
+        $this->assign('list',$list);
+        $this->display();
     }
 
     public function detail($mid,$id){
@@ -74,7 +80,7 @@ class ArticleController extends Controller
         }else{
             $article->status=1;
             $article->createtime=date();
-            if(!$article->add()){        //提交内容
+            if(!$article->addAtc($cate)){        //提交内容
                 $this->ajaxreturn($article->getDbError());
                 echo $modelInfo['name'];
             }

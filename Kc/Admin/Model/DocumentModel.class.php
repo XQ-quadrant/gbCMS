@@ -19,13 +19,13 @@ class DocumentModel extends Model implements Atc
 
     }
 
-    public function addAtc($cate){
+    public function addAtc($cate){  //添加文档
         $this->add();
         $cate_atc = M('cate_atc');
-        $cate_atc->cate=$cate;
-
-        $cate_atc->model_id=
-
+        $cate_atc->cate = $cate ;
+        $cate_atc->title = $this->title ;
+        $cate_atc->createtime = date() ;
+        $cate_atc->model_id = M('model')->field('id')->where(['name'=>$this->trueTableName])->find();
     }
 
     public function deleteAtc(){
