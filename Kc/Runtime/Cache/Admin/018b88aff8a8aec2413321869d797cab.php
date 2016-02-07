@@ -136,9 +136,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- /.navbar-static-side -->
     </nav>
 
-        <div id="page-wrapper">
-             <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-                
+    <div id="page-wrapper">
+        <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+            
     <div class="xs">
         <h3>Forms</h3>
         <!--<div class="tab-content">
@@ -500,6 +500,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             });
         });
     </script>
+
 
             <div class="copy_layout">
                 <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>

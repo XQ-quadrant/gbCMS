@@ -78,13 +78,15 @@ class ArticleController extends Controller
                 //echo $article->getError();
                 //$this->ajaxreturn($article->getError());
         }else{
-            $article->status=1;
-            $article->createtime=date();
-            if(!$article->addAtc($cate)){        //提交内容
-                $this->ajaxreturn($article->getDbError());
-                echo $modelInfo['name'];
-            }
-                $this->ajaxreturn('添加成功');
+
+                $article->createtime=date();
+                if(!$article->addAtc($cate)){        //提交内容
+                    $this->ajaxreturn($article->getError());
+
+                }else{
+                    $this->ajaxreturn('添加成功');
+
+                }
             }
         }else{
                 $this->display(T($modelInfo['view_edit']));

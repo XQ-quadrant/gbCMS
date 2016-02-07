@@ -136,9 +136,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- /.navbar-static-side -->
     </nav>
 
-        <div id="page-wrapper">
-             <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-                
+    <div id="page-wrapper">
+        <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+            
 
     <div class="xs">
         <h3>编辑</h3>
@@ -277,8 +277,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
-                            <button  class="btn-success btn">提交</button>
-                            <a id="submit">sdfsdf</a>
+                            <button id="submit" class="btn-success btn">提交</button>
                             <button class="btn-default btn">预览</button>
                             <!--<button class="btn-inverse btn">Reset</button>-->
                         </div>
@@ -349,6 +348,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </form>
         </div>-->
     </div>
+
 
 
 
