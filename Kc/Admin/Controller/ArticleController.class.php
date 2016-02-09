@@ -23,11 +23,16 @@ class ArticleController extends Controller
 
     public function listView($cate){
         $cate_atc= M('cate_atc');
-        $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->page($_GET['p'].',25')->select();
+        $count      = $cate_atc->where('status=1')->count();
+        $Page       = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $show       = $Page->show();// 分页显示输出
 
-        $count= $cate_atc->where('status=1')->count();
-        $Page = new \Think\Page($count,25);
-        $show = $Page->show();
+        $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
+
+        //var_dump($show);
+       /* $Page->setConfig('f_decorate','<li>');
+        $Page->setConfig('b_decorate','</li>');*/
+
         $this->assign('page',$show);
         $this->assign('list',$list);
         $this->display();
@@ -36,13 +41,14 @@ class ArticleController extends Controller
     public function detail($mid,$id){
         $modelInfo=get_model_info($mid);  //获取模型信息
         $article = D($modelInfo['name']);
-        $article->id = $id;
-        $atcInfo = $article->detail();
+        //$article->id = $id;
+        $atcInfo = $article->detail($id);
         if(!is_array($atcInfo)){
             //$this->error($atcInfo);
             //$this->ajaxreturn($article->getDbError());
         }
         $atcInfo['content']=htmlspecialchars_decode($atcInfo['content']);
+
         $this->assign($atcInfo);
         //var_dump($atcInfo);
         //var_dump($article->getError());

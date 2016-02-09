@@ -20,6 +20,8 @@ class DocumentModel extends Model implements Atc
     }
 
     public function addAtc($cate){  //添加文档
+
+        $title = $this->title ;
         $atc_id =$this->add();
         if($atc_id==false){
             $this->error='添加失败';
@@ -28,8 +30,9 @@ class DocumentModel extends Model implements Atc
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
         $cate_atc->cate = $cate ;
-        $cate_atc->title = $this->title ;
-        $cate_atc->createtime = date() ;
+        $cate_atc->title = $title ;
+
+        $cate_atc->createtime = date('y-m-d-h-m-s') ;
         $cate_atc->model_id = M('model')->field('id')->where(['name'=>$this->trueTableName])->find();
         $cate_atc->status=1;
         if($cate_atc->add()){
@@ -45,15 +48,15 @@ class DocumentModel extends Model implements Atc
 
     }
 
-    public function detail(){
-        $status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
-        //var_dump($status);
-        $atcInfo = $this->where('id=%d',$this->id)->find();
-        if($atcInfo['status']==1){
+    public function detail($id){
+        //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
+        $atcInfo = $this->query("select * from cate_atc WHERE id=$id");
+        //var_dump($atcInfo);
+
+        if($atcInfo[0]['status']==1){
+            $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
-
-
-
+            $atcInfo+=$atcContent;
             return $atcInfo;
         }else{
             return 'h';//$this->getDbError();

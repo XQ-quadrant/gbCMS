@@ -10,7 +10,7 @@ namespace Admin\Model;
 
 interface Atc
 {
-    public function detail();
+    public function detail($id);
     public function addAtc($cate);
     public function editor();
     public function deleteAtc();

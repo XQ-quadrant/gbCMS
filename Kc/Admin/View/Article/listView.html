@@ -201,6 +201,7 @@
                 </div>
                 <table class="table">
                     <tbody>
+                    <volist name="list" id="vo">
                     <tr class="unread checked">
                         <td class="hidden-xs">
                             <input type="checkbox" class="checkbox">
@@ -209,254 +210,20 @@
                             <i class="fa fa-star icon-state-warning"></i>
                         </td>
                         <td class="hidden-xs">
-                            Google
+                            {$vo.author}
                         </td>
                         <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
+                            <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}">{$vo.title}</a>
                         </td>
                         <td>
                         </td>
                         <td>
-                            12 march
+                            {$vo.createtime}
                         </td>
                     </tr>
-                    <tr class="unread checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Dropbox
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            02 march
-                        </td>
-                    </tr>
-                    <tr class="unread checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Adobe
-                        </td>
-                        <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            8 march
-                        </td>
-                    </tr>
-                    <tr class="unread checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Apple
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            4 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Microsoft
-                        </td>
-                        <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            1 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Microsoft
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            15 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Microsoft
-                        </td>
-                        <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            16 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Microsoft
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            9 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Microsoft
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            16 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Dropbox
-                        </td>
-                        <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            10 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Dropbox
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            14 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Dropbox
-                        </td>
-                        <td>
-                            Nullam quis risus eget urna mollis ornare vel eu leo
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            11 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox">
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            Dropbox
-                        </td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                        </td>
-                        <td>
-                            <i class="fa fa-paperclip"></i>
-                        </td>
-                        <td>
-                            20 march
-                        </td>
-                    </tr>
-                    <tr class="read checked">
+                    </volist>
+
+                    <!--<tr class="read checked">
                         <td class="hidden-xs">
                             <input type="checkbox" class="checkbox">
                         </td>
@@ -594,9 +361,25 @@
                         <td>
                             16 march
                         </td>
-                    </tr>
+                    </tr>-->
                     </tbody>
                 </table>
+
+                <nav>
+
+
+                    <ul class="pagination">
+                        {$page}
+                        <!--<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>-->
+                    </ul>
+                </nav>
+
             </div>
         </div>
         <!--<div class="bs-example" data-example-id="form-validation-states">

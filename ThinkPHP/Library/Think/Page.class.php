@@ -26,11 +26,13 @@ class Page{
 	// 分页显示定制
     private $config  = array(
         'header' => '<span class="rows">共 %TOTAL_ROW% 条记录</span>',
-        'prev'   => '<<',
-        'next'   => '>>',
+        'prev'   => '«',
+        'next'   => '»',
         'first'  => '1...',
         'last'   => '...%TOTAL_PAGE%',
         'theme'  => '%FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%',
+        'b_decorate'=>'</li>',
+        'f_decorate'=>'<li>',
     );
 
     /**
@@ -89,26 +91,26 @@ class Page{
         /* 计算分页临时变量 */
         $now_cool_page      = $this->rollPage/2;
 		$now_cool_page_ceil = ceil($now_cool_page);
-		$this->lastSuffix && $this->config['last'] = $this->totalPages;
+		//$this->lastSuffix && $this->config['last'] = $this->totalPages;
 
         //上一页
         $up_row  = $this->nowPage - 1;
-        $up_page = $up_row > 0 ? '<a class="prev" href="' . $this->url($up_row) . '">' . $this->config['prev'] . '</a>' : '';
+        $up_page = $up_row > 0 ? $this->config['f_decorate'].'<a class="prev" href="' . $this->url($up_row) . '">' . $this->config['prev'] . '</a>.' .$this->config['b_decorate']: '';
 
         //下一页
         $down_row  = $this->nowPage + 1;
-        $down_page = ($down_row <= $this->totalPages) ? '<a class="next" href="' . $this->url($down_row) . '">' . $this->config['next'] . '</a>' : '';
+        $down_page = ($down_row <= $this->totalPages) ?$this->config['f_decorate']. '<a class="next" href="' . $this->url($down_row) . '">' . $this->config['next'] . '</a>'.$this->config['b_decorate'] : '';
 
         //第一页
         $the_first = '';
         if($this->totalPages > $this->rollPage && ($this->nowPage - $now_cool_page) >= 1){
-            $the_first = '<a class="first" href="' . $this->url(1) . '">' . $this->config['first'] . '</a>';
+            $the_first = $this->config['f_decorate']. '<a class="first" href="' . $this->url(1) . '">' . $this->config['first'] . '</a>'.$this->config['b_decorate'];
         }
 
         //最后一页
         $the_end = '';
         if($this->totalPages > $this->rollPage && ($this->nowPage + $now_cool_page) < $this->totalPages){
-            $the_end = '<a class="end" href="' . $this->url($this->totalPages) . '">' . $this->config['last'] . '</a>';
+            $the_end = $this->config['f_decorate']. '<a class="end" href="' . $this->url($this->totalPages) . '">' . $this->config['last'] . '</a>'.$this->config['b_decorate'];
         }
 
         //数字连接
@@ -124,13 +126,13 @@ class Page{
             if($page > 0 && $page != $this->nowPage){
 
                 if($page <= $this->totalPages){
-                    $link_page .= '<a class="num" href="' . $this->url($page) . '">' . $page . '</a>';
+                    $link_page .= $this->config['f_decorate']. '<a class="num" href="' . $this->url($page) . '">' . $page . '</a>'.$this->config['b_decorate'];
                 }else{
                     break;
                 }
             }else{
                 if($page > 0 && $this->totalPages != 1){
-                    $link_page .= '<span class="current">' . $page . '</span>';
+                    $link_page .= '<li class="active"><a href="#">'. $page .'<span class="sr-only">(current)</span></a></li>';
                 }
             }
         }
@@ -140,6 +142,6 @@ class Page{
             array('%HEADER%', '%NOW_PAGE%', '%UP_PAGE%', '%DOWN_PAGE%', '%FIRST%', '%LINK_PAGE%', '%END%', '%TOTAL_ROW%', '%TOTAL_PAGE%'),
             array($this->config['header'], $this->nowPage, $up_page, $down_page, $the_first, $link_page, $the_end, $this->totalRows, $this->totalPages),
             $this->config['theme']);
-        return "<div>{$page_str}</div>";
+        return "{$page_str}";
     }
 }
