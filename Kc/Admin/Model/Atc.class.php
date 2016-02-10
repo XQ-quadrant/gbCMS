@@ -13,6 +13,6 @@ interface Atc
     public function detail($id);
     public function addAtc($cate);
     public function editor();
-    public function deleteAtc();
+    public function deleteAtc($cate,$id);
 
 }

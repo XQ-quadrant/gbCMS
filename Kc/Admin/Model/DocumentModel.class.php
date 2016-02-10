@@ -44,7 +44,9 @@ class DocumentModel extends Model implements Atc
         }
     }
 
-    public function deleteAtc(){
+    public function deleteAtc($cate=0,$id=0){
+        $this->delete();
+        $article =
 
     }
 

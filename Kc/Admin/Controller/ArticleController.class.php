@@ -99,6 +99,16 @@ class ArticleController extends Controller
         }
     }
 
+    public function delete($id){
+        $index_atc = D('cate_atc');
+        if($index_atc->deleteIndex($id)){
+            $this->ajaxreturn('删除成功');
+        }else{
+            $this->ajaxreturn($index_atc->getError());
+        }
+    }
+
+
     /**编辑文章
      * @param $cate
      * @param string $id
