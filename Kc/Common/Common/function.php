@@ -47,3 +47,14 @@ function get_model_info($mid){  //带增加根据唯一标识获取信息
     $model->id=$mid;
     return $model->find();
 }
+
+function get_all_model($status=1){
+    $model = D('model');
+    return $model->query("select id,`name` from model WHERE status = {$status}");
+}
+
+function get_document_model($id){
+    $model = new \Think\Model();
+    $row = $model->query("select id,title,model_id,cate,atc_id from cate_atc WHERE id = $id");
+    return $row[0];
+}

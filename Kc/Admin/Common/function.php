@@ -7,7 +7,7 @@
  */
 use Admin\Model\CateModel;
 
-function getAllCate(){
+/*function getAllCate(){
     $cate = new CateModel();
     $cateArray = $cate->where(['status'=>1])->order('pre_cate desc')->select();
 
@@ -49,4 +49,4 @@ function getAllCate(){
             $cate[$v['pre_cate']]['sub_cate'] = $v;
         }
     }*/
-}
+}*/

@@ -2,6 +2,8 @@
 namespace Admin\Controller;
 use Admin\Model\AdminModel;
 use Think\Controller;
+use Admin\Model\CateModel;
+
 class IndexController extends Controller {
 
     protected $user ;
@@ -12,6 +14,8 @@ class IndexController extends Controller {
     }
 
     public function index(){
+
+        //tag('cate');
         $this->display();
     }
 
@@ -56,9 +60,11 @@ class IndexController extends Controller {
 
     public function register(){
         if(IS_POST){
-            $data =I('post.');
+            //$data =I('post.');
             $adminer= new AdminModel();
-            $AddInfo = $adminer->register($data);
+            $adminer->create();
+            $adminer->status=2;
+            $AddInfo = $adminer->register();
             //var_dump($data);
             return $AddInfo;
             //$this->display();

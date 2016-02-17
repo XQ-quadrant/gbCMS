@@ -6,6 +6,6 @@
  * Time: 下午5:49
  */
 return [
-    'app_begin'=>array('Admin\\Behaviors\\testBehavior'),
-    'cate'=>array('Admin\\Behaviors\\cateBehavior')
+    //'app_begin'=>array('Admin\\Behaviors\\testBehavior'),
+    'cate'=>array('Admin\\Behaviors\\CateBehavior')
 ];

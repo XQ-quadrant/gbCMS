@@ -113,9 +113,10 @@ class ArticleController extends Controller
      * @param $cate
      * @param string $id
      */
-    public function editor($cate,$id=''){
-        $atcModel=get_document_Model($cate);        //获取模型信息
-        D($atcModel['name']);    //建立模型对象
+    public function editor($id=''){
+        $atcModel=get_document_Model($id);        //获取模型信息
+        $atc = D($atcModel['name']);    //建立模型对象
+        $atc->find()
 
         if(IS_POST){
             $article = new ArticleModel();

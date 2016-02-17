@@ -57,7 +57,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </form>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
+                <?php tag('cate'); ?>
+                <!--<ul class="nav" id="side-menu">
                     <li>
                         <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
                     </li>
@@ -68,7 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="grids.html">Grid System</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-indent nav_icon"></i>Menu Levels<span class="fa arrow"></span></a>
@@ -80,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="typography.html">Typography</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-envelope nav_icon"></i>Mailbox<span class="fa arrow"></span></a>
@@ -92,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="compose.html">Compose email</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="widgets.html"><i class="fa fa-flask nav_icon"></i>Widgets</a>
@@ -107,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="validation.html">Validation</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-table nav_icon"></i>Tables<span class="fa arrow"></span></a>
@@ -116,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="basic_tables.html">Basic Tables</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap fa-fw nav_icon"></i>Css<span class="fa arrow"></span></a>
@@ -128,18 +129,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="login.html">Login</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
-                </ul>
+                </ul>-->
             </div>
             <!-- /.sidebar-collapse -->
         </div>
         <!-- /.navbar-static-side -->
     </nav>
 
-        <div id="page-wrapper">
-             <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-                
+    <div id="page-wrapper">
+        <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+            
 	<div class="col_3">
 		<div class="col-md-3 widget widget1">
 			<div class="r3_counter_box">
@@ -469,8 +470,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p>Copyright &copy; 2015 <a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 	</div>
 
+
             <div class="copy_layout">
-                <p>Copyright © 2015 Modern. All Rights Reserved | Design by <a href="http://www.mycodes.net/" target="_blank">源码之家</a> </p>
+                <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
             </div>
         </div>
     </div>
@@ -488,5 +490,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="/kechuang4/Public/Bootstrap/js/d3.v3.js"></script>
 	<script src="/kechuang4/Public/Bootstrap/js/rickshaw.js"></script>
 
+<script src="/kechuang4/Public/Bootstrap/js/metisMenu.min.js"></script>
+<script src="/kechuang4/Public/Bootstrap/js/custom.js"></script>
 </body>
 </html>
