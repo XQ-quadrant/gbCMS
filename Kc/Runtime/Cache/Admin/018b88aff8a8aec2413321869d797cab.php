@@ -142,341 +142,132 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             
     <div class="xs">
         <h3>Forms</h3>
-        <!--<div class="tab-content">
-            <div class="tab-pane active" id="horizontal-form">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="focusedinput" class="col-sm-2 control-label">Focused Input</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input">
+        <div class="grid_3 grid_5">
+            <h3>Tabs</h3>
+            <div class="but_list">
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">模型列表</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">添加</a></li>
+                        <!--<li role="presentation" class="dropdown">
+                            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+                                <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                            <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+                                <div class="panel-body no-padding">
+                                    <table class="table table-striped">
+                                        <thead>
+
+                                        <tr class="warning">
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php if(is_array($cate)): foreach($cate as $key=>$vo): ?><tr>
+                                            <td><?php echo ($vo["id"]); ?></td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr><?php endforeach; endif; ?>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-2">
-                            <p class="help-block">Your help text!</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
-                        <div class="col-sm-8">
-                            <input disabled="" type="text" class="form-control1" id="disabledinput" placeholder="Disabled Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-                        <div class="col-sm-8">
-                            <input type="password" class="form-control1" id="inputPassword" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
-                        <div class="col-sm-8">
-                            <div class="checkbox-inline1"><label><input type="checkbox"> Unchecked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" checked=""> Checked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
-                        <div class="col-sm-8">
-                            <div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
-                        <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
-                            <option>Lorem ipsum dolor sit amet.</option>
-                            <option>Dolore, ab unde modi est!</option>
-                            <option>Illum, fuga minus sit eaque.</option>
-                            <option>Consequatur ducimus maiores voluptatum minima.</option>
-                        </select></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Multiple Select</label>
-                        <div class="col-sm-8">
-                            <select multiple="" class="form-control1">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                                <option>Option 4</option>
-                                <option>Option 5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
-                        <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="radio" class="col-sm-2 control-label">Radio</label>
-                        <div class="col-sm-8">
-                            <div class="radio block"><label><input type="radio"> Unchecked</label></div>
-                            <div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
-                            <div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                            <div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="radio" class="col-sm-2 control-label">Radio Inline</label>
-                        <div class="col-sm-8">
-                            <div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
-                            <div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
-                            <div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                            <div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1 input-sm" id="smallinput" placeholder="Small Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1" id="mediuminput" placeholder="Medium Input">
-                        </div>
-                    </div>
-                    <div class="form-group mb-n">
-                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">Large Input</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1 input-lg" id="largeinput" placeholder="Large Input">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>-->
-        <!--<div class="bs-example" data-example-id="form-validation-states">
-            <form>
-                <div class="form-group has-success">
-                    <label class="control-label" for="inputSuccess1">Input with success</label>
-                    <input type="text" class="form-control1" id="inputSuccess1">
-                </div>
-                <div class="form-group has-warning">
-                    <label class="control-label" for="inputWarning1">Input with warning</label>
-                    <input type="text" class="form-control1" id="inputWarning1">
-                </div>
-                <div class="form-group has-error">
-                    <label class="control-label" for="inputError1">Input with error</label>
-                    <input type="text" class="form-control1" id="inputError1">
-                </div>
-            </form>
-        </div>-->
-        <div class="panel-body">
-            <form role="form" class="form-horizontal" id="form-register" method="post" >
-                <div class="form-group">
-                    <label class="col-md-2 control-label">名称<span class="font-red">*</span></label>
-                    <div class="col-md-6">
-                        <div class="input-group">
+                        <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                            <form role="form" class="form-horizontal" id="form-register" method="post" >
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">名称<span class="font-red">*</span></label>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-                            <input name="name" id="name"  type="text" class="form-control1" placeholder="名称">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">上级栏目<span class="font-red">*</span></label>
-                    <div class="col-md-4">
-                        <div class="input-group">
+                                            <input name="name" id="name"  type="text" class="form-control1" placeholder="名称">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">上级栏目<span class="font-red">*</span></label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-thumbs-o-up"></i>
 									</span>
-                            <input name="pre_cate" id="pre_cate"  type="number" class="form-control1" value="0">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">上级栏目编号</p>
-                    </div>
-                </div>
-                <!--<div class="form-group">
-                    <label class="col-md-2 control-label">模型</label>
-                    <div class="col-md-6">
-                        <div class="input-group">
-									<span class="input-group-addon">
-										<i class="fa fa-key"></i>
-									</span>
-                            <input name="model" id="model" type="text" class="form-control1"  placeholder="模型">
-                        </div>
-                    </div>
-                </div>-->
-                <div class="form-group">
-                    <label for="model" class="col-sm-2 control-label">模型<span class="font-red">*</span></label>
-                    <div class="col-sm-8" id="model">
-                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=1>基础模型</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=2>基础模型(评论)</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=4>下载</label></div>
-                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=3>新闻</label></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">优先级</label>
-                    <div class="col-md-4">
-                        <div class="input-group">
+                                            <input name="pre_cate" id="pre_cate"  type="number" class="form-control1" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">上级栏目编号</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="model" class="col-sm-2 control-label">模型<span class="font-red">*</span></label>
+                                    <div class="col-sm-8" id="model">
+                                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=1>基础模型</label></div>
+                                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=2>基础模型(评论)</label></div>
+                                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=4>下载</label></div>
+                                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=3>新闻</label></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">优先级</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-gear"></i>
 									</span>
-                            <input name="level" id="level" type="text" class="form-control1"  placeholder="0">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">数字0～250</p>
-                    </div>
-                </div>
-                <!--<div class="form-group has-success">
-                    <label class="col-md-2 control-label">Input Addon Success</label>
-                    <div class="col-md-8">
-                        <div class="input-group input-icon right">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-envelope-o"></i>
-                                        </span>
-                            <input id="email" class="form-control1" type="text" placeholder="Email Address">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">Email is valid!</p>
-                    </div>
-                </div>
-                <div class="form-group has-error">
-                    <label class="col-md-2 control-label">Input Addon Error</label>
-                    <div class="col-md-8">
-                        <div class="input-group input-icon right">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-key"></i>
-                                        </span>
-                            <input type="password" class="form-control1" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">Error!</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Checkbox Addon</label>
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <div class="input-group-addon"><input type="checkbox"></div>
-                            <input type="text" class="form-control1">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Checkbox Addon</label>
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <input type="text" class="form-control1">
-                            <div class="input-group-addon"><input type="checkbox"></div>
+                                            <input name="level" id="level" type="text" class="form-control1"  placeholder="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">数字0～250</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2 ">
+                                        <button class="btn-warning btn " type="submit" id="submit-register">保 存</button>
+                                        <button class="btn-default btn " type="reset">重 置</button>
 
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">Checkbox on right</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Radio Addon</label>
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <div class="input-group-addon"><input type="radio"></div>
-                            <input type="text" class="form-control1">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Radio Addon</label>
-                    <div class="col-md-8">
-                        <div class="input-group">
-                            <input type="text" class="form-control1">
-                            <div class="input-group-addon"><input type="radio"></div>
+                                    </div>
+                                </div>
 
+                            </form>
                         </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">Radio on right</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Input Processing</label>
-                    <div class="col-md-8">
-                        <div class="input-icon right spinner">
-                            <i class="fa fa-fw fa-spin fa-spinner"></i>
-                            <input id="email" class="form-control1" type="text" placeholder="Processing...">
+                        <!--<div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
                         </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <p class="help-block">Processing right</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Static Paragraph</label>
-                    <div class="col-md-8">
-                        <p class="form-control1 m-n">email@example.com</p>
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                        </div>-->
                     </div>
                 </div>
-                <div class="form-group mb-n">
-                    <label class="col-md-2 control-label">Readonly</label>
-                    <div class="col-md-8">
-                        <input type="text" class="form-control1" placeholder="Readonly" readonly="">
-                    </div>
-                </div>-->
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 ">
-                            <button class="btn-warning btn " type="submit" id="submit-register">保 存</button>
-                            <button class="btn-default btn " type="reset">重 置</button>
-
-                        </div>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-        <!--<div class="bs-example" data-example-id="form-validation-states-with-icons">
-            <form>
-                <div class="form-group has-success has-feedback">
-                    <label class="control-label" for="inputSuccess2">Input with success</label>
-                    <input type="text" class="form-control1" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                </div>
-                <div class="form-group has-warning has-feedback">
-                    <label class="control-label" for="inputWarning2">Input with warning</label>
-                    <input type="text" class="form-control1" id="inputWarning2" aria-describedby="inputWarning2Status">
-                    <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputWarning2Status" class="sr-only">(warning)</span>
-                </div>
-                <div class="form-group has-error has-feedback">
-                    <label class="control-label" for="inputError2">Input with error</label>
-                    <input type="text" class="form-control1" id="inputError2" aria-describedby="inputError2Status">
-                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputError2Status" class="sr-only">(error)</span>
-                </div>
-                <div class="form-group has-success has-feedback">
-                    <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">@</span>
-                        <input type="text" class="form-control1" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                    </div>
-                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile">
-                    <p class="help-block">Example block-level help text here.</p>
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-success btn">Submit</button>
-                            <button class="btn-default btn">Cancel</button>
-                            <button class="btn-inverse btn">Reset</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>-->
+
+
     </div>
     <script>
 

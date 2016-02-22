@@ -34,7 +34,10 @@ function get_cate_Model($cate=1){
     $cateModel= new \Admin\Model\CateModel();   //带增加根据唯一标识获取信息
     $row = $cateModel->field('model')->where(['id'=>$cate])->find();
     $modelArray = json_decode($row['model']);
-    return $modelArray;
+    $modelArray['_logic'] = "OR";
+    $model = D('Model');
+    $modelInfo =$model->field('id,name')->where($modelArray)->select();
+    return $modelInfo;
 
 }
 
@@ -48,13 +51,17 @@ function get_model_info($mid){  //带增加根据唯一标识获取信息
     return $model->find();
 }
 
+/**获取所有文档模型的id,name
+ * @param int $status
+ * @return mixed
+ */
 function get_all_model($status=1){
     $model = D('model');
     return $model->query("select id,`name` from model WHERE status = {$status}");
 }
 
-function get_document_model($id){
+function cate_atc_get($id){
     $model = new \Think\Model();
-    $row = $model->query("select id,title,model_id,cate,atc_id from cate_atc WHERE id = $id");
+    $row = $model->query("select id,title,model_id,cate,atc_id,views,status,createtime from cate_atc WHERE id = {$id}");
     return $row[0];
 }

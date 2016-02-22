@@ -17,6 +17,14 @@ class CateController extends Controller
         //$a='oop';
         //tag('cate',$a);
     }
+    public function index(){
+        $cate = new CateModel();
+        $cateInfo = $cate->where(['status'=>['NEQ',0]])->select();
+        $this->assign("cate",$cateInfo);
+        $this->assign('model',get_all_model());
+
+        $this->display();
+    }
 
     /**添加栏目
      *
@@ -38,20 +46,30 @@ class CateController extends Controller
             }
 
         }else{
+            $this->assign('model',get_all_model());
+
             $this->display();
         }
     }
 
+    /**编辑栏目
+     * @param $id
+     */
     public function editCate($id){
+        //$this->ajaxreturn(['msg'=>'修改成功'],'JSON');
+        //die();
         $cate = new CateModel();
         if(IS_POST){
+            //$cate->id = $id;
             $cate->create();
-            $cate->id = $id;
-            if($cate->save()){
-                $this->ajaxreturn('修改成功');
+            //$
+            //$this->ajaxreturn(['msg'=>$cate->where(['id'=>$id])->save()]);
+            if($cate->where(['id'=>$id])->save()){
+                //return json_encode(['msg'=>'修改成功','status'=>1]);
+                $this->ajaxreturn(['msg'=>'修改成功']);
             }else{
-                $this->ajaxreturn($cate->getError());
-
+                //return json_encode(['msg'=>'修功','status'=>2]);
+                $this->ajaxreturn(['msg'=>$cate->getError()]);
             }
 
         }else{
@@ -62,7 +80,7 @@ class CateController extends Controller
             $model = get_all_model();
             foreach($model as $k=>$v){
                 if(in_array($v['id'],$checked)){
-                    $model[$k]['checked'] = "checked=\"\"";
+                    $model[$k]['checked'] = "checked=true";
                 }
             }
             $this->assign('model',$model);
@@ -70,16 +88,43 @@ class CateController extends Controller
         }
 
     }
-
-    public function test(){
-        //\Think\Hook::add('action_end','Admin\\Behaviors\\testBehavior');
-        //\Think\Hook::add('ad','Admin\\Behaviors\\testBehavior');
-        $hook = new \Think\Hook();
-        //$hook->listen('action_end');
-        $a='oop';
-        //tag('ad', $a);
-        \Think\Hook::listen('ad'['ss']);
-        echo 'dd';
+    public function delete($id){
+        $cate= new CateModel();
+        if($cate->delete($id)){
+            return true;
+            //$this->ajaxreturn(['msg'=>'已删除','status'=>1]);
+        }else{
+            return false;
+            //$this->ajaxreturn(['msg'=>$cate->getError(),'status'=>2]);
+        }
     }
+
+    public function excu(){
+        $e =I('post.');
+        //$a= json_decode($e);
+        //echo $e[0];
+        //$cate_atc = D('cate_atc');
+        $func= $e['status'];
+
+        $success=0;
+        $fail=0;
+
+        foreach($e['val'] as $k=>$v){
+
+            $state = $this->$func($v);
+            if ($state) {
+                $success++;
+                //$this->ajaxReturn($state);
+            } else {
+                $fail++;
+                //$this->ajaxReturn(null);
+            }
+        }
+        //$b= json_encode($a);
+        $c=[1,2];
+        $alarm = "成功修改".$success."个，失败".$fail."个";
+        $this->ajaxReturn($alarm);
+    }
+
 
 }
