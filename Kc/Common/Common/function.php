@@ -34,9 +34,10 @@ function get_cate_Model($cate=1){
     $cateModel= new \Admin\Model\CateModel();   //带增加根据唯一标识获取信息
     $row = $cateModel->field('model')->where(['id'=>$cate])->find();
     $modelArray = json_decode($row['model']);
-    $modelArray['_logic'] = "OR";
+    $arr = ['id'=>['IN',$modelArray]];
+    //$modelArray['_logic'] = "OR";
     $model = D('Model');
-    $modelInfo =$model->field('id,name')->where($modelArray)->select();
+    $modelInfo =$model->field('id,name,identity')->where($arr)->select();
     return $modelInfo;
 
 }
@@ -47,8 +48,8 @@ function get_cate_Model($cate=1){
  */
 function get_model_info($mid){  //带增加根据唯一标识获取信息
     $model = D('model');
-    $model->id=$mid;
-    return $model->find();
+    //$model->id=$mid;
+    return $model->find($mid);
 }
 
 /**获取所有文档模型的id,name

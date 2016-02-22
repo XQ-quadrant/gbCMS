@@ -30,7 +30,7 @@ class ArticleController extends Controller
     public function listView($cate){
         $cate_atc= M('cate_atc');
         $count      = $cate_atc->where('status=1')->count();
-        $Page       = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $Page       = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
@@ -85,9 +85,11 @@ class ArticleController extends Controller
      */
     public function addAtc($cate=1,$mid=''){
         if($mid==''){
-            $mid=get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
+            $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
+
         }
         $modelInfo=get_model_info($mid);  //获取模型信息
+
 
         if(IS_POST){
             $article = D($modelInfo['identity']);    //建立模型对象
