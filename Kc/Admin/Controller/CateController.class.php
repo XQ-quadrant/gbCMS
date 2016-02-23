@@ -88,6 +88,11 @@ class CateController extends Controller
         }
 
     }
+
+    /**删除栏目
+     * @param $id
+     * @return bool
+     */
     public function delete($id){
         $cate= new CateModel();
         if($cate->delete($id)){
@@ -99,6 +104,9 @@ class CateController extends Controller
         }
     }
 
+    /**方法执行
+     *
+     */
     public function excu(){
         $e =I('post.');
         //$a= json_decode($e);

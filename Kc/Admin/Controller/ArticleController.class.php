@@ -21,7 +21,10 @@ class ArticleController extends Controller
     /*public function _initialize(){
         $this->assign("cate_id",$this->cate_id);
     }*/
-
+    /**主控面板
+     * @param $cate
+     * @param $id
+     */
     public function index($cate,$id){
         //$article =
         //$this->display();
@@ -102,18 +105,14 @@ class ArticleController extends Controller
             $article = D($modelInfo['identity']);    //建立模型对象
             //$article->createtime = date('y-m-d h:i:s');
             //$article->model_id = $mid;
-            //$data = I('post.');
-            //$data['createtime'] = date('y-m-d h:i:s G');
-            //$data['model_id'] = $mid;
+
         if(!$article->validate($modelInfo['rules'])->create()){
 
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
 
         }else{
-
                 if(!$article->addAtc($cate)){        //提交内容
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
-
                 }else{
                     $this->ajaxreturn(['msg'=>'添加成功','status'=>1]);
                 }
@@ -125,6 +124,9 @@ class ArticleController extends Controller
         }
     }
 
+    /**删除文章
+     * @param $id
+     */
     public function delete($id){
         $index_atc = D('cate_atc');
         if($index_atc->delete_h($id)){
@@ -135,7 +137,7 @@ class ArticleController extends Controller
     }
 
 
-    /**编辑文章
+    /**编辑内容
      * @param $id
      * @param string $id
      */
@@ -176,6 +178,9 @@ class ArticleController extends Controller
         }
     }
 
+    /**
+     * 判断并执行控制器的指定方法
+     */
     public function excu(){
         $e =I('post.');
         //$a= json_decode($e);

@@ -31,52 +31,21 @@ class CateBehavior extends Behavior
     }
 
     // 行为扩展的执行入口必须是run
+    /**
+     * @param mixed $params
+     */
     public function run(&$params)
     {
         echo $this->cateNav($this->catelist());
 
     }
 
-    public function getAllCate(){
-        $cate = new CateModel();
 
-        function catelist($pre_cate =0){
-            $cate = new CateModel();
-            global $cateArray;
-            $cateArray = $cate->where(['$pre_cate'=>$pre_cate])->select();
 
-            foreach($cateArray as $v=>$k){
-
-                $k['next_cate'] = catelist($k['id']);
-            }
-            return $cateArray;
-        }
-        return catelist();
-        //sort($cateArray,0);
-        /*function PreCateSet(int $n){
-            $cateArray=[];
-            if($cateArray[$n]['pre_cate']!=0){
-                $cateArray[$cateArray[$n]['pre_cate']]['sub_cate']= $cateArray[$n];
-                return getPreCate($cateArray[$n]['pre_cate']);
-            }else{
-                return 0;
-
-            }
-        }*/
-        $this->ajaxreturn($cateArray);
-
-        /*foreach($cateArray as $k=>$v){
-            if(empty($v['sub_cate'])) $v['sub_cate'] = 0;
-
-            if($v['pre_cate'] != 0){
-
-                if($cate[$v['pre_cate']]['sub_cate']==0){
-
-                }
-                $cate[$v['pre_cate']]['sub_cate'] = $v;
-            }
-        }*/
-    }
+    /**获取栏目排序数组
+     * @param int $pre_cate
+     * @return mixed
+     */
     public function catelist($pre_cate =0){
 
         $cateArray = $this->model->query("select id,`name`,pre_cate,uri from cate WHERE pre_cate=$pre_cate AND status=1 ORDER BY `LEVEL`");//$cate->where(['$pre_cate'=>$pre_cate])->select();
@@ -88,7 +57,7 @@ class CateBehavior extends Behavior
         return $cateArray;
     }
 
-    /**栏目html编码
+    /**栏目数组进行html转换
      * @param $list
      * @return string
      */
