@@ -289,9 +289,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 
 
-            <div class="copy_layout">
-                <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
-            </div>
+
+        </div>
+        <div class="copy_layout">
+            <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
         </div>
     </div>
 

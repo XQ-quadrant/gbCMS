@@ -179,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <hr>
-
+                    <input type="hidden" name="id" value=<?php echo ($id); ?>>
                 </form>
                 <div class="panel-footer">
                     <div class="row">
@@ -199,9 +199,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-            <div class="copy_layout">
-                <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
-            </div>
+
+        </div>
+        <div class="copy_layout">
+            <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
         </div>
     </div>
 

@@ -17,7 +17,7 @@ use Think\Model;
 
 class ArticleController extends Controller
 {
-    public $cate_id = 1;
+    //public $cate_id = 1;
     /*public function _initialize(){
         $this->assign("cate_id",$this->cate_id);
     }*/
@@ -27,20 +27,23 @@ class ArticleController extends Controller
         //$this->display();
     }
 
+    /**列表展示
+     * @param $cate
+     */
     public function listView($cate){
         $cate_atc= M('cate_atc');
-        $count      = $cate_atc->where('status=1')->count();
-        $Page       = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+        $count      = $cate_atc->where(['status'=>1,'cate'=>$cate])->count();
+        $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
         $model = new Model();
         foreach($list as $k=>$v){
-            $modelInfo = get_model_info($v['mid']);
+            $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
             $raw = $model->query("select author from {$modelInfo['identity']} where id = {$v['atc_id']}");
             $list[$k]['author'] = $raw[0]['author'];
             $d = strtotime($v['createtime']);
-            $list[$k]['createtime'] = '<div>'.date("Y/m/d",$d).'</div>'.'<div>'.date("h:i:s A",$d).'</div>';
+            $list[$k]['createtime'] = '<div>'.date("Y/m/d",$d).'</div>'.'<div>'.date("H:i:s",$d).'</div>'; //编辑时间格式
         }
         //var_dump($show);
        /* $Page->setConfig('f_decorate','<li>');
@@ -48,11 +51,17 @@ class ArticleController extends Controller
 
         $this->assign('page',$show);
         $this->assign('list',$list);
-        $this->assign('model_list',get_all_model($this->cate_id));
-        $this->assign("cate_id",1);
+        $this->assign('model_list',get_cate_Model($cate));
+        //$this->assign("cate_id",1);
+        $this->assign("cate",$cate);
+
         $this->display();
     }
 
+    /**详细信息展示
+     * @param $mid
+     * @param $id
+     */
     public function detail($mid,$id){
         $modelInfo=get_model_info($mid);  //获取模型信息
         $article = D($modelInfo['identity']);
@@ -86,30 +95,32 @@ class ArticleController extends Controller
     public function addAtc($cate=1,$mid=''){
         if($mid==''){
             $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
-
         }
         $modelInfo=get_model_info($mid);  //获取模型信息
 
-
         if(IS_POST){
             $article = D($modelInfo['identity']);    //建立模型对象
-
+            //$article->createtime = date('y-m-d h:i:s');
+            //$article->model_id = $mid;
+            //$data = I('post.');
+            //$data['createtime'] = date('y-m-d h:i:s G');
+            //$data['model_id'] = $mid;
         if(!$article->validate($modelInfo['rules'])->create()){
 
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
 
         }else{
-            //$this->ajaxreturn('dfs');
-                $article->createtime=date();
+
                 if(!$article->addAtc($cate)){        //提交内容
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
 
                 }else{
                     $this->ajaxreturn(['msg'=>'添加成功','status'=>1]);
-
                 }
             }
         }else{
+                $this->assign("cate",$cate);
+                $this->assign("mid",$mid);
                 $this->display(T($modelInfo['view_add']));
         }
     }
@@ -132,16 +143,11 @@ class ArticleController extends Controller
     public function editor($id){
         $cate_atc = new CateAtcModel();//D('cate_atc');
         //$atcInfo = $cate_atc->find($id);
-        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,views,status,createtime")->find($id);//cate_atc_get($id);     //获取文档目录信息
-        $model = get_model_info($atcInfo['mid']); //获取模型信息
+        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,status,createtime")->find($id);
+        $model = get_model_info($atcInfo['model_id']); //获取模型信息
         $atc = D($model['identity']);    //建立模型对象
 
         if(IS_POST){
-            //var_dump($cate_atc->create());
-
-
-
-            //$article = new ArticleModel();
             $c = $atc->create();
             $d = $cate_atc->create();
             if(!$c&&!$d){             //验证是否合法
@@ -163,8 +169,9 @@ class ArticleController extends Controller
         }else{
 
             //$atc->query("select author,editor, content from ")
-            $atcInfo = array_merge($atcInfo, $atc->field("author,editor,content")->find($atcInfo['atc_id']));
+            $atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
             $this->assign($atcInfo);
+            //echo $model['identity'];
             $this->display($model['view_edit']);
         }
     }

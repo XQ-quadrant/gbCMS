@@ -140,92 +140,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="page-wrapper">
         <div class="graphs" style="font-family: '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif">
             
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
-                    <h2 class="modal-title">Modal title</h2>
-                </div>
-                <div class="modal-body">
-                    <h2>Text in a modal</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                    <h2>Tooltips in a modal</h2>
-                    <p><a href="#" class="tooltips" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltips" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-
-                    <hr>
-                    <h2>Overflowing text to show scroll behavior</h2>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                    <p><img src="images/pic3.jpg" class="img-responsive" alt="Fountain" class="img-rounded img-responsive"></p>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div>
     <div ><!--class="modal-dialog"-->
-        <div class="modal-content" style="width: 750px;">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2 class="modal-title">Modal title</h2>
-            </div>
-            <div class="modal-body"  >
-                <div style="position:relative;display:block">
-                    <h2><?php echo ($title); ?></h2>
-                    <!--<div style="position:absolute; right:80px">
-                        <ul class="list-unstyled list-inline" >
-                            <li><a href="#" class="text-muted">12<sup>th</sup> March, 2015</a></li>
-                            <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
-                            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
-                            <li><a href="#" class="text-muted">More</a></li>
-                        </ul>
-                    </div>-->
-                    <div class="wid_blog-desc">
-                        <div class="wid_blog-left">
-                            <img src="images/1.png" class="img-responsive" alt="">
-                        </div>
-                        <div class="wid_blog-right" style="position:relative;">
-                            <h2>Lorem Ipsum</h2>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-                            <ul class="list-unstyled list-inline" style="float:right;margin:20px;">
-                                <li><a href="#" class="text-muted"><?php echo ($author); ?></a></li>
-                                <li><a href="#" class="text-muted">12<sup>th</sup> March, 2015</a></li>
-                                <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
-                                <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="modal-content"> <!--style="width: 750px;"-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title"><?php echo ($title); ?></h3>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-6 grid_box1">
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled list-inline" >
+                                        <li><a href="#" class="text-muted"><?php echo ($author); ?></a></li>
+                                        <li><a href="" class="text-muted"><?php echo ($createtime); ?></a></li>
+                                        <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                                        <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
 
-                            </ul>
+                                    </ul>                            </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <!--<h2><?php echo ($title); ?></h2>-->
+
                         </div>
-                        <div class="clearfix"> </div>
                     </div>
-                </div>
-                <hr >
+                    <div class="modal-body"  >
 
-                <?php echo ($content); ?>
 
+
+                        <?php echo ($content); ?>
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div><!-- /.modal-content -->
+                <div class="clearfix"> </div>
             </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>-->
-            </div>
-        </div><!-- /.modal-content -->
+        </div>
     </div>
 
 
 
 
-            <div class="copy_layout">
-                <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
-            </div>
+
+        </div>
+        <div class="copy_layout">
+            <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
         </div>
     </div>
 

@@ -3,11 +3,11 @@
 <block name="content">
 
     <div class="xs">
-        <h3>新闻添加</h3>
+        <h3>编辑</h3>
 
         <div class="tab-content">
             <div class="tab-pane active" id="horizontal-form">
-                <form class="form-horizontal form" >
+                <form class="form-horizontal form">
                     <div class="form-group">
                         <label for="focusedinput" class="col-sm-2 control-label">标题</label>
 
@@ -27,23 +27,20 @@
                         </div>
                     </div>
 
-
                     <div class="form-group mb-n">
                         <label for="myEditor" class="col-sm-2 control-label label-input-lg">正文</label>
 
                         <div class="col-sm-8">
-                            <!--<textarea id="myEditor">{$content}</textarea>-->
-                            <script id="myEditor" name="content" type="text/plain" style="width:100%;">
-
-
-                            </script>
+                            <textarea id="myEditor" name="content">{$content}</textarea>
                         </div>
                     </div>
                     <hr>
+
                 </form>
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
+
                             <button id="submit" class="btn-success btn">提交</button>
                             <button class="btn-default btn">预览</button>
                             <!--<button class="btn-inverse btn">Reset</button>-->
@@ -52,7 +49,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 
@@ -62,21 +58,15 @@
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
-<!--
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.parse.js"></script>
--->
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
-        var ue = UE.getEditor('myEditor');
-        //UE.getEditor("myEditor",{serverUrl: '__PUBLIC__/editor/php/controller.php'});
+        //var ue = UE.getEditor('container');
+        UE.getEditor("myEditor",{serverUrl: '__PUBLIC__/editor/php/controller.php'});
         /*uParse('.ccc', {
             rootPath: '__PUBLIC__/editor/'
         })*/
-
-
         //ue.getEditor('myEditor', {serverUrl: '/server/ueditor/controller.php'})
-
-
     </script>
     <script>
         $('#submit').click(function() {
@@ -85,15 +75,15 @@
             //var password = $('#password').val();
             var myForm = $('form');
             $.ajax({
-                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
-                type: 'post',//提交的方式i
+                url: '__URL__/editor/id/{$id}',
+                type: 'post',//提交的方式
                 dataType:'json',
                 data: myForm.serialize(),
                 success: function(data) {
                     alert(data.msg);
-                   if(data.status==1){
-                       window.location.href=document.referrer;
-                   }
+                    if(data.status==1){
+                        window.location.href=document.referrer;
+                    }
 
                     //这是成功返回的数据，写自己的逻辑
                 }

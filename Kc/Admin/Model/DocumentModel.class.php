@@ -22,7 +22,7 @@ class DocumentModel extends Model implements Atc
 
         ]
     );*/
-    public $id;
+    public $mid=1; //模型id
 
     public function editor(){
 
@@ -41,8 +41,8 @@ class DocumentModel extends Model implements Atc
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;
 
-        $cate_atc->createtime = date('y-m-d-h-m-s') ;
-        $cate_atc->model_id = M('model')->field('id')->where(['identity'=>$this->trueTableName])->find();
+        $cate_atc->createtime = date('y-m-d H:i:s') ;
+        $cate_atc->model_id = $this->mid;
         $cate_atc->status=1;
         if($cate_atc->add()){
             return true;
@@ -67,8 +67,8 @@ class DocumentModel extends Model implements Atc
         if($atcInfo[0]['status']==1){
             $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
-            $atcInfo+=$atcContent;
-            return $atcInfo;
+            $atcInfo[0]+=$atcContent;
+            return $atcInfo[0];
         }else{
             return 'h';//$this->getDbError();
             //返回状态信息

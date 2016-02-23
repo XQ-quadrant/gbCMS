@@ -63,6 +63,6 @@ function get_all_model($status=1){
 
 function cate_atc_get($id){
     $model = new \Think\Model();
-    $row = $model->query("select id,title,model_id,cate,atc_id,views,status,createtime from cate_atc WHERE id = {$id}");
+    $row = $model->query("select id,title,model_id,cate,atc_id,status,createtime from cate_atc WHERE id = {$id}");
     return $row[0];
 }
