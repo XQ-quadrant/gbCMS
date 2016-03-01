@@ -1,0 +1,168 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+
+    <div class="xs">
+        <!--<h3>新闻</h3>-->
+        <!--<form action="#" method="GET">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control input-search" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+            </div>&lt;!&ndash; Input Group &ndash;&gt;
+        </form>-->
+        <div class="modal-content-small" >
+        <form class="navbar-middle">
+            <input type="text" class="form-control-blue"  placeholder="信息搜索" style="border:1px solid #00bcd4 ;">
+        </form>
+        </div>
+
+        <div class="bs-example4" data-example-id="contextual-table">
+
+                <table class="table table-condensed">
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr class="unread checked">
+                        <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}" >
+
+                            <div class="avatar_left" style="width:100%">
+                                <span class="email-title">{$vo.title}</span>
+                                <p class="truncate grey-text ultra-small">{$list.description}</p>
+                            </div>
+                            <a href="" class="secondary-content"><span class="blue-text ultra-small">{$vo.createtime}</span></a>
+
+                            <div class="clearfix"> </div>
+                        </a>
+                        </tr>
+                    <!--<tr class="unread checked">
+                        <td class="hidden-xs">
+                            <input type="checkbox" class="checkbox" value={$vo.id}>
+                        </td>
+                        <td class="hidden-xs">
+                            <i class="fa fa-star icon-state-warning"></i>
+                        </td>
+                        <td class="hidden-xs">
+                            {$vo.author}
+                        </td>
+                        <td>
+                            <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}"  target="_blank">{$vo.title}</a>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            {$vo.createtime}
+                        </td>
+                        <td class="hidden-xs">
+                            <a href="__URL__/editor/id/{$vo.id}" target="_blank">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </a>
+                            <a class="excu" value={$vo.id} name="delete_h">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                    </tr>-->
+                    </volist>
+
+
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination">
+                        {$page}
+                    </ul>
+                </nav>
+        </div>
+
+    </div>
+    <script>
+
+    </script>
+
+    <script>
+        $('#submit').click(function() {
+
+            var myForm = $('form');
+            $.ajax({
+                url: '__URL__/addAtc',
+                type: 'post',//提交的方式
+                dataType:'json',
+                data: myForm.serialize(),
+                success: function(data) {
+                    alert(data.msg);
+                    if(data.status==1){
+                        window.location.href=document.referrer;
+                    }
+
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+
+        /*function excu(){
+            alert(12);
+            var status = $(this).attr('name'); //方法名
+            //var ch = arguments[0] ? arguments[0] : {};
+            //var ch={};   //方法接受的参数
+
+            if(arguments[0]){
+                var ch = arguments[0];
+            }else {
+                var i=0;
+                $('input:checkbox:checked').each(function(){
+                    ch[i]=$(this).val(); //attr('id');
+                    i++;
+                });
+            }
+
+            //var jch = JSON.stringify(ch);
+
+            //alert(jch);
+            $.ajax({
+                type:"POST",
+                url:"__URL__/excu",
+                data:{'status':status,'val':ch},//{'0':ch},
+                success: function(data) {
+                    alert(JSON.stringify(data));
+                    location.reload();
+                    //alert($.parseJSON(data));
+                }
+            });
+        };*/
+
+        $('.excu').bind('click',function(){
+
+            var status = $(this).attr('name'); //方法名
+            if(status=="delete_h"){
+                alert('是否删除该文档');
+            }
+            //var ch = arguments[0] ? arguments[0] : {};
+            var ch={};   //方法接受的参数
+
+            if($(this).attr('value')){
+                ch[0] = $(this).attr('value');
+            }else {
+                //ch={};
+                var i=0;
+                $('input:checkbox:checked').each(function(){
+                    ch[i]=$(this).val(); //attr('id');
+                    i++;
+                });
+            }
+
+            //var jch = JSON.stringify(ch);
+
+            //alert(jch);
+            $.ajax({
+                type:"POST",
+                url:"__URL__/excu",
+                data:{'status':status,'val':ch},//{'0':ch},
+                success: function(data) {
+                    alert(JSON.stringify(data));
+                    location.reload();
+                    //alert($.parseJSON(data));
+                }
+            });
+        });
+    </script>
+</block>

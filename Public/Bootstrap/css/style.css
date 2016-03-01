@@ -251,6 +251,16 @@ i.nav_icon {
   border-radius: 20px !important;
   box-shadow: none !important;
 }
+.form-control-blue {
+  width:90%;
+  margin: 13px 5% 12px 5%;
+  padding-left: 7%;
+  background: none !important;
+  border: 1px solid #bacde9 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
 .navbar-form.navbar-right input[type="text"] {
   color: #fff;
 }
@@ -852,7 +862,7 @@ i.dollar1{
 }
 /*-- graphs --*/
 .graphs{
-  padding: 2em 1em;
+  padding: 1em 1em;
   background: #f2f4f8;
   font-family: 'Roboto', sans-serif;
 }
@@ -1096,6 +1106,14 @@ h2.modal-title {
   -moz-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  border: 0px solid #e0e0e0;
+}
+.modal-content-small {
+  -ms-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   border: 0px solid #e0e0e0;
 }
 .modal-body h2{

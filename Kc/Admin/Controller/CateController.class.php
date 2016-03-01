@@ -60,9 +60,9 @@ class CateController extends Controller
         //die();
         $cate = new CateModel();
         if(IS_POST){
-            //$cate->id = $id;
             $cate->create();
-            //$
+            $cate->model= json_encode($cate->model);
+            $cate->status=1;
             //$this->ajaxreturn(['msg'=>$cate->where(['id'=>$id])->save()]);
             if($cate->where(['id'=>$id])->save()){
                 //return json_encode(['msg'=>'修改成功','status'=>1]);

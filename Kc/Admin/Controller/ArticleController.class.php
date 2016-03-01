@@ -43,6 +43,7 @@ class ArticleController extends Controller
         $model = new Model();
         foreach($list as $k=>$v){
             $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
+            //echo $modelInfo['identity'];
             $raw = $model->query("select author from {$modelInfo['identity']} where id = {$v['atc_id']}");
             $list[$k]['author'] = $raw[0]['author'];
             $d = strtotime($v['createtime']);
@@ -102,6 +103,7 @@ class ArticleController extends Controller
         $modelInfo=get_model_info($mid);  //获取模型信息
 
         if(IS_POST){
+
             $article = D($modelInfo['identity']);    //建立模型对象
             //$article->createtime = date('y-m-d h:i:s');
             //$article->model_id = $mid;
@@ -120,7 +122,7 @@ class ArticleController extends Controller
         }else{
                 $this->assign("cate",$cate);
                 $this->assign("mid",$mid);
-                $this->display(T($modelInfo['view_add']));
+                $this->display($modelInfo['view_add']);
         }
     }
 

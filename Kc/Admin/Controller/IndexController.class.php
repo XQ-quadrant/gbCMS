@@ -15,8 +15,8 @@ class IndexController extends Controller {
 
     public function index(){
 
-        tag('cate');
-        //$this->display();
+        //tag('cate');
+        $this->display();
     }
 
     public function login(){
