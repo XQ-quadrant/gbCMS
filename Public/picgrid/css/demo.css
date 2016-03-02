@@ -44,7 +44,7 @@ body {
 
 a {
 	outline: none;
-	color: #77d45b;
+	color: #A28D45;
 	text-decoration: none;
 }
 
@@ -99,8 +99,8 @@ button:focus {
 	text-align: center;
 	white-space: nowrap;
 }
-
-.codrops-links::after {
+/*  背景 /   */
+/*.codrops-links::after {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -110,7 +110,7 @@ button:focus {
 	content: '';
 	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
 	transform: rotate3d(0, 0, 1, 22.5deg);
-}
+}*/
 
 .codrops-icon {
 	display: inline-block;

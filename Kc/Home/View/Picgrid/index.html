@@ -21,10 +21,11 @@
 	<div class="container">
 		<header class="codrops-header">
 			<div class="codrops-links">
-				<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Tutorials/CSSProgress/" title="Previous Demo"><span>Previous Demo</span></a>
-				<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=25256" title="Back to the article"><span>Back to the Codrops article</span></a>
+				<img src="__PUBLIC__/picgrid/img/xiaohui.png">
+				<!--<a class="codrops-icon codrops-icon&#45;&#45;prev" href="http://tympanus.net/Tutorials/CSSProgress/" title="Previous Demo"><span>Previous Demo</span></a>
+				<a class="codrops-icon codrops-icon&#45;&#45;drop" href="http://tympanus.net/codrops/?p=25256" title="Back to the article"><span>Back to the Codrops article</span></a>-->
 			</div>
-			<h1>风 韵 交 大 <span>120年交大校史展</span></h1>
+			<h1>交 大 史 韵 <span>120年交大校史展</span></h1>
 			<nav class="codrops-demos">
 				<a href="index.html">回望</a>
 				<a href="index2.html">今朝</a>
@@ -36,9 +37,10 @@
 			<div class="grid">
 				<volist name="pic" id="vo">
 					<div class="grid__item" data-size="1280x961">
-						<a href="__PUBLIC__/{$vo.savepath}/{$vo.savename}" class="img-wrap"><img src="__PUBLIC__/{$vo.savepath}thumb/{$vo.savename}" alt="img04" style="width: 100%"/>
+						<a href="__PUBLIC__{$vo.savepath}thumb/{$vo.savename}" class="img-wrap"><img src="__PUBLIC__{$vo.savepath}{$vo.savename}" alt="img04" />
 							<div class="description description--grid">
-								<div><p>{$vo.content}</p>
+								<div>
+									<p>{$vo.content}</p>
 
 								</div>
 							</div>

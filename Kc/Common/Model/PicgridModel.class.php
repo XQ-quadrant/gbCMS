@@ -60,18 +60,20 @@ class PicgridModel extends Model //implements Atc
                     $this->error='存储失败';
                     return false;
                 }
-
+                $picName = './Public'.$file['savepath'].$file['savename'];
+                $picThunbName = './Public'.$file['savepath'].'thumb/'.$file['savename'];
                 chmod('./Public'.$file['savepath'],0777);
+                chmod($picName,0777);
 
                 //echo './Public/'.substr($file['savepath'],2).'thumb/hehe.jpg';
-                $image->open('./Public'.$file['savepath'].$file['savename']);
+                $image->open($picName);
 
                 if (!file_exists('./Public/'.$file['savepath'].'thumb')){
                     mkdir ('./Public'.$file['savepath'].'thumb');
                     chmod('./Public'.$file['savepath'].'thumb',0777);
                 }
-                $image->thumb(500, 600)->save('./Public'.$file['savepath'].'thumb/'.$file['savename']);
-
+                $image->thumb(500, 600)->save($picThunbName);
+                chmod($picThunbName,0777);
                 $cate_atc->atc_id = $atc_id;
                 $cate_atc->cate = $cate ;
                 $cate_atc->title = $_POST['title'];  //$file['savename'] ;
