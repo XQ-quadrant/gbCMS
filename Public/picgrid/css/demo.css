@@ -32,7 +32,7 @@
 }
 
 body {
-	font-family: "Avenir Next", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: "AR PL UKai HK", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	color: #fff;
 	background: #252323;
 	-webkit-font-smoothing: antialiased;
@@ -174,7 +174,7 @@ button:focus {
 
 .content--related {
 	text-align: center;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	padding: 0 1em;
 }
 

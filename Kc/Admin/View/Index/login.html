@@ -32,11 +32,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   <h2 class="form-heading">登 录</h2>
   <div class="app-cam">
-	  <form>
+	  <form id="form-login">
           <p id="msg"></p>
 		<input name ='count'  id ='count' type="text" class="text" value="" placeholder="帐号" >
 		<input name = 'password'  id = 'password' type="password" placeholder="密码" >
-		<div class="submit"><input type="button" onClick="login()" value="登  录"></div>
+		<div class="submit"><button id="login-button">提 d交</button><!--<input id="login-button" type="button" value="登  录">--></div>
 		<div class="login-social-link">
           <a href="index.html" class="facebook">
               教师
@@ -56,32 +56,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <p>Copyright © 2015 Modern. All Rights Reserved | Design by  </p>
    </div>
 <script>
-
-    function login(){
-        var countname = $('#count').val();
-        var password = $('#password').val();
-
+    $('#login-button').click(function() {
+        //alert('kk');
+        //var name = $('#name').val();
+        //var password = $('#password').val();
+        var myForm = $('#form-register');
         $.ajax({
-
-            url: '__URL__/login',
-            type: 'post',//提交的方式
+            url: '__URL__/login/mid/{$mid}',
+            type: 'post',//提交的方式i
             dataType:'json',
-            data: {'name':countname,'password':password},//myForm.serializeArray(),
+            data: myForm.serialize(),
             success: function(data) {
-                //var msg1 =evalJSON(msg);
-                //alert(msg1['status']);
-                //var aa = jQuery.parseJSON(data);
+                alert(data.msg);
                 if(data.status==1){
-                    location.href = '__URL__/index';
-                }else {
-                    //$('#msg').css('display','block');
-                    $('#msg').text(data.msg);
-                    //alert(data.msg);
+                    //window.location.href=document.referrer;
                 }
+
                 //这是成功返回的数据，写自己的逻辑
             }
         });
-    }
+    });
 </script>
 </body>
 </html>

@@ -31,7 +31,7 @@ class DocumentModel extends Model implements Atc
     public function addAtc($cate){  //添加文档
 
         $title = $this->title ;
-        $atc_id =$this->add();
+        $atc_id = $this->add();
         if($atc_id==false){
             $this->error='添加失败';
             return false;
