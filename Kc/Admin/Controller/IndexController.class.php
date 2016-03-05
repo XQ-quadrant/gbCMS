@@ -1,6 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Admin\Model\AdminModel;
+use Admin\Model\Uindex;
 use Think\Controller;
 use Admin\Model\CateModel;
 
@@ -25,16 +26,16 @@ class IndexController extends Controller {
     public function login($mid){
 
         $modelInfo = get_model_info($mid);  //获取模型信息
-
+        $uindex = new Uindex();
         if(IS_POST){
             //$data = I("post.");
-            $user = D($modelInfo['identity']);    //建立模型对象
+            //$user = D($modelInfo['identity']);    //建立模型对象
             //$user = new AdminModel();
             //return 'hhh';
             //$this->ajaxReturn(['name'=>'34'],'JSON');
             //$this->redirect('index');
-            $user->validate($modelInfo['rules'])->create();
-            $reInfo = $user->login();
+            $uindex->create();
+            $reInfo = $uindex->login($mid);
             $this->ajaxReturn($reInfo);
             //$this->ajaxReturn(['name'=>$rows['id']],'JSON');
 

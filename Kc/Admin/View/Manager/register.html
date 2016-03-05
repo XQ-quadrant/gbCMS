@@ -129,13 +129,13 @@
 	<div class="panel-body">
 		<form role="form" class="form-horizontal" id="form-register" >
 			<div class="form-group">
-				<label class="col-md-2 control-label">帐号</label>
+				<label class="col-md-2 control-label">邮箱</label>
 				<div class="col-md-8">
 					<div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-						<input name="name" id="name"  type="text" class="form-control1" placeholder="帐号">
+						<input name="email" id="email"  type="text" class="form-control1" placeholder="email">
 					</div>
 				</div>
 			</div>
@@ -146,10 +146,46 @@
 									<span class="input-group-addon">
 										<i class="fa fa-key"></i>
 									</span>
-						<input name="password" id="password" type="password" class="form-control1" id="exampleInputPassword1" placeholder="密码">
+						<input name="password" id="password" type="password" class="form-control1" id="InputPassword1" placeholder="密码">
 					</div>
 				</div>
 			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">确认密码</label>
+				<div class="col-md-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-key"></i>
+						</span>
+						<input name="password" id="repassword" type="password" class="form-control1" id="InputPassword2" placeholder="确认密码">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">姓名</label>
+				<div class="col-md-8">
+					<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+						<input name="name" id="name"  type="text" class="form-control1" placeholder="姓名">
+					</div>
+				</div>
+			</div>
+			<!--<div class="form-group has-success">
+				<label class="col-md-2 control-label">Input Addon Success</label>
+				<div class="col-md-8">
+					<div class="input-group input-icon right">
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+						<input id="" class="form-control1" type="text" placeholder="Email Address">
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<p class="help-block">Email is valid!</p>
+				</div>
+			</div>-->
 			<!--<div class="form-group has-success">
 				<label class="col-md-2 control-label">Input Addon Success</label>
 				<div class="col-md-8">
@@ -326,5 +362,12 @@
 				}
 			});
 		});
+
+		$('#repassword').blur(function(){
+
+		})
+		$(function(){
+
+		})
 	</script>
 </block>
