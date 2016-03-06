@@ -24,11 +24,26 @@
 
                             <form class="form-horizontal form" >
                                 <label>发起标题 : </label>
-                                <input type="text" class="form-control1 control3" placeholder="30字以内" maxlength="30">
+                                <input name="title" type="text" class="form-control1 control3" placeholder="30字以内" maxlength="30">
                                 <label>目标比赛 :  </label>
-                                <input type="text" class="form-control1 control3">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    选 择  <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">数学建模新秀杯</a></li>
+                                                <li><a href="#">全国机器人大赛</a></li>
+                                                <li><a href="#">ACM国际编程大赛</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">全国大学生广告大赛</a></li>
+                                                <li><a href="#">全国大学生电子商务大赛</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                        <input name="race" type="text" class="form-control1 control" >
+                                    </div><!-- /input-group -->
+
+                               <!-- <input name="race" type="text" class="form-control1 control3">-->
                                 <label>发起详情 : </label>
-                                <textarea rows="6" class="form-control1 control2"></textarea>
+                                <textarea name="content" rows="6" class="form-control1 control2"></textarea>
                                 <hr>
                             </form>
                             <!--

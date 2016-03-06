@@ -118,7 +118,6 @@ class ArticleController extends Controller
         if(!$article->validate($modelInfo['rules'])->create()){
 
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
-
         }else{
                 if(!$article->addAtc($cate)){        //提交内容
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
