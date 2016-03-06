@@ -21,6 +21,12 @@ class ArticleController extends Controller
     /*public function _initialize(){
         $this->assign("cate_id",$this->cate_id);
     }*/
+    public function _initialize(){
+        if(isset($_GET['cate'])){
+            $cateInfo = get_cate($_GET['cate']);
+            $this->assign('cateName',$cateInfo['name']);
+        }
+    }
     /**主控面板
      * @param $cate
      * @param $id
@@ -41,6 +47,7 @@ class ArticleController extends Controller
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
         $model = new Model();
+
         foreach($list as $k=>$v){
             $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
             //echo $modelInfo['identity'];

@@ -2,7 +2,7 @@
 
 <block name="content">
 <div class="xs">
-	<h3>Forms</h3>
+	<h3>注册</h3>
 	<!--<div class="tab-content">
 		<div class="tab-pane active" id="horizontal-form">
 			<form class="form-horizontal">
@@ -128,50 +128,54 @@
 	</div>-->
 	<div class="panel-body">
 		<form role="form" class="form-horizontal" id="form-register" >
-			<div class="form-group">
+			<div class="form-group"  id="email">
 				<label class="col-md-2 control-label">邮箱</label>
 				<div class="col-md-8">
 					<div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-						<input name="email" id="email"  type="text" class="form-control1" placeholder="email">
+						<input name="email"  type="text" class="form-control1" placeholder="email">
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group" id="password">
 				<label class="col-md-2 control-label">密码</label>
 				<div class="col-md-8">
 					<div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-key"></i>
 									</span>
-						<input name="password" id="password" type="password" class="form-control1" id="InputPassword1" placeholder="密码">
+						<input name="password" type="password" class="form-control1" id="InputPassword1" placeholder="密码">
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group" id="repassword" >
 				<label class="col-md-2 control-label">确认密码</label>
 				<div class="col-md-8">
 					<div class="input-group">
 						<span class="input-group-addon">
 							<i class="fa fa-key"></i>
 						</span>
-						<input name="password" id="repassword" type="password" class="form-control1" id="InputPassword2" placeholder="确认密码">
+						<input name="repassword"  type="password" class="form-control1" id="InputPassword2" placeholder="确认密码">
 					</div>
 				</div>
+				<div class="col-sm-2" >
+					<p class="help-block" style="display:none;">两次密码不一致</p>
+				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group"  id="name">
 				<label class="col-md-2 control-label">姓名</label>
 				<div class="col-md-8">
 					<div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope-o"></i>
 									</span>
-						<input name="name" id="name"  type="text" class="form-control1" placeholder="姓名">
+						<input name="name"  type="text" class="form-control1" placeholder="姓名">
 					</div>
 				</div>
 			</div>
+
 			<!--<div class="form-group has-success">
 				<label class="col-md-2 control-label">Input Addon Success</label>
 				<div class="col-md-8">
@@ -200,20 +204,7 @@
 					<p class="help-block">Email is valid!</p>
 				</div>
 			</div>
-			<div class="form-group has-error">
-				<label class="col-md-2 control-label">Input Addon Error</label>
-				<div class="col-md-8">
-					<div class="input-group input-icon right">
-									<span class="input-group-addon">
-										<i class="fa fa-key"></i>
-									</span>
-						<input type="password" class="form-control1" placeholder="Password">
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<p class="help-block">Error!</p>
-				</div>
-			</div>
+
 			<div class="form-group">
 				<label class="col-md-2 control-label">Checkbox Addon</label>
 				<div class="col-md-8">
@@ -355,7 +346,7 @@
 				success: function(data) {
 					alert(data.msg);
 					if(data.status==1){
-						//window.location.href=document.referrer;
+						history.go(-1);
 					}
 
 					//这是成功返回的数据，写自己的逻辑
@@ -363,9 +354,21 @@
 			});
 		});
 
-		$('#repassword').blur(function(){
+		$('#repassword input').blur(function(){
+			//alert(3);
+			var pwd =$('#password');
+			var repwd =$('#repassword');
+			if(pwd.find('input').val() != repwd.find('input').val() ){
+				//alert(1);
+				repwd.addClass('has-error');
+				repwd.find('.help-block').show();
+			}else{
+				repwd.removeClass('has-error');
+				repwd.find('.help-block').hide();
+			}
 
-		})
+			//alert(2);
+		});
 		$(function(){
 
 		})

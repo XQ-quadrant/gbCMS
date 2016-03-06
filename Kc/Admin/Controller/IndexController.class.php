@@ -8,9 +8,19 @@ use Admin\Model\CateModel;
 class IndexController extends Controller {
 
     protected $user ;
-
+    private $power = 2;
 
     public function _initialize(){
+        $logined = session('email');
+        $status = session('status');
+
+        if(!session('?email')&& !session('?status')){
+            $this->redirect('/Admin/Enter/login');
+        }
+        elseif(session('power')<$this->power){
+            $this->error('权限不足，无法访问');
+//echo session('power');
+        }
 
     }
 
@@ -23,43 +33,20 @@ class IndexController extends Controller {
     /**统一登录入口
      * @param $uid
      */
-    public function login($mid){
+/*    public function login($mid){
 
         $modelInfo = get_model_info($mid);  //获取模型信息
         $uindex = new Uindex();
         if(IS_POST){
-            //$data = I("post.");
-            //$user = D($modelInfo['identity']);    //建立模型对象
-            //$user = new AdminModel();
-            //return 'hhh';
-            //$this->ajaxReturn(['name'=>'34'],'JSON');
-            //$this->redirect('index');
-            $uindex->create();
+
             $reInfo = $uindex->login($mid);
             $this->ajaxReturn($reInfo);
             //$this->ajaxReturn(['name'=>$rows['id']],'JSON');
 
-            /*if ($loginInfo["status"]==1){
-                //登录成功
-                session("id",$loginInfo["id"]);
-                session("name",I('post.name'));
-                session("status",$loginInfo['status']);
-                cookie("name",I('post.name'));
-                $this->ajaxReturn($loginInfo);
-
-            }elseif ($loginInfo["status"]==2){
-                $this->ajaxReturn(['msg'=>"系统已经向{$loginInfo['user_email']}发送了验证信，请验证。"]);
-            }elseif ($loginInfo["status"]==3){
-                $this->ajaxReturn(['msg'=>"你的用户资格管理员正在审核中"]);
-            }else{
-
-                $this->ajaxReturn(['msg'=>"登录失败，请检查用户名或邮箱"],'JSON');
-            }*/
-
         }
         $this->assign('mid',$modelInfo['id']);
         $this->display($modelInfo['view_other']);
-    }
+    }*/
 
     public function register($mid){
         $modelInfo = get_model_info($mid);
@@ -94,11 +81,11 @@ class IndexController extends Controller {
 
     }
 
-    public function logout(){
-        session('id',null);
-        session("name",null);
-        session("status",null);
-        cookie("username",null);
-        $this->redirect('login');
-    }
+//    public function logout(){
+//        session(null);
+//        /*session("name",null);
+//        session("status",null);*/
+//        cookie(null);
+//        $this->redirect('login');
+//    }
 }

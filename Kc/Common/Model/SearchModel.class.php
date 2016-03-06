@@ -19,8 +19,6 @@ class SearchModel extends Model
 
     public function _initialize($action = null,$ref,$data,$method )
     {
-
-
         $this->action=$action;
         $this->method = $method;
         $this->method = $ref;

@@ -18,9 +18,10 @@ function get_cate($cateName){
     }else{
         $row = $cate->where(['cindex'=>$cateName])->find();
     }
-    $row['model'] = json_decode($row['model']);
-    $model = new M('model');
-    $modelName = $model->field('name')->where(['id'=>['IN',$row['model']]])->select();  //查询模型名称列表
+    $modelArray = json_decode($row['model']);
+    $arr = ['id'=>['IN',$modelArray]];
+    $model = D('Model');
+    $modelName = $model->field('name')->where($arr)->select();  //查询模型名称列表
     $row['model'] =$modelName;
     return $row;
     //return ['name'=>'Article'];

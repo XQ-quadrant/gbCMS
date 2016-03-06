@@ -12,7 +12,7 @@ p {margin: 0;}
 html, body{
   	font-family: 'Roboto', sans-serif;
     font-size: 100%;
-  	background:#000;
+  	background:#192433;
   	overflow-x: hidden;
 }
 body a{
@@ -111,7 +111,7 @@ body a{
 	padding:1px 5px !important;
 }	
 .but_list, .tab-content{
-	margin:1.5em 0 0 0;
+	margin:0.4em 0 0 0;
 }
 .btn-group-lg>.btn, .btn-lg {
   border-radius:4px !important;
@@ -219,7 +219,7 @@ body a{
   min-width: 0;
 }
 .navbar-default.sidebar {
-  background-color: #000;
+  background-color: #192433;
   font-family: 'Roboto', sans-serif;
 }
 nav.top1.navbar.navbar-default.navbar-static-top {
@@ -242,8 +242,9 @@ i.nav_icon {
   margin-right:6px;
 }
 .sidebar ul li a{
-  color: #999;
-  font-size:14px;
+  color: #64e2c1;
+  font-size:15px;
+  letter-spacing:0.7px;
 }
 .form-control {
   background: none !important;

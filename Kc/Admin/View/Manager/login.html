@@ -32,11 +32,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   </div>
   <h2 class="form-heading">登 录</h2>
   <div class="app-cam">
-	  <form id="form-login">
+	  <form id="form-login" >
           <p id="msg"></p>
-		<input name ='count'  id ='count' type="text" class="text" value="" placeholder="帐号" >
-		<input name = 'password'  id = 'password' type="password" placeholder="密码" >
-		<div class="submit"><!--<button id="submit" class="btn-success btn">提交</button>--><input id="login-button" type="button" value="登  录"></div>
+		<input name ='email' id ='email' type="text" class="text" value="" placeholder="Email" >
+		<input name = 'password' id = 'password' type="password" placeholder="密码" >
+      </form>
+        <div class="submit"><input id="login-button" type="button" value="登  录"></div>
+          <!--<button id="submit" class="btn-success btn">提交</button>-->
+
 		<div class="login-social-link">
           <a href="index.html" class="facebook">
               教师
@@ -50,32 +53,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<li class="new_right"><p class="sign">帮助 ?<a href="register.html"> 联系客服</a></p></li>
 			<div class="clearfix"></div>
 		</ul>
-	</form>
+
   </div>
    <div class="copy_layout login">
       <p>Copyright © 2015 Modern. All Rights Reserved | Design by  </p>
    </div>
 <script>
-    $('#login-button').click(function() {
-        //alert('kk');
-        //var name = $('#name').val();
-        //var password = $('#password').val();
-        var myForm = $('#form-register');
-        $.ajax({
-            url: '__URL__/login/mid/{$mid}',
-            type: 'post',//提交的方式i
-            dataType:'json',
-            data: myForm.serialize(),
-            success: function(data) {
-                alert(data.msg);
-                if(data.status==1){
-                    //window.location.href=document.referrer;
-                }
+    //$('#login-button').click(function() {
+        $('#login-button').click(function() {
+            //alert('kk');
+            //var name = $('#name').val();
+            //var password = $('#password').val();
+            var myForm = $('#form-login');
+            var data = new FormData(myForm[0]);
+            $.ajax({
+                url: '__URL__/login/mid/{$mid}',
+                type: 'post',//提交的方式i
+                dataType:'json',
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(rdata) {
+                    alert(rdata.msg);
+                    if(rdata.status==1){
+                        window.location.href = '__MODULE__';//document.referrer;
+                    }
 
-                //这是成功返回的数据，写自己的逻辑
-            }
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
         });
-    });
 </script>
 </body>
 </html>

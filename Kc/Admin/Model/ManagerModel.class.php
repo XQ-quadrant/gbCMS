@@ -15,11 +15,8 @@ class ManagerModel extends Model implements User
     //protected $mid = '4';
 
     public function register(){
-
         $uid = $this->add();
-
         if($uid){
-
             $uindex = D('uindex');
             $uindex->create();
             $uContent =[$uid,I('get.mid'),date('y-m-d H:i:s'),3,1];
@@ -29,12 +26,7 @@ class ManagerModel extends Model implements User
                 $uindex->power,
                 $uindex->status
                 ) = $uContent;
-            /*$uindex->uid = $uid;
-            $uindex->mid = $this->tableName ;
-            //$cate_atc->title = $title ;
-            $uindex->createtime = date('y-m-d H:i:s') ;
-            $uindex->power = 3;
-            $uindex->status=1;*/
+
             if($uindex->add()){
                 //return true;
             }else{
@@ -60,9 +52,9 @@ class ManagerModel extends Model implements User
                 session("id",$loginInfo["id"]);
                 session("name",I('post.name'));
                 session("status",$loginInfo['status']);
-                cookie("name",I('post.name'));
+                cookie("email",$loginInfo['email']);
 
-                return ['msg'=>"waiting",'status'=>1];
+                return ['msg'=>$loginInfo['email'],'status'=>1];
                 break;
             case 2:
                 return ['msg'=>"系统已经向{$loginInfo['email']}发送了验证信，请验证。",'status'=>1];

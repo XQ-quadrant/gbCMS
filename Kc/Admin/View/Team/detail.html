@@ -1,0 +1,79 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+    <div ><!--class="modal-dialog"-->
+        <div class="row">
+            <div class="col-md-10">
+                <div class="modal-content"> <!--style="width: 750px;"-->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="modal-title">{$title}</h3>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-6 grid_box1">
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled list-inline" >
+                                        <li><a href="#" class="text-muted">{$author}</a></li>
+                                        <li><a href="" class="text-muted">{$createtime}</a></li>
+                                        <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                                        <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+
+                                    </ul>                            </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <!--<h2>{$title}</h2>-->
+
+                        </div>
+                    </div>
+                    <div class="modal-body"  >
+
+
+
+                        {$content}
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div><!-- /.modal-content -->
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+
+</block>
+<block name="script">
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+    <script>
+        $('#submit').click(function() {
+            //alert('kk');
+            //var name = $('#name').val();
+            //var password = $('#password').val();
+            var myForm = $('form');
+            $.ajax({
+                url: '__URL__/addAtc',
+                type: 'post',//提交的方式
+                dataType:'json',
+                data: myForm.serialize(),
+                success: function(data) {
+                    alert(data.msg);
+                    if(data.status==1){
+                        window.location.href=document.referrer;
+                    }
+
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+    </script>
+</block>
