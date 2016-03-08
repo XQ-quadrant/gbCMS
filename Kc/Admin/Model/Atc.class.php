@@ -10,9 +10,28 @@ namespace Admin\Model;
 
 interface Atc
 {
-    public function detail($id);
-    public function addAtc($cate);
-    public function editor();
-    public function deleteAtc($cate,$id);
+    /**
+     * @param $id
+     * @return array
+     */
+    public function detail($id);  //查
+
+    /**
+     * @param $cate
+     * @return mixed
+     */
+    public function addAtc($cate); //添
+
+    /**
+     * @return mixed
+     */
+    public function editor();       //改
+
+    /**
+     * @param $cate
+     * @param $id
+     * @return bool
+     */
+    public function deleteAtc($cate,$id); //删
 
 }

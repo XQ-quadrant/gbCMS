@@ -1,0 +1,317 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+    <div class="xs">
+        <h3>Forms</h3>
+        <div class="grid_3 grid_5">
+            <h3>Tabs</h3>
+            <div class="but_list">
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">模型列表</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">添加</a></li>
+                        <!--<li role="presentation" class="dropdown">
+                            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                                <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+                                <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                            <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+                                <div class="panel-body no-padding">
+                                    <table class="table table-striped">
+                                        <thead>
+
+                                        <tr class="warning">
+                                            <th>id</th>
+                                            <th>名称</th>
+                                            <th>文档模型</th>
+                                            <th>优先级</th>
+                                            <th>状态</th>
+                                            <th>链接</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <foreach name="cate" item="vo">
+                                        <tr>
+                                            <td>{$vo.id}</td>
+                                            <td>{$vo.name}</td>
+                                            <td>{$vo.model}</td>
+                                            <td>{$vo.level}</td>
+                                            <td>{$vo.status}</td>
+                                            <td>{$vo.uri}</td>
+                                            <td class="hidden-xs">
+                                                <a href="__URL__/editCate/id/{$vo.id}" target="_blank">
+                                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                </a>
+                                                <a class="excu" value={$vo.id} name="delete">
+                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </foreach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                            <form  class="form-horizontal" id="form_add">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">名称<span class="font-red">*</span></label>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+                                            <input name="name" id="name"  type="text" class="form-control1" value={$name}>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">上级栏目<span class="font-red">*</span></label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-thumbs-o-up"></i>
+									</span>
+                                            <input name="pre_cate" id="pre_cate"  type="number" class="form-control1" value={$pre_cate}>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">上级栏目编号</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="model" class="col-sm-2 control-label">模型<span class="font-red">*</span></label>
+                                    <div class="col-sm-8" id="model">
+                                        <volist name="model" id = 'vo'>
+                                            <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value={$vo.id} {$vo.checked}>{$vo.name}</label></div>
+
+                                        </volist>
+                                        <!--<div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=4>下载</label></div>
+                                        <div class="checkbox-inline"><label><input type="checkbox" name="model[]" value=3>新闻</label></div>-->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">优先级</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-gear"></i>
+									</span>
+                                            <input name="level" id="level" type="text" class="form-control1"  value={$level}>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">数字0～250</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">状态</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-gear"></i>
+									</span>
+                                            <input name="status" id="status" type="text" class="form-control1"  value={$status}>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">数字0～250</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">链接</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-gear"></i>
+									</span>
+                                            <input name="uri" id="uri" type="text" class="form-control1"  value={$uri}>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">250</p>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="id" value={$id}>
+                                <!--<div class="form-group has-success">
+                                    <label class="col-md-2 control-label">Input Addon Success</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group input-icon right">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-envelope-o"></i>
+                                                        </span>
+                                            <input id="email" class="form-control1" type="text" placeholder="Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">Email is valid!</p>
+                                    </div>
+                                </div>
+                                <div class="form-group has-error">
+                                    <label class="col-md-2 control-label">Input Addon Error</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group input-icon right">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-key"></i>
+                                                        </span>
+                                            <input type="password" class="form-control1" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">Error!</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Checkbox Addon</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><input type="checkbox"></div>
+                                            <input type="text" class="form-control1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Checkbox Addon</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control1">
+                                            <div class="input-group-addon"><input type="checkbox"></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">Checkbox on right</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Radio Addon</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><input type="radio"></div>
+                                            <input type="text" class="form-control1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Radio Addon</label>
+                                    <div class="col-md-8">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control1">
+                                            <div class="input-group-addon"><input type="radio"></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">Radio on right</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Input Processing</label>
+                                    <div class="col-md-8">
+                                        <div class="input-icon right spinner">
+                                            <i class="fa fa-fw fa-spin fa-spinner"></i>
+                                            <input id="email" class="form-control1" type="text" placeholder="Processing...">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p class="help-block">Processing right</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Static Paragraph</label>
+                                    <div class="col-md-8">
+                                        <p class="form-control1 m-n">email@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label class="col-md-2 control-label">Readonly</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control1" placeholder="Readonly" readonly="">
+                                    </div>
+                                </div>-->
+
+                            </form>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2 ">
+                                        <button class="btn-warning btn "  id="submit">保 存</button>
+                                        <button class="btn-default btn " type="reset">重 置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="dropdown1-tab">
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+
+    </script>
+
+    <script>
+        $('#submit').click(function() {
+            //alert('kk');
+            //var name = $('#name').val();
+            //var password = $('#password').val();
+            var myForm = $('#form_add');
+            $.ajax({
+                url: '__URL__/addCate',
+                type: 'post',//提交的方式
+                dataType:'json',
+                data: myForm.serialize(),
+                success: function(data) {
+                    //alert(9);
+                    alert(data);
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+        $('.excu').bind('click',function(){
+
+            var status = $(this).attr('name'); //方法名
+            //var ch = arguments[0] ? arguments[0] : {};
+            var ch={};   //方法接受的参数
+
+            if($(this).attr('value')){
+                ch[0] = $(this).attr('value');
+            }else {
+                //ch={};
+                var i=0;
+                $('input:checkbox:checked').each(function(){
+                    ch[i]=$(this).val(); //attr('id');
+                    i++;
+                });
+            }
+
+            //var jch = JSON.stringify(ch);
+
+            //alert(jch);
+            $.ajax({
+                type:"POST",
+                url:"__URL__/excu",
+                data:{'status':status,'val':ch},//{'0':ch},
+                success: function(data) {
+                    alert(JSON.stringify(data));
+                    location.reload();
+                    //alert($.parseJSON(data));
+                }
+            });
+        });
+    </script>
+</block>

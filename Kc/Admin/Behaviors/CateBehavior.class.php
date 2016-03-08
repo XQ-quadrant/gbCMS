@@ -20,9 +20,9 @@ class CateBehavior extends Behavior
     //protected $cateList  =  [];
     protected $model ;
 
-    public $ul_class= "nav";
-    public $ul_id= "side-menu";
-    public $css= ['class'=>"side-menu",'id'=>'side-menu'];
+    //public $ul_class= "nav";
+    //public $ul_id= "side-menu";
+    public $css= ['class'=>"nav",'id'=>'side-menu']; //<ul>的 css
 
     public function __construct()
     {
@@ -31,72 +31,21 @@ class CateBehavior extends Behavior
     }
 
     // 行为扩展的执行入口必须是run
+    /**
+     * @param mixed $params
+     */
     public function run(&$params)
     {
         echo $this->cateNav($this->catelist());
-        //header('charset:utf-8');
-        //return $this->catelist();
-       /* if (C('TEST_PARAM')) {
-            echo 'RUNTEST BEHAVIOR ' . $params;
-        }*/
+
     }
 
-    public function getAllCate(){
-        $cate = new CateModel();
-        //$cateArray = $cate->where(['status'=>1])->order('pre_cate desc')->select();
 
-       /* function sortCate($pid = 0)  //栏目排序，栏目的子栏目作为其数组子元素
-        {
-            global $cateArray;
-            foreach($cateArray as $k=>$v){
-                $preCate = $v['pre_cate'];
-                if($preCate!=0){
-                    $cate_id = $preCate;
-                    while($cateArray[$cate_id]['id']!=$preCate){
-                        $cate_id++;
-                    }
-                    $cateArray[$cate_id]['sub_cate']=$v;
-                }
-            }
-        }*/
 
-        function catelist($pre_cate =0){
-            $cate = new CateModel();
-            global $cateArray;
-            $cateArray = $cate->where(['$pre_cate'=>$pre_cate])->select();
-
-            foreach($cateArray as $v=>$k){
-
-                $k['next_cate'] = catelist($k['id']);
-            }
-            return $cateArray;
-        }
-        return catelist();
-        //sort($cateArray,0);
-        /*function PreCateSet(int $n){
-            $cateArray=[];
-            if($cateArray[$n]['pre_cate']!=0){
-                $cateArray[$cateArray[$n]['pre_cate']]['sub_cate']= $cateArray[$n];
-                return getPreCate($cateArray[$n]['pre_cate']);
-            }else{
-                return 0;
-
-            }
-        }*/
-        $this->ajaxreturn($cateArray);
-
-        /*foreach($cateArray as $k=>$v){
-            if(empty($v['sub_cate'])) $v['sub_cate'] = 0;
-
-            if($v['pre_cate'] != 0){
-
-                if($cate[$v['pre_cate']]['sub_cate']==0){
-
-                }
-                $cate[$v['pre_cate']]['sub_cate'] = $v;
-            }
-        }*/
-    }
+    /**获取栏目排序数组
+     * @param int $pre_cate
+     * @return mixed
+     */
     public function catelist($pre_cate =0){
 
         $cateArray = $this->model->query("select id,`name`,pre_cate,uri from cate WHERE pre_cate=$pre_cate AND status=1 ORDER BY `LEVEL`");//$cate->where(['$pre_cate'=>$pre_cate])->select();
@@ -108,22 +57,36 @@ class CateBehavior extends Behavior
         return $cateArray;
     }
 
-    public function cateNav($list){
-        $ul ="<ul class={$this->css['class']} id={$this->css['id']} >";
+    /**栏目数组进行html转换
+     * @param $list
+     * @return string
+     */
+    public function cateNav($list,$css){
+        if(empty($css)){
+            $css=$this->css;
+        }
+        $cssStr="";
+        foreach($css as $k=>$v){
+            $cssStr.=$k.'='."\"$v\" ";
+        }
+        $ul ="<ul $cssStr >\n";
         foreach($list as $v=>$k){
-            $ul.="<li><a href={$k['uri']}><i class=\"fa fa-laptop nav_icon\"></i>".$k['name'];
+            $ul.="<li>\n<a href=\"{$k['uri']}\">".$k['name'];
             if(!empty($k['next_cate'])){
-                if($this->css['class']=='nav'){
+                $ul.= "<span class=\"fa arrow\"></span></a>\n";
+                /*if($this->css['class']=='nav'){
                     $this->css['class'] = "nav nav-second-level";
                 }
                 if($this->css['id']=='side-menu'){
                     $this->css['id'] = "";
-                }
-                $ul.=$this->cateNav($k['next_cate']);
+                }*///class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;
+                $ul.=$this->cateNav($k['next_cate'],['class'=>"nav nav-second-level"]);
+            }else{
+                $ul.= "</a>\n";
             }
-            $ul.= "</a></li>";
+            $ul.= "</li>\n";
         }
-        $ul.= "</ul>";
+        $ul.= "</ul>\n";
         return $ul;
     }
 }

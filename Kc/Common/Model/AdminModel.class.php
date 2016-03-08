@@ -6,7 +6,7 @@
  * Time: 上午4:11
  */
 
-namespace Admin\Model;
+namespace Common\Model;
 use Think\Model;
 
 class AdminModel extends Model

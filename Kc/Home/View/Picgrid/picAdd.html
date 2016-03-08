@@ -1,0 +1,105 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+
+    <div class="xs">
+        <h3>照片墙</h3>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="horizontal-form">
+                <form id="main-form" class="form-horizontal form" enctype="multipart/form-data" action="__URL__/addAtc/cate/{$cate}/mid/{$mid}" method="post">
+                    <div class="form-group">
+                        <label for="focusedinput" class="col-sm-2 control-label">主题</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" name="title" class="form-control1" id="focusedinput" value={$title}>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="help-block">120字以内</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mediuminput" class="col-sm-2 control-label">作者</label>
+
+                        <div class="col-sm-4">
+                            <input type="text" name="author" class="form-control1 input-sm" id="mediuminput"
+                                   value={$author}>
+                        </div>
+                    </div>
+                    <div class="form-group mb-n">
+                        <label for="myEditor" class="col-sm-2 control-label label-input-lg">正文</label>
+
+                        <div class="col-sm-6">
+                            <textarea id="myEditor" name="content" style="width:100%;">{$content}</textarea>
+                            <!--<script id="myEditor" name="content" type="text/plain" style="width:100%;">
+
+                            </script>-->
+                        </div>
+                    </div>
+
+
+                    <div class="form-group mb-n">
+                        <label for="photo" class="col-sm-2 control-label label-input-lg">图片</label>
+
+                        <div class="col-sm-8">
+                            <input type="file" id="photo" name="photo" />
+                        </div>
+                    </div>
+                    <hr>
+<input type="submit" value="33">
+                </form>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <button id="submit" class="btn-success btn">提交</button>
+                            <button class="btn-default btn">预览</button>
+                            <!--<button class="btn-inverse btn">Reset</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</block>
+<block name="script">
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+<!--
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.parse.js"></script>
+-->
+    <!-- 实例化编辑器 -->
+    <!--<script type="text/javascript">
+        var ue = UE.getEditor('myEditor');
+    </script>-->
+    <script>
+        $('#submit').click(function() {
+            //alert('kk');
+            //var name = $('#name').val();
+            //var password = $('#password').val();
+            var myForm = $('#main-form');
+            var data = new FormData(myForm[0]);
+            $.ajax({
+                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
+                type: 'POST',
+                data: data,
+                dataType: 'JSON',
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(rdata) {
+                    alert(rdata.msg);
+                   if(rdata.status==1){
+                       window.location.href=document.referrer;
+                   }
+
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+    </script>
+</block>

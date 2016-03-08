@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cn" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>交大史韵</title>
+	<meta name="description" content="Effect inspiration for opening an image grid item." />
+	<meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/picgrid/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/picgrid/fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/picgrid/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/picgrid/css/style6.css" />
+	<script src="__PUBLIC__/picgrid/js/modernizr-custom.js"></script>
+</head>
+
+<body class="demo-6">
+	<div class="container">
+		<header class="codrops-header">
+			<div class="codrops-links">
+				<img src="__PUBLIC__/picgrid/img/xiaohui_t6.png" style="width: 50%">
+				<!--<a class="codrops-icon codrops-icon&#45;&#45;prev" href="http://tympanus.net/Tutorials/CSSProgress/" title="Previous Demo"><span>Previous Demo</span></a>
+				<a class="codrops-icon codrops-icon&#45;&#45;drop" href="http://tympanus.net/codrops/?p=25256" title="Back to the article"><span>Back to the Codrops article</span></a>-->
+			</div>
+			<h1 style="color: #256296;">交 大 史 韵 <span>120年交大校史展</span></h1>
+			<nav class="codrops-demos">
+				<a href="index.html">回望</a>
+				<a href="index2.html">今朝</a>
+				<a href="index3.html">未来</a>
+
+			</nav>
+		</header>
+		<div class="content">
+			<div class="grid">
+				<volist name="pic" id="vo">
+					<div class="grid__item" data-size="1280x961">
+						<a href="__PUBLIC__{$vo.savepath}thumb/{$vo.savename}" class="img-wrap"><img src="__PUBLIC__{$vo.savepath}{$vo.savename}" alt="img04" style="width: 240px;" />
+							<div class="description description--grid">
+								<div>
+									<p style="color:#B39B4F">{$vo.content}</p>
+
+								</div>
+							</div>
+							<p>{$vo.title}</p>
+						</a>
+					</div>
+				</volist>
+				<!--<div class="grid__item" data-size="1280x1131">
+					<a href="__PUBLIC__/picgrid/img/original/5.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/5.jpg" alt="img05" />
+						<div class="description description&#45;&#45;grid">Ephemeral<P>上海师范大学张老师与林嘉文在网上互动已有较长一段时间。他称，昨晚10点多，一位与林嘉文更为熟悉的宋史研究专家在微信朋友圈发文，让大家快打电话给林嘉文，说“林嘉文写了些东西发给他”。</P></div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x857">
+					<a href="__PUBLIC__/picgrid/img/original/6.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/6.jpg" alt="img06" />
+						<div class="description description&#45;&#45;grid">Surreptitious</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1280">
+					<a href="__PUBLIC__/picgrid/img/original/7.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/7.jpg" alt="img07" />
+						<div class="description description&#45;&#45;grid">Scintilla</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x853">
+					<a href="__PUBLIC__/picgrid/img/original/8.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/8.jpg" alt="img08" />
+						<div class="description description&#45;&#45;grid">Vestigial</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="865x1280">
+					<a href="__PUBLIC__/picgrid/img/original/9.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/9.jpg" alt="img09" />
+						<div class="description description&#45;&#45;grid">Zephyr</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1280">
+					<a href="__PUBLIC__/picgrid/img/original/10.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/10.jpg" alt="img10" />
+						<div class="description description&#45;&#45;grid">Desideratum</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x850">
+					<a href="__PUBLIC__/picgrid/img/original/11.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/11.jpg" alt="img11" />
+						<div class="description description&#45;&#45;grid">Quixotic</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x853">
+					<a href="__PUBLIC__/picgrid/img/original/1.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/1.jpg" alt="img01" />
+						<div class="description description&#45;&#45;grid">Assemblage</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="958x1280">
+					<a href="__PUBLIC__/picgrid/img/original/2.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/2.jpg" alt="img02" />
+						<div class="description description&#45;&#45;grid">Demesne</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="837x1280">
+					<a href="__PUBLIC__/picgrid/img/original/3.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/3.jpg" alt="img03" />
+						<div class="description description&#45;&#45;grid">Felicity</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x961">
+					<a href="__PUBLIC__/picgrid/img/original/4.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/4.jpg" alt="img04" />
+						<div class="description description&#45;&#45;grid">Propinquity</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1131">
+					<a href="__PUBLIC__/picgrid/img/original/5.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/5.jpg" alt="img05" />
+						<div class="description description&#45;&#45;grid">Ephemeral</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x857">
+					<a href="__PUBLIC__/picgrid/img/original/6.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/6.jpg" alt="img06" />
+						<div class="description description&#45;&#45;grid">Surreptitious</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1280">
+					<a href="__PUBLIC__/picgrid/img/original/7.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/7.jpg" alt="img07" />
+						<div class="description description&#45;&#45;grid">Scintilla</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x853">
+					<a href="__PUBLIC__/picgrid/img/original/8.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/8.jpg" alt="img08" />
+						<div class="description description&#45;&#45;grid">Vestigial</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="865x1280">
+					<a href="__PUBLIC__/picgrid/img/original/9.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/9.jpg" alt="img09" />
+						<div class="description description&#45;&#45;grid">Zephyr</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1280">
+					<a href="__PUBLIC__/picgrid/img/original/10.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/10.jpg" alt="img10" />
+						<div class="description description&#45;&#45;grid">Desideratum</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x850">
+					<a href="__PUBLIC__/picgrid/img/original/11.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/11.jpg" alt="img11" />
+						<div class="description description&#45;&#45;grid">Quixotic</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x853">
+					<a href="__PUBLIC__/picgrid/img/original/1.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/1.jpg" alt="img01" />
+						<div class="description description&#45;&#45;grid">Assemblage</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="958x1280">
+					<a href="__PUBLIC__/picgrid/img/original/2.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/2.jpg" alt="img02" />
+						<div class="description description&#45;&#45;grid">Demesne</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="837x1280">
+					<a href="__PUBLIC__/picgrid/img/original/3.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/3.jpg" alt="img03" />
+						<div class="description description&#45;&#45;grid">Felicity</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x961">
+					<a href="__PUBLIC__/picgrid/img/original/4.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/4.jpg" alt="img04" />
+						<div class="description description&#45;&#45;grid">Propinquity</div>
+					</a>
+				</div>
+				<div class="grid__item" data-size="1280x1131">
+					<a href="__PUBLIC__/picgrid/img/original/5.jpg" class="img-wrap"><img src="__PUBLIC__/picgrid/img/thumbs/5.jpg" alt="img05" />
+						<div class="description description&#45;&#45;grid">Ephemeral</div>
+					</a>
+				</div>-->
+			</div>
+			<!-- /grid -->
+			<div class="preview">
+				<button class="action action--close"><i class="fa fa-times"></i><span class="text-hidden">Close</span></button>
+				<div class="description description--preview"></div>
+			</div>
+			<!-- /preview -->
+		</div>
+		<!-- /content -->
+		<!-- Related demos -->
+		<section class="content content--related">
+
+
+			<!--<p>作为中国近代建校最早的国立大学之一，西南交通大学从山海关出发，三世纪风雕雨塑，五万里逶迤磅礴，十八次辗转迁徙，开中国土木工程、交通工程、矿冶工程高等教育之先河，以“东方康奈尔”之名蜚声中外。作为国家首批“211工程”、“特色985工程”重点建设、首批进入“2011计划”并设有研究生院的教育部直属全国重点大学，西南交通大学守交通之本、行大学之道，自强不息，矢志报国。</p>
+			<p>“灌输文化尚交通”的西南交通大学，造就了以茅以升、竺可桢、林同炎、黄万里、陈能宽、姚桐斌等为代表的学界翘楚，培养了以57位海内外院士为代表的30余万各界英才。承踔厉风发之基，传“竢实扬华”之魂，一代代交大人以交通天下为己任，为国家富强和民族振兴焚膏继晷，贡献卓著，执中国轨道交通之牛耳，展高铁走向世界之自信。</p>
+<p>相约双甲子，共圆交大梦。校庆被赋予的人文之美含弘光大，学术之光辉映盛世；校庆所承载的是课堂灯火的遥忆、阔别归来的足音、书香校园的情怀。</p>
+<p>站在新的历史起点，“大师云集、英才辈出、贡献卓著、事业常青”的交大梦烛照未来，西南交通大学正行进在建设交通特色鲜明的综合性研究型一流大学的壮丽征途。</p>
+		<p>群贤毕至襄盛举，逸兴云飞展宏图。特此公告，敬祈周知。</p>-->
+				<a class="media-item" href="http://120.swjtu.edu.cn/">
+				<img class="media-item__img" src="__PUBLIC__/picgrid/img/banner.jpg" style="opacity:1">
+				<h3 class="media-item__title">竢实扬华 自强不息</h3>
+			</a>
+
+		</section>
+	</div>
+	<!-- /container -->
+	<script src="__PUBLIC__/picgrid/js/imagesloaded.pkgd.min.js"></script>
+	<script src="__PUBLIC__/picgrid/js/masonry.pkgd.min.js"></script>
+	<script src="__PUBLIC__/picgrid/js/classie.js"></script>
+	<script src="__PUBLIC__/picgrid/js/main.js"></script>
+	<script>
+		(function() {
+			var support = { transitions: Modernizr.csstransitions },
+				// transition end event name
+				transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
+				transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+				onEndTransition = function( el, callback ) {
+					var onEndCallbackFn = function( ev ) {
+						if( support.transitions ) {
+							if( ev.target != this ) return;
+							this.removeEventListener( transEndEventName, onEndCallbackFn );
+						}
+						if( callback && typeof callback === 'function' ) { callback.call(this); }
+					};
+					if( support.transitions ) {
+						el.addEventListener( transEndEventName, onEndCallbackFn );
+					}
+					else {
+						onEndCallbackFn();
+					}
+				};
+
+			new GridFx(document.querySelector('.grid'), {
+				imgPosition : {
+					x : 1,
+					y : -0.75
+				},
+				pagemargin : 50,
+				onOpenItem : function(instance, item) {
+					var win = {width: window.innerWidth, height: window.innerHeight};
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 150);
+								el.style.WebkitTransition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+								el.style.transition = 'opacity .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .6s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+							
+								el.style.WebkitTransform = 'translate3d(-' + win.width + 'px,0,0)';
+								el.style.transform = 'translate3d(-' + win.width + 'px,0,0)';
+								el.style.opacity = 0;
+						}
+					});
+				},
+				onCloseItem : function(instance, item) {
+					instance.items.forEach(function(el) {
+						if(item != el) {
+							var delay = Math.floor(Math.random() * 150);
+							el.style.WebkitTransition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), -webkit-transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+							el.style.transition = 'opacity .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1), transform .3s ' + delay + 'ms cubic-bezier(.5,1,.2,1)';
+
+
+							el.style.WebkitTransform = 'translate3d(0,0,0)';
+							el.style.transform = 'translate3d(0,0,0)';
+							el.style.opacity = 1;
+
+							onEndTransition(el, function() {
+								el.style.transition = 'none';
+								el.style.WebkitTransform = 'none';
+							});
+						}
+					});
+				}
+			});
+		})();
+	</script>
+</body>
+
+</html>

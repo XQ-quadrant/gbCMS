@@ -580,7 +580,7 @@ function vendor($class, $baseUrl = '', $ext='.php') {
 function D($name='',$layer='') {
     if(empty($name)) return new Think\Model;
     static $_model  =   array();
-    $layer          =   $layer? : C('DEFAULT_M_LAYER');
+    $layer          =   $layer?  : C('DEFAULT_M_LAYER');
     if(isset($_model[$name.$layer]))
         return $_model[$name.$layer];
     $class          =   parse_res_name($name,$layer);
@@ -591,6 +591,7 @@ function D($name='',$layer='') {
         if(!C('APP_USE_NAMESPACE')){
             import('Common/'.$layer.'/'.$class);
         }else{
+            $name =ucwords($name);
             $class      =   '\\Common\\'.$layer.'\\'.$name.$layer;
         }
         $model      =   class_exists($class)? new $class($name) : new Think\Model($name);

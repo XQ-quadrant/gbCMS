@@ -56,7 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </form>
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
+                <?php tag('cate'); ?>
+                <!--<ul class="nav" id="side-menu">
                     <li>
                         <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
                     </li>
@@ -67,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="grids.html">Grid System</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-indent nav_icon"></i>Menu Levels<span class="fa arrow"></span></a>
@@ -79,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="typography.html">Typography</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-envelope nav_icon"></i>Mailbox<span class="fa arrow"></span></a>
@@ -91,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="compose.html">Compose email</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="widgets.html"><i class="fa fa-flask nav_icon"></i>Widgets</a>
@@ -106,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="validation.html">Validation</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-table nav_icon"></i>Tables<span class="fa arrow"></span></a>
@@ -115,7 +116,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="basic_tables.html">Basic Tables</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-sitemap fa-fw nav_icon"></i>Css<span class="fa arrow"></span></a>
@@ -127,9 +128,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <a href="login.html">Login</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
+                        &lt;!&ndash; /.nav-second-level &ndash;&gt;
                     </li>
-                </ul>
+                </ul>-->
             </div>
             <!-- /.sidebar-collapse -->
         </div>
@@ -145,15 +146,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <div class="tab-content">
             <div class="tab-pane active" id="horizontal-form">
-                <form class="form-horizontal form" >
+                <form class="form-horizontal form">
                     <div class="form-group">
                         <label for="focusedinput" class="col-sm-2 control-label">标题</label>
 
                         <div class="col-sm-8">
-                            <input type="text" name="title" class="form-control1" id="focusedinput" placeholder="Default Input">
+                            <input type="text" name="title" class="form-control1" id="focusedinput" value=<?php echo ($title); ?>>
                         </div>
                         <div class="col-sm-2">
-                            <p class="help-block">Your help text!</p>
+                            <p class="help-block">120字以内</p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -161,122 +162,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         <div class="col-sm-4">
                             <input type="text" name="author" class="form-control1 input-sm" id="mediuminput"
-                                   placeholder="Medium Input">
+                                   value=<?php echo ($author); ?>>
                         </div>
                     </div>
-                    <!--<div class="form-group">
-                        <label for="focusedinput" class="col-sm-2 control-label">标题</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1" id="focusedinput" placeholder="Default Input">
-                        </div>
-                        <div class="col-sm-2">
-                            <p class="help-block">Your help text!</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="disabledinput" class="col-sm-2 control-label">Disabled Input</label>
-                        <div class="col-sm-8">
-                            <input disabled="" type="text" class="form-control1" id="disabledinput" placeholder="Disabled Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-                        <div class="col-sm-8">
-                            <input type="password" class="form-control1" id="inputPassword" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="checkbox" class="col-sm-2 control-label">Checkbox</label>
-                        <div class="col-sm-8">
-                            <div class="checkbox-inline1"><label><input type="checkbox"> Unchecked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" checked=""> Checked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                            <div class="checkbox-inline1"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="checkbox" class="col-sm-2 control-label">Checkbox Inline</label>
-                        <div class="col-sm-8">
-                            <div class="checkbox-inline"><label><input type="checkbox"> Unchecked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" checked=""> Checked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" disabled=""> Disabled Unchecked</label></div>
-                            <div class="checkbox-inline"><label><input type="checkbox" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="selector1" class="col-sm-2 control-label">Dropdown Select</label>
-                        <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
-                            <option>Lorem ipsum dolor sit amet.</option>
-                            <option>Dolore, ab unde modi est!</option>
-                            <option>Illum, fuga minus sit eaque.</option>
-                            <option>Consequatur ducimus maiores voluptatum minima.</option>
-                        </select></div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Multiple Select</label>
-                        <div class="col-sm-8">
-                            <select multiple="" class="form-control1">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                                <option>Option 4</option>
-                                <option>Option 5</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="txtarea1" class="col-sm-2 control-label">Textarea</label>
-                        <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="radio" class="col-sm-2 control-label">Radio</label>
-                        <div class="col-sm-8">
-                            <div class="radio block"><label><input type="radio"> Unchecked</label></div>
-                            <div class="radio block"><label><input type="radio" checked=""> Checked</label></div>
-                            <div class="radio block"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                            <div class="radio block"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="radio" class="col-sm-2 control-label">Radio Inline</label>
-                        <div class="col-sm-8">
-                            <div class="radio-inline"><label><input type="radio"> Unchecked</label></div>
-                            <div class="radio-inline"><label><input type="radio" checked=""> Checked</label></div>
-                            <div class="radio-inline"><label><input type="radio" disabled=""> Disabled Unchecked</label></div>
-                            <div class="radio-inline"><label><input type="radio" disabled="" checked=""> Disabled Checked</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="smallinput" class="col-sm-2 control-label label-input-sm">Small Input</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control1 input-sm" id="smallinput" placeholder="Small Input">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="mediuminput" class="col-sm-2 control-label">Medium Input</label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control1 input-sm" id="mediuminput" placeholder="Medium Input">
-                        </div>
-                    </div>-->
-                    <!--
-                                        <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
-                    -->
+
 
                     <div class="form-group mb-n">
-                        <label for="container" class="col-sm-2 control-label label-input-lg">正文</label>
+                        <label for="myEditor" class="col-sm-2 control-label label-input-lg">正文</label>
 
                         <div class="col-sm-8">
-                            <script id="container" name="content" type="text/plain" style="width:100%;">
-                                这里写你的初始化内容 **I`m bad guy!**
+                            <textarea id="myEditor" name="content"><?php echo ($content); ?></textarea>
+                            <!--<script id="container" name="content" type="text/plain" style="width:100%;">
 
-                            </script>
+
+                            </script>-->
                         </div>
                     </div>
                     <hr>
+                    <input type="hidden" name="id" value=<?php echo ($id); ?>>
                 </form>
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
+
                             <button id="submit" class="btn-success btn">提交</button>
                             <button class="btn-default btn">预览</button>
                             <!--<button class="btn-inverse btn">Reset</button>-->
@@ -285,76 +193,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
         </div>
-        <!--<div class="bs-example" data-example-id="form-validation-states">
-            <form>
-                <div class="form-group has-success">
-                    <label class="control-label" for="inputSuccess1">Input with success</label>
-                    <input type="text" class="form-control1" id="inputSuccess1">
-                </div>
-                <div class="form-group has-warning">
-                    <label class="control-label" for="inputWarning1">Input with warning</label>
-                    <input type="text" class="form-control1" id="inputWarning1">
-                </div>
-                <div class="form-group has-error">
-                    <label class="control-label" for="inputError1">Input with error</label>
-                    <input type="text" class="form-control1" id="inputError1">
-                </div>
-            </form>
-        </div>-->
-        <!--<hr>
-        <div class="bs-example" data-example-id="form-validation-states-with-icons">
-            <form>
-                &lt;!&ndash;<div class="form-group has-success has-feedback">
-                    <label class="control-label" for="inputSuccess2">Input with success</label>
-                    <input type="text" class="form-control1" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                </div>
-                <div class="form-group has-warning has-feedback">
-                    <label class="control-label" for="inputWarning2">Input with warning</label>
-                    <input type="text" class="form-control1" id="inputWarning2" aria-describedby="inputWarning2Status">
-                    <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputWarning2Status" class="sr-only">(warning)</span>
-                </div>
-                <div class="form-group has-error has-feedback">
-                    <label class="control-label" for="inputError2">Input with error</label>
-                    <input type="text" class="form-control1" id="inputError2" aria-describedby="inputError2Status">
-                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputError2Status" class="sr-only">(error)</span>
-                </div>
-                <div class="form-group has-success has-feedback">
-                    <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">@</span>
-                        <input type="text" class="form-control1" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                    </div>
-                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" id="exampleInputFile">
-                    <p class="help-block">Example block-level help text here.</p>
-                </div>&ndash;&gt;
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-success btn">提交</button>
-                            <button class="btn-default btn">预览</button>
-                            &lt;!&ndash;<button class="btn-inverse btn">Reset</button>&ndash;&gt;
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>-->
+
     </div>
 
 
 
 
-            <div class="copy_layout">
-                <p>Copyright © 2015 Modern. All Rights Reserved | 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
-            </div>
+
+        </div>
+        <div class="copy_layout">
+            <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
         </div>
     </div>
 
@@ -368,9 +216,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript" src="/kechuang4/Public/editor/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
     <script type="text/javascript" src="/kechuang4/Public/editor/ueditor.all.js"></script>
+    <script type="text/javascript" src="/kechuang4/Public/editor/ueditor.parse.js"></script>
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
-        var ue = UE.getEditor('container');
+        //var ue = UE.getEditor('container');
+        UE.getEditor("myEditor",{serverUrl: '/kechuang4/Public/editor/php/controller.php'});
+        /*uParse('.ccc', {
+            rootPath: '/kechuang4/Public/editor/'
+        })*/
+
+
+        //ue.getEditor('myEditor', {serverUrl: '/server/ueditor/controller.php'})
+
+
     </script>
     <script>
         $('#submit').click(function() {
@@ -379,13 +237,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             //var password = $('#password').val();
             var myForm = $('form');
             $.ajax({
-                url: '/kechuang4/index.php/Admin/Article/addAtc',
+                url: '/kechuang4/index.php/Admin/Article/editor/id/<?php echo ($id); ?>',
                 type: 'post',//提交的方式
                 dataType:'json',
                 data: myForm.serialize(),
                 success: function(data) {
-                    //alert(9);
-                    alert(data);
+                    alert(data.msg);
+                    if(data.status==1){
+                        window.location.href=document.referrer;
+                    }
+
                     //这是成功返回的数据，写自己的逻辑
                 }
             });

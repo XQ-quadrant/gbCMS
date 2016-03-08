@@ -9,11 +9,20 @@
 namespace Admin\Model;
 
 use Think\Model;
-
+use Think\Model\RelationModel;
 class DocumentModel extends Model implements Atc
 {
     //protected $tableName = '';
-    public $id;
+    /*protected $_link = array(
+        'cate_atc'=>[
+            'mapping_type'      => self::HAS_ONE,
+            'class_name'        => 'cate_atc',
+            'foreign_key' => 'index_id',
+            //'mapping_fields '
+
+        ]
+    );*/
+    public $mid=1; //模型id
 
     public function editor(){
 
@@ -22,7 +31,7 @@ class DocumentModel extends Model implements Atc
     public function addAtc($cate){  //添加文档
 
         $title = $this->title ;
-        $atc_id =$this->add();
+        $atc_id = $this->add();
         if($atc_id==false){
             $this->error='添加失败';
             return false;
@@ -32,13 +41,13 @@ class DocumentModel extends Model implements Atc
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;
 
-        $cate_atc->createtime = date('y-m-d-h-m-s') ;
-        $cate_atc->model_id = M('model')->field('id')->where(['name'=>$this->trueTableName])->find();
+        $cate_atc->createtime = date('y-m-d H:i:s') ;
+        $cate_atc->model_id = $this->mid;
         $cate_atc->status=1;
         if($cate_atc->add()){
             return true;
         }else{
-            $this->delete();
+            $this->delete($atc_id);
             $this->error='添加失败';
             return false;
         }
@@ -46,20 +55,20 @@ class DocumentModel extends Model implements Atc
 
     public function deleteAtc($cate=0,$id=0){
         $this->delete();
-        $article =
+        //$article =
 
     }
 
     public function detail($id){
         //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
-        $atcInfo = $this->query("select * from cate_atc WHERE id=$id");
+        $atcInfo = $this->query("select * from cate_atc WHERE id={$id}");
         //var_dump($atcInfo);
 
         if($atcInfo[0]['status']==1){
             $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
-            $atcInfo+=$atcContent;
-            return $atcInfo;
+            $atcInfo[0]+=$atcContent;
+            return $atcInfo[0];
         }else{
             return 'h';//$this->getDbError();
             //返回状态信息

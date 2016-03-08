@@ -1,15 +1,26 @@
 <?php
 namespace Admin\Controller;
 use Admin\Model\AdminModel;
+use Admin\Model\Uindex;
 use Think\Controller;
 use Admin\Model\CateModel;
 
 class IndexController extends Controller {
 
     protected $user ;
-
+    private $power = 2;
 
     public function _initialize(){
+        $logined = session('email');
+        $status = session('status');
+
+        if(!session('?email')&& !session('?status')){
+            $this->redirect('/Admin/Enter/login');
+        }
+        elseif(session('power')<$this->power){
+            $this->error('权限不足，无法访问');
+//echo session('power');
+        }
 
     }
 
@@ -19,58 +30,62 @@ class IndexController extends Controller {
         $this->display();
     }
 
-    public function login(){
+    /**统一登录入口
+     * @param $uid
+     */
+/*    public function login($mid){
+
+        $modelInfo = get_model_info($mid);  //获取模型信息
+        $uindex = new Uindex();
         if(IS_POST){
-            //$data = I("post.");
-            $user = new AdminModel();
-            //return 'hhh';
-            //$this->ajaxReturn(['name'=>'34'],'JSON');
-            //$this->redirect('index');
-            $rows = $user->login();
+
+            $reInfo = $uindex->login($mid);
+            $this->ajaxReturn($reInfo);
             //$this->ajaxReturn(['name'=>$rows['id']],'JSON');
-            if ($rows["status"]==1){
-                //登录成功
-                session("id",$rows["id"]);
-
-                session("name",I('post.name'));
-                session("status",$rows['status']);
-                cookie("name",I('post.name'));
-                $this->ajaxReturn($rows);
-
-            }elseif ($rows["status"]==2){
-                $this->ajaxReturn(['msg'=>"系统已经向{$rows['user_email']}发送了验证信，请验证。"]);
-            }elseif ($rows["status"]==3){
-                $this->ajaxReturn(['msg'=>"你的用户资格管理员正在审核中"]);
-            }else{
-
-                $this->ajaxReturn(['msg'=>"登录失败，请检查用户名或邮箱"],'JSON');
-            }
 
         }
-        $this->display();
-    }
+        $this->assign('mid',$modelInfo['id']);
+        $this->display($modelInfo['view_other']);
+    }*/
 
-    public function logout(){
-        session('id',null);
-        session("name",null);
-        session("status",null);
-        cookie("username",null);
-        $this->redirect('login');
-    }
+    public function register($mid){
+        $modelInfo = get_model_info($mid);
 
-    public function register(){
         if(IS_POST){
             //$data =I('post.');
-            $adminer= new AdminModel();
-            $adminer->create();
-            $adminer->status=2;
+            $user = D($modelInfo['identity']);    //建立模型对象
+            if(!$user->validate($modelInfo['rules'])->create()){
+                $this->ajaxreturn($user->getError());   //反馈验证错误信息
+            }else {
+                $reInfo = $user->register();  //模型实际操作方法
+                $this->ajaxReturn($reInfo);
+            }
+            /*$reInfo = $user->login();
+
+
+            $this->ajaxReturn($reInfo);
+
+
+
+            //$adminer= new AdminModel();
+            //$adminer->create();
+            //$adminer->status=2;
             $AddInfo = $adminer->register();
             //var_dump($data);
             return $AddInfo;
-            //$this->display();
+            //$this->display();*/
         }else{
-            $this->display();
+            $this->assign('mid',$modelInfo['id']);
+            $this->display($modelInfo['view_add']);
         }
 
     }
+
+//    public function logout(){
+//        session(null);
+//        /*session("name",null);
+//        session("status",null);*/
+//        cookie(null);
+//        $this->redirect('login');
+//    }
 }
