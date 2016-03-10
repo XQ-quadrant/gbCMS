@@ -109,7 +109,7 @@ class StudentModel extends Model implements User
             return false;
         }
         return $info;
-        //var_dump($info);
+        //sssvar_dump($info);
 
     }
 
