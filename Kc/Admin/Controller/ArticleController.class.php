@@ -29,8 +29,8 @@ class ArticleController extends Controller
         }
 
 
-        if(!session('?email') || !session('?count')){  //权限验证
-            $this->redirect('/Admin/Enter/login');
+        if(!session('?email') && !session('?count')){  //权限验证
+            $this->redirect("/Admin/Enter/login/mid/{$_GET['mid']}");
         }
         elseif(session('power')<$this->power){
             $this->error('权限不足，无法访问');

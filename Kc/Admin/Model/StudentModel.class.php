@@ -102,13 +102,16 @@ class StudentModel extends Model implements User
                 default:break;
             }
         }
-        $id = $this->add($info);
-        $info['uid'] = $id;
-        $info['power'] = $this->power;
+
         if(empty($info['name'])){
             return false;
+        }else{
+            $id = $this->add($info);
+            $info['uid'] = $id;
+            $info['power'] = $this->power;
+            return $info;
         }
-        return $info;
+
         //sssxxvar_dump($info);
 
     }

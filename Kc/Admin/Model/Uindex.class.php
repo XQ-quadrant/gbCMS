@@ -50,7 +50,7 @@ class Uindex extends Model
             case 1:
                 session(['expire'=>3600]);
                 session("id" , $loginInfo["id"]);
-                session("id" , $mid);
+                session("mid" , $mid);
                 session("email" , $loginInfo['email']);
                 session("status" , $loginInfo['status']);
                 session("power",$loginInfo['power']);

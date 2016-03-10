@@ -31,6 +31,7 @@ class TeamModel extends Model implements Atc
 
         $title = $this->title;
         $this->uid = session('id');
+
         $atc_id =$this->add();
         if($atc_id==false){
             $this->error='添加失败';
@@ -64,14 +65,16 @@ class TeamModel extends Model implements Atc
 
     public function detail($id){
         //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
-        $atcInfo = $this->query("select * from cate_atc WHERE id={$id}");
+        $teamIndex = $this->query("select * from cate_atc WHERE id={$id}");
         //var_dump($atcInfo);
 
-        if($atcInfo[0]['status']==1){  //状态确认
-            $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
+        if($teamIndex[0]['status']==1){  //状态确认
+            $teamContent = $this->where('id=%d',$teamIndex[0]['atc_id'])->find();
+            $userInfo = get_user_info($teamContent['uid'],['name','signature','pic']);
+            $teamContent+= $userInfo;
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
-            $atcInfo[0]+=$atcContent;
-            return $atcInfo[0];
+            $teamIndex[0]+=$teamContent;
+            return $teamIndex[0];
         }else{
             return 'h';//$this->getDbError();
             //返回状态信息
