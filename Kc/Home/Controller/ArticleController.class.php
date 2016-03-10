@@ -31,22 +31,44 @@ class ArticleController extends Controller
         $show       = $Page->show();// 分页显示输出
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
-        $model = new Model();
-        foreach($list as $k=>$v){
+
+        $cateInfo = get_cate($cate);  //获取栏目信息
+//var_dump($cateInfo);
+        $reList =[];
+        //$yList = &$list;
+        foreach($cateInfo['model'] as $k=>$v){
+            //var_dump($v['model_id']);
+            //echo $v['id'];
+            $modelInfo = get_model_info($v['id']);
+
+            $model = D($modelInfo['identity']);            //建立内容模型对象
+            $reList = array_merge($reList,$model->listView($list,$modelInfo));
+        }
+        echo count($list);
+
+   /*     foreach($list as $k=>$v){
             $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
-            $raw = $model->query("select author from {$modelInfo['identity']} where id = {$v['atc_id']}");
-            $list[$k]['author'] = $raw[0]['author'];
+            $model = M($modelInfo['identity']);
+            $model->listView($modelInfo);
+
+            $listExtra = implode(',',$modelInfo['list_extra']['index']); //列表附加项，如：user
+
+            $raw = $model->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
+
+            //$list[$k]['author'] = $raw[0]['author'];
+            $list[$k]= array_merge($list[$k],$raw);
+
             $d = strtotime($v['createtime']);
             $list[$k]['createtime'] = '<h6>'.date("m/d",$d).'</h6>'; //编辑时间格式
-        }
-
+        }*/
 
         $this->assign('page',$show);
-        $this->assign('list',$list);
+        $this->assign('list',$reList);
         $this->assign('model_list',get_cate_Model($cate));
         $this->assign("cate",$cate);
 
-        $this->display('News/index');
+
+        $this->display($cateInfo['view_index']);
     }
 
     /**列表展示

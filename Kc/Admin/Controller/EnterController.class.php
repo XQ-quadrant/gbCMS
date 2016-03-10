@@ -26,17 +26,15 @@ class EnterController extends Controller {
         $modelInfo = get_model_info($mid);  //获取模型信息
         $uindex = new Uindex();
         if(IS_POST){
-
             $reInfo = $uindex->login($mid);
             $this->ajaxReturn($reInfo);
             //$this->ajaxReturn(['name'=>$rows['id']],'JSON');
-
         }
         $this->assign('mid',$modelInfo['id']);
         $this->display($modelInfo['view_other']);
     }
 
-    public function register($mid){
+    public function stuRegister($mid = 6){
         $modelInfo = get_model_info($mid);
 
         if(IS_POST){
@@ -52,9 +50,10 @@ class EnterController extends Controller {
             //$this->display();*/
         }else{
             $this->assign('mid',$modelInfo['id']);
-            $this->display($modelInfo['view_add']);
+            $this->display();
         }
     }
+
 
     public function logout(){
         $uindex = new Uindex();

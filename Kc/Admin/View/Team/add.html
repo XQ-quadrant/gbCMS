@@ -21,18 +21,17 @@
                                 团队组建 项目发起 队友招募
                             </div>
                             <hr>-->
-
-                            <form class="form-horizontal form" >
+                            <form class="form-horizontal form" id="form-submit" >
                                 <label>发起标题 : </label>
                                 <input name="title" type="text" class="form-control1 control3" placeholder="30字以内" maxlength="30">
                                 <label>目标比赛 :  </label>
                                     <div class="input-group">
                                         <div class="input-group-btn">
-                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    选 择  <span class="caret"></span></button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 40px">    选 择  <span class="caret"></span></button>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#">数学建模新秀杯</a></li>
-                                                <li><a href="#">全国机器人大赛</a></li>
-                                                <li><a href="#">ACM国际编程大赛</a></li>
+                                                <li><a href="#">全国大学生机器人大赛</a></li>
+                                                <li><a href="#">ACM国际大学生编程大赛</a></li>
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="#">全国大学生广告大赛</a></li>
                                                 <li><a href="#">全国大学生电子商务大赛</a></li>
@@ -43,22 +42,21 @@
 
                                <!-- <input name="race" type="text" class="form-control1 control3">-->
                                 <label>发起详情 : </label>
-                                <textarea name="content" rows="6" class="form-control1 control2"></textarea>
+                                <textarea name="content" rows="9" class="form-control1 control2"></textarea>
+                                <label>联系方式 : </label>
+                                <input name="connect" type="text" class="form-control1 control3" placeholder="qq or tel or wechat" maxlength="50">
                                 <hr>
                             </form>
                             <!--
                                                                 <a href="#" class="btn btn-success btn-warng1"><span class="glyphicon glyphicon-tags tag_01"></span> Save To Drafts </a>
                             -->
-                            <a href="#" class="btn btn-warning btn-warng1"><span class="glyphicon glyphicon-envelope tag_02"></span>  发  布  </a>&nbsp;
+                            <a id="submit" class="btn btn-warning btn-warng1"><span class="glyphicon glyphicon-envelope tag_02"></span>  发  布  </a>&nbsp;
 
                         </div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane active" id="horizontal-form">
-
-
-
                 <div class="panel-footer">
                     <div class="row">
                         <!--<div class="col-sm-8 col-sm-offset-2">
@@ -68,7 +66,6 @@
                         </div>-->
                     </div>
                 </div>
-
             </div>
         </div>
         <!--<div class="bs-example" data-example-id="form-validation-states">
@@ -138,42 +135,36 @@
 
 </block>
 <block name="script">
-    <!-- 配置文件 -->
+<!--    &lt;!&ndash; 配置文件 &ndash;&gt;
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
+    &lt;!&ndash; 编辑器源码文件 &ndash;&gt;
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
-<!--
+&lt;!&ndash;
     <script type="text/javascript" src="__PUBLIC__/editor/ueditor.parse.js"></script>
--->
-    <!-- 实例化编辑器 -->
+&ndash;&gt;
+    &lt;!&ndash; 实例化编辑器 &ndash;&gt;
     <script type="text/javascript">
         var ue = UE.getEditor('myEditor');
-        //UE.getEditor("myEditor",{serverUrl: '__PUBLIC__/editor/php/controller.php'});
-        /*uParse('.ccc', {
-            rootPath: '__PUBLIC__/editor/'
-        })*/
-
-
-        //ue.getEditor('myEditor', {serverUrl: '/server/ueditor/controller.php'})
-
-
-    </script>
+    </script>-->
     <script>
         $('#submit').click(function() {
-            //alert('kk');
-            //var name = $('#name').val();
-            //var password = $('#password').val();
-            var myForm = $('form');
+
+            var myForm = $('#form-submit');
+            var data = new FormData(myForm[0]);
+            //alert(data[1]);
             $.ajax({
-                url: '__URL__/addAtc',
+                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
                 type: 'post',//提交的方式
                 dataType:'json',
-                data: myForm.serialize(),
-                success: function(data) {
-                    alert(data.msg);
-                   if(data.status==1){
-                       window.location.href=document.referrer;
-                   }
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(rdata) {
+                    alert(rdata.msg);
+                    if(rdata.status==1){
+                        window.location.href = '__MODULE__';//document.referrer;
+                    }
 
                     //这是成功返回的数据，写自己的逻辑
                 }

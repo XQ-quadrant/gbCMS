@@ -10,9 +10,9 @@ namespace Admin\Model;
 
 interface User
 {
-    public function login();
+    public function login($map);
 
-    public function register();
+    public function register($map);
 
     public function logout();
 

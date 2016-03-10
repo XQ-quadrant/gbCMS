@@ -21,21 +21,21 @@ function get_cate($cateName){
     $modelArray = json_decode($row['model']);
     $arr = ['id'=>['IN',$modelArray]];
     $model = D('Model');
-    $modelName = $model->field('name')->where($arr)->select();  //查询模型名称列表
+    $modelName = $model->field(['id','name'])->where($arr)->select();  //查询模型名称列表
     $row['model'] =$modelName;
     return $row;
     //return ['name'=>'Article'];
 }
 
 /**获取栏目对应模型的名称
- * @param int $cate 栏目名称
+ * @param int $cate 栏目名称$status
  * @return mixed 模型名称数组
  */
-function get_cate_Model($cate=1){
+function get_cate_Model($cate=1,$status=1){
     $cateModel= new \Admin\Model\CateModel();   //带增加根据唯一标识获取信息
     $row = $cateModel->field('model')->where(['id'=>$cate])->find();
     $modelArray = json_decode($row['model']);
-    $arr = ['id'=>['IN',$modelArray]];
+    $arr = ['id'=>['IN',$modelArray],'status'=>$status];
     //$modelArray['_logic'] = "OR";
     $model = D('Model');
     $modelInfo =$model->field('id,name,identity')->where($arr)->select();
@@ -50,7 +50,9 @@ function get_cate_Model($cate=1){
 function get_model_info($mid){  //带增加根据唯一标识获取信息
     $model = D('model');
     //$model->id=$mid;
-    return $model->find($mid);
+    $modelInfo =$model->find($mid);
+    $modelInfo['list_extra'] = json_decode($modelInfo['list_extra'],true);
+    return $modelInfo;
 }
 
 /**获取所有文档模型的id,name
@@ -67,3 +69,19 @@ function cate_atc_get($id){
     $row = $model->query("select id,title,model_id,cate,atc_id,status,createtime from cate_atc WHERE id = {$id}");
     return $row[0];
 }
+function jiaowu_login(){
+
+}
+
+function jiaowu_register(){
+
+}
+
+function get_cate_info(){
+    $model = new \Think\Model();
+    $row = $model->query("select id,title,model_id,cate,atc_id,status,createtime from cate_atc WHERE id = {$id}");
+    return $row[0];
+}
+
+
+

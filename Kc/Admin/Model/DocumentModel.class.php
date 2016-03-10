@@ -24,8 +24,8 @@ class DocumentModel extends Model implements Atc
     );*/
     public $mid=1; //模型id
 
-    public function editor(){
-
+    public function editor($id){
+        return $this->field(['content','author'])->find($id);
     }
 
     public function addAtc($cate){  //添加文档

@@ -25,7 +25,8 @@ class NewsModel extends Model implements Atc
     public $id;
     protected $mid = 2;
 
-    public function editor(){
+    public function editor($id){
+        return $this->field(['content','author'])->find($id);
 
     }
 

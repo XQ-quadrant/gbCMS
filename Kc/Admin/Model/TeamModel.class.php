@@ -15,15 +15,22 @@ class TeamModel extends Model implements Atc
 {
     protected $tableName='team';
 
-    protected $mid = 2;
+    protected $mid = 5;
 
-    public function editor(){
+    /**获取对应编辑内容
+     * @param $id 内容id
+     * @return mixed
+     */
+    public function editor($id){  //获取编辑内容
+
+        return $this->field(['content','race','limit_member','already_member'])->find($id);
 
     }
 
     public function addAtc($cate){  //添加文档
 
         $title = $this->title;
+        $this->uid = session('id');
         $atc_id =$this->add();
         if($atc_id==false){
             $this->error='添加失败';
@@ -31,6 +38,7 @@ class TeamModel extends Model implements Atc
         }
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
+        //$cate_atc->author = session('id');
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;
 
@@ -59,7 +67,7 @@ class TeamModel extends Model implements Atc
         $atcInfo = $this->query("select * from cate_atc WHERE id={$id}");
         //var_dump($atcInfo);
 
-        if($atcInfo[0]['status']==1){
+        if($atcInfo[0]['status']==1){  //状态确认
             $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
             $atcInfo[0]+=$atcContent;
@@ -70,4 +78,23 @@ class TeamModel extends Model implements Atc
         }
 
     }
+
+    /**列表内容获取
+     * @param $list
+     */
+    /*public function listView(&$list,$modelInfo){
+        $listExtra = implode(',',$modelInfo['list_extra']['index']); //列表附加项，如：user
+        $reList =[];
+        foreach($list as $k=>$v){
+            if(in_array($this->mid,$list['model'])){
+                $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
+                $reList[$k] = array_merge($v,$raw);
+                unset($list[$k]);
+                echo $list[$k];
+                //var_dump($list);
+
+            }
+        }
+        return $reList;
+    }*/
 }

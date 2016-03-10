@@ -14,7 +14,7 @@ class IndexController extends Controller {
         $logined = session('email');
         $status = session('status');
 
-        if(!session('?email')&& !session('?status')){
+        if(!session('?email')&& !session('?status')){  //权限验证
             $this->redirect('/Admin/Enter/login');
         }
         elseif(session('power')<$this->power){

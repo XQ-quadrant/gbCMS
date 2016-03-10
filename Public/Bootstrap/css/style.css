@@ -223,7 +223,13 @@ body a{
   font-family: 'Roboto', sans-serif;
 }
 nav.top1.navbar.navbar-default.navbar-static-top {
-  background-color:rgb(6, 217, 149);
+  background-image:linear-gradient(to right, #fff9f6, #3eddbb, #1addb4);
+  /*
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00aced), color-stop(1, #40c5f4));
+  */
+    /*
+  background-color: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00))
+  */
   font-family: 'Roboto', sans-serif;
 }
 .navbar-default .navbar-brand {
@@ -249,7 +255,7 @@ i.nav_icon {
 .form-control {
   background: none !important;
   border: 1px solid #fff !important;
-  border-radius: 20px !important;
+  border-radius: 5px !important;
   box-shadow: none !important;
 }
 .form-control-blue {
@@ -924,7 +930,7 @@ canvas#doughnut, canvas#line, canvas#polarArea, #bar, #pie, #radar{
   background:#E74225 !important;
 }
 .control2{
-  height:200px;
+  height:150px;
 }
 .alert-info {
   color: #31708f;
@@ -1545,7 +1551,7 @@ div.checker input {
 }
 .mail-toolbar.clearfix {
   border-bottom: 1px solid #f0f0f0;
-  padding: 2em 0;
+  padding: 0 0 0.5em 0;
 }
 .compose-message {
   overflow: hidden;

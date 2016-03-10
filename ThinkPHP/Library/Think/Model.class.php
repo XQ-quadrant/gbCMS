@@ -1887,4 +1887,22 @@ class Model {
         return $this;
     }
 
+    /**列表内容获取
+     * @param $list
+     */
+    public function listView(&$list,$modelInfo){
+        $listExtra = implode(',',$modelInfo['list_extra']['admin']); //列表附加项，如：user
+        $reList =[];
+        //echo $listExtra;
+        foreach($list as $k=>$v){
+            if($this->mid==$v['model_id']){
+                $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
+                $reList[$k] = array_merge($v,$raw);
+
+                unset($list[$k]);
+            }
+        }
+        return $reList;
+    }
+
 }

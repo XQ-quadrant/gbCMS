@@ -1,46 +1,103 @@
 <extend name="Layout/layout" />
 
 <block name="content">
-    <div ><!--class="modal-dialog"-->
-        <div class="row">
-            <div class="col-md-10">
-                <div class="modal-content"> <!--style="width: 750px;"-->
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h3 class="modal-title">{$title}</h3>
-                        <div>
-                            <div class="row">
-                                <div class="col-md-6 grid_box1">
-                                </div>
-                                <div class="col-md-6">
-                                    <ul class="list-unstyled list-inline" >
-                                        <li><a href="#" class="text-muted">{$author}</a></li>
-                                        <li><a href="" class="text-muted">{$createtime}</a></li>
-                                        <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
-                                        <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+    <div class="col_1">
+        <div class="col-md-4 span_7" style="margin-bottom: 5px">
 
-                                    </ul>                            </div>
-                                <div class="clearfix"> </div>
+                <div class="activity_box"> <!--style="width: 750px;"-->
+                    <div class="modal-header" style="border-bottom: 0px">
+                        <div class="online-top" style="padding:0 0 11px 0">
+                            <div class="top-at">
+                                <img class="img-responsive" src="__PUBLIC__/Bootstrap/images/3.png" alt="">
                             </div>
-                            <!--<h2>{$title}</h2>-->
-
+                            <div class="top-on">
+                                <div class="top-on1">
+                                    <p>Accompanied</p>
+                                    <span>Repet</span>
+                                </div>
+                                <label class="round"> </label>
+                                <!-- <div class="clearfix"> </div>-->
+                            </div>
+                            <div class="clearfix"> </div>
                         </div>
+                        <!--<div class="col-md-6">
+                            <div class="status-badge mrg10A">
+                                <img class="img-circle" width="40" src="__PUBLIC__/Bootstrap/images/1.png" alt="">
+                                <div class="small-badge bg-red"></div>
+                            </div>
+                            <ul class="list-unstyled list-inline" >
+                                <li><a href="#" class="text-muted">{$author}</a></li>
+                                <li><a href="" class="text-muted">{$createtime}</a></li>
+                                <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                                <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>-->
+                        <!--<h2>{$title}</h2>-->
                     </div>
-                    <div class="modal-body"  >
-
-
-
-                        {$content}
-
+                    <div class="modal-body"   style="min-height: 240px;">
+                        <h5 class="modal-title">{$title}</h5>
+                        <p>{$content}</p>
+                        <p><a>{$connect}</a></p>
                     </div>
                     <div class="modal-footer">
+                        <ul class="list-unstyled list-inline" style="margin:0" >
+                            <li><a href="#" class="text-muted">{$author}</a></li>
+                            <li><a href="" class="text-muted">{$createtime}</a></li>
+                            <!--<li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>-->
+
+                        </ul>
+                        <div class="clearfix"> </div>
                         <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save changes</button>-->
                     </div>
-                </div><!-- /.modal-content -->
-                <div class="clearfix"> </div>
+                </div>
+        </div>
+        <div class="col-md-4 span_7" style="margin-bottom: 5px">
+        <div class="activity_box" style="padding:20px 10px">
+            <div >
+                <div class="activity-row">
+                    <div class="col-xs-3 activity-img"><img src="images/5.png" class="img-responsive img-circle" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">Lorem Ipsum</a> liked <a href="#">random</a></h5>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="activity-row">
+                    <div class="col-xs-3 activity-img"><img src="images/3.png" class="img-responsive" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">simply random</a> liked <a href="#">passages</a></h5>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="activity-row">
+                    <div class="col-xs-3 activity-img"><img src="images/1.png" class="img-responsive" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">standard chunk</a> liked <a href="#">model</a></h5>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="activity-row1">
+                    <div class="col-xs-3 activity-img"><img src="images/4.png" class="img-responsive" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">perspiciatis</a> liked <a href="#">donating</a></h5>
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
             </div>
         </div>
+        </div>
+        <div class="clearfix"> </div>
     </div>
 
 

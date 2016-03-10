@@ -26,6 +26,15 @@ class ArticleController extends Controller
             $cateInfo = get_cate($_GET['cate']);
             $this->assign('cateName',$cateInfo['name']);
         }
+
+
+        if(!session('?email')&& !session('?status')){  //权限验证
+            $this->redirect('/Admin/Enter/login');
+        }
+        elseif(session('power')<$this->power){
+            $this->error('权限不足，无法访问');
+//echo session('power');
+        }
     }
     /**主控面板
      * @param $cate
@@ -48,20 +57,36 @@ class ArticleController extends Controller
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
         $model = new Model();
 
-        foreach($list as $k=>$v){
-            $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
-            //echo $modelInfo['identity'];
-            $raw = $model->query("select author from {$modelInfo['identity']} where id = {$v['atc_id']}");
-            $list[$k]['author'] = $raw[0]['author'];
-            $d = strtotime($v['createtime']);
-            $list[$k]['createtime'] = '<div>'.date("Y/m/d",$d).'</div>'.'<div>'.date("H:i:s",$d).'</div>'; //编辑时间格式
+        $cateInfo = get_cate($cate);  //获取栏目信息
+//var_dump($cateInfo);
+        $reList =[];
+        //$yList = &$list;
+        foreach($cateInfo['model'] as $k=>$v){
+            //var_dump($v);
+            $modelInfo = get_model_info($v['id']);
+            $model = D($modelInfo['identity']);            //建立内容模型对象
+            $reList = array_merge($reList,$model->listView($list,$modelInfo));  //合并
         }
+
+
+        /*foreach($list as $k=>$v){
+            $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
+
+            $listExtra = implode(',',$modelInfo['list_extra']['admin']); //列表附加项，如：author
+            //var_dump($modelInfo['list_extra']);
+
+            $raw = $model->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
+            $list[$k]['author'] = $raw[0]['author'];
+
+            $d = strtotime($v['createtime']);  //日期显示
+            $list[$k]['createtime'] = '<div>'.date("Y/m/d",$d).'</div>'.'<div>'.date("H:i:s",$d).'</div>'; //编辑时间格式
+        }*/
         //var_dump($show);
        /* $Page->setConfig('f_decorate','<li>');
         $Page->setConfig('b_decorate','</li>');*/
 
         $this->assign('page',$show);
-        $this->assign('list',$list);
+        $this->assign('list',$reList);
         $this->assign('model_list',get_cate_Model($cate));
         //$this->assign("cate_id",1);
         $this->assign("cate",$cate);
@@ -153,9 +178,10 @@ class ArticleController extends Controller
     public function editor($id){
         $cate_atc = new CateAtcModel();//D('cate_atc');
         //$atcInfo = $cate_atc->find($id);
-        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,status,createtime")->find($id);
-        $model = get_model_info($atcInfo['model_id']); //获取模型信息
-        $atc = D($model['identity']);    //建立模型对象
+        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,status,createtime")->find($id); //引索表信息
+        $modelInfo = get_model_info($atcInfo['model_id']); //获取模型信息
+
+        $atc = D($modelInfo['identity']);    //建立模型对象
 
         if(IS_POST){
             $c = $atc->create();
@@ -170,7 +196,7 @@ class ArticleController extends Controller
                 //$atc->status=1;
                 //
                 $a = $cate_atc->where(['id'=>$cate_atc->id])->save();
-                $b = $atc->where(['id'=>$atc->id])->validate($model['rules'])->save();
+                $b = $atc->where(['id'=>$atc->id])->validate($modelInfo['rules'])->save();
                 if(!$a&&!$b){        //提交内容
                     $this->ajaxreturn(['msg'=>$atc->getError().$cate_atc->getError(),'status'=>2]);
                 }
@@ -179,10 +205,12 @@ class ArticleController extends Controller
         }else{
 
             //$atc->query("select author,editor, content from ")
-            $atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
+            $listExtra = $modelInfo['list_extra']['admin']; //列表附加项，如：author
+            $atcInfo = array_merge($atcInfo,$atc->editor($atcInfo['id']));
+            //$atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
             $this->assign($atcInfo);
             //echo $model['identity'];
-            $this->display($model['view_edit']);
+            $this->display($modelInfo['view_edit']);
         }
     }
 

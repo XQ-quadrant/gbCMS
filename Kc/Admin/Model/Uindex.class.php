@@ -23,13 +23,25 @@ class Uindex extends Model
         $modelInfo = get_model_info($mid);
         //$this->create();
         $map = I('post.');
+        if($modelInfo['status']==3){   //学生登录
+            $model = D($modelInfo['identity']);
+            $loginInfo = $model->login($map);
+            $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
+            if($loginInfo==null){
+                $this->register($mid,$map);
+                return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
+            }
+            //var_dump($loginInfo);
+        }else{
+            $loginInfo = $this->where(['email'=>$map['email'],'password'=>$map['password']])->find();
+            if($loginInfo==null){
+                return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
+            }
 
-        $loginInfo = $this->where($map)->find();
-        //var_dump($map);
-        if($loginInfo==null){
-            return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
         }
-        //var_dump($loginInfo);
+
+
+
         switch($loginInfo["status"]){
             case 1:
                 session(['expire'=>3600]);
@@ -63,6 +75,28 @@ class Uindex extends Model
             cookie(null);
         return 0;
             //$this->redirect('login');
+    }
+
+    public function register($mid,$map=[]){
+        $modelInfo = get_model_info($mid);
+        $model = D($modelInfo['identity']);
+
+        $Info = $model->register($map);
+        if(!empty($Info)){
+            $this->create($Info);
+            $this->mid =$mid;
+            return $this->add();
+        }
+        else{
+            $this->error('注册失败');
+            return false;
+        }
+
+        //$this->count = $Info['user_id'];
+       // $this->name = $Info['name'];
+        //$this->name = $Info['password'];
+
+
 
     }
 

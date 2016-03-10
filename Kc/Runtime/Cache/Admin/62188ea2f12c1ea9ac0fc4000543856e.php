@@ -9,7 +9,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
     <head>
-    <title>Modern an Admin Panel Category Flat Bootstarp Resposive Website Template | Compose :: w3layouts</title>
+        <title>科创俱乐部</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -48,7 +49,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Modern</a>
+
+            <a class="navbar-brand" href="index.html" style="padding: 4px 6px 4px 5px"><img style="height: 100%" alt="科创俱乐部" src="/kechuang4/Public/logo_r.png"></a>
+            <!--<a class="navbar-brand" href="index.html">科创俱乐部</a>-->
         </div>
         <!-- ss -->
 
@@ -149,7 +152,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="m_2"><a href="/kechuang4/index.php/Admin/Enter/logout"><i class="fa fa-lock"></i> Logout</a></li>
                 </ul>
             </li>
-
         </ul>
         <form class="navbar-form navbar-right">
             <input type="text" class="form-control" value="Search..." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search...';}">
@@ -570,12 +572,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<p>Copyright &copy; 2015 <a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 	</div>
 
+            <div class="copy_layout">
+                <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
+            </div>
+        </div>
 
 
-        </div>
-        <div class="copy_layout">
-            <p> 技术支持由 <a href="http://www.gearblade.com/" target="_blank">归锋科技</a>提供 </p>
-        </div>
     </div>
 
     <!-- /#page-wrapper -->
