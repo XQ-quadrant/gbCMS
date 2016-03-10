@@ -21,6 +21,7 @@ class ArticleController extends Controller
     /*public function _initialize(){
         $this->assign("cate_id",$this->cate_id);
     }*/
+    private $power = 2;
     public function _initialize(){
         if(isset($_GET['cate'])){
             $cateInfo = get_cate($_GET['cate']);
@@ -28,7 +29,7 @@ class ArticleController extends Controller
         }
 
 
-        if(!session('?email')&& !session('?status')){  //权限验证
+        if(!session('?email') || !session('?count')){  //权限验证
             $this->redirect('/Admin/Enter/login');
         }
         elseif(session('power')<$this->power){

@@ -24,14 +24,18 @@ class Uindex extends Model
         //$this->create();
         $map = I('post.');
         if($modelInfo['status']==3){   //学生登录
-            $model = D($modelInfo['identity']);
-            $loginInfo = $model->login($map);
+            //$model = D($modelInfo['identity']);
+            //$loginInfo = $model->login($map);
             $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
             if($loginInfo==null){
                 $this->register($mid,$map);
-                return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
+                $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
+
+                if($loginInfo==false){
+                    return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
+                }
             }
-            //var_dump($loginInfo);
+
         }else{
             $loginInfo = $this->where(['email'=>$map['email'],'password'=>$map['password']])->find();
             if($loginInfo==null){
@@ -82,10 +86,11 @@ class Uindex extends Model
         $model = D($modelInfo['identity']);
 
         $Info = $model->register($map);
-        if(!empty($Info)){
-            $this->create($Info);
-            $this->mid =$mid;
+        if($this->create($Info)){
+            $this->count = $Info['user_id'];
+            $this->mid = $mid;
             return $this->add();
+
         }
         else{
             $this->error('注册失败');

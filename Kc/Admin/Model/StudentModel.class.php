@@ -14,6 +14,7 @@ use Think\Model;
 
 class StudentModel extends Model implements User
 {
+    private $power =4;
     public function login($map){
         $loginInfo = $this->where(['user_id'=>$map['count'],'password'=>$map['password']])->find();
 
@@ -103,6 +104,7 @@ class StudentModel extends Model implements User
         }
         $id = $this->add($info);
         $info['uid'] = $id;
+        $info['power'] = $this->power;
         if(empty($info['name'])){
             return false;
         }
