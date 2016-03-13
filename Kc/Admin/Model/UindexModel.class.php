@@ -11,7 +11,7 @@ namespace Admin\Model;
 
 use Think\Model;
 
-class Uindex extends Model
+class UindexModel extends Model
 {
     protected $tableName = 'uindex';
 
@@ -41,17 +41,19 @@ class Uindex extends Model
             if($loginInfo==null){
                 return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
             }
-
         }
-
-
 
         switch($loginInfo["status"]){
             case 1:
                 session(['expire'=>3600]);
                 session("id" , $loginInfo["id"]);
                 session("mid" , $mid);
-                session("email" , $loginInfo['email']);
+                if($loginInfo['email']==null){
+                    session("count" , $loginInfo['count']);
+                }else{
+                    session("email" , $loginInfo['email']);
+
+                }
                 session("status" , $loginInfo['status']);
                 session("power",$loginInfo['power']);
 

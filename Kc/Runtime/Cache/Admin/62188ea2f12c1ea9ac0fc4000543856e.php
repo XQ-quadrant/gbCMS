@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="index.html" style="padding: 4px 6px 4px 5px"><img style="height: 100%" alt="科创俱乐部" src="/kechuang4/Public/logo_r.png"></a>
+            <a class="navbar-brand" href="index.html" style="padding: 4px 6px 4px 5px"><img style="height: 100%" alt="科创俱乐部" src="/kechuang4/Public/logo_r2.png"></a>
             <!--<a class="navbar-brand" href="index.html">科创俱乐部</a>-->
         </div>
         <!-- ss -->
@@ -153,9 +153,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </ul>
             </li>
         </ul>
-        <form class="navbar-form navbar-right">
+        <!--<form class="navbar-form navbar-right">
             <input type="text" class="form-control" value="Search..." onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search...';}">
-        </form>
+        </form>-->
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <?php tag('cate'); ?>

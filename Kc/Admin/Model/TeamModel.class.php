@@ -30,7 +30,9 @@ class TeamModel extends Model implements Atc
     public function addAtc($cate){  //添加文档
 
         $title = $this->title;
-        $this->uid = session('id');
+
+        $userInfo = get_user_info(session('id'),['name']);
+        $this->uname = $userInfo['name'];
 
         $atc_id =$this->add();
         if($atc_id==false){
@@ -39,6 +41,7 @@ class TeamModel extends Model implements Atc
         }
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
+        $cate_atc->uid = session('id');
         //$cate_atc->author = session('id');
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;
@@ -66,11 +69,16 @@ class TeamModel extends Model implements Atc
     public function detail($id){
         //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
         $teamIndex = $this->query("select * from cate_atc WHERE id={$id}");
-        //var_dump($atcInfo);
+        //var_dump($teamIndex);
 
         if($teamIndex[0]['status']==1){  //状态确认
             $teamContent = $this->where('id=%d',$teamIndex[0]['atc_id'])->find();
-            $userInfo = get_user_info($teamContent['uid'],['name','signature','pic']);
+            //var_dump($teamContent);
+            $userInfo = get_user_info($teamIndex[0]['uid'],['name']);
+
+            if($userInfo==null){
+                return false;
+            }
             $teamContent+= $userInfo;
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
             $teamIndex[0]+=$teamContent;

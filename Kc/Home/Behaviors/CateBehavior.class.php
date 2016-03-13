@@ -48,7 +48,7 @@ class CateBehavior extends Behavior
      */
     public function catelist($pre_cate =0){
 
-        $cateArray = $this->model->query("select id,`name`,pre_cate,uri from cate WHERE pre_cate=$pre_cate AND status=1 ORDER BY `LEVEL`");//$cate->where(['$pre_cate'=>$pre_cate])->select();
+        $cateArray = $this->model->query("select id,`name`,pre_cate,uri from cate WHERE pre_cate=$pre_cate AND status=4 ORDER BY `LEVEL`");//$cate->where(['$pre_cate'=>$pre_cate])->select();
         //$this->cateList = $cateArray;
         foreach( $cateArray as $v=>$k){
             //echo $v['id'];

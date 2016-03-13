@@ -2,37 +2,40 @@
 /**
  * Created by PhpStorm.
  * User: xq
- * Date: 16-1-17
- * Time: 下午11:13
+ * Date: 16-3-6
+ * Time: 上午1:26
  */
 
 namespace Common\Model;
 
+
 use Think\Model;
-use Think\Model\RelationModel;
-class NewsModel extends Model implements Atc
+
+class TeamModel extends Model implements Atc
 {
-    //protected $tableName = '';
-    /*protected $_link = array(
-        'cate_atc'=>[
-            'mapping_type'      => self::HAS_ONE,
-            'class_name'        => 'cate_atc',
-            'foreign_key' => 'index_id',
-            //'mapping_fields '
+    protected $tableName='team';
 
-        ]
-    );*/
-    public $id;
-    protected $mid = 2;
-    public $strLimit = 70;
+    protected $mid = 5;
 
-    public function editor($id){
+    public $strLimit = 45;
+
+    /**获取对应编辑内容
+     * @param $id 内容id
+     * @return mixed
+     */
+    public function editor($id){  //获取编辑内容
+
+        return $this->field(['content','race','limit_member','already_member'])->find($id);
 
     }
 
     public function addAtc($cate){  //添加文档
 
-        $title = $this->title ;
+        $title = $this->title;
+
+        $userInfo = get_user_info(session('id'),['name']);
+        $this->uname = $userInfo['name'];
+
         $atc_id =$this->add();
         if($atc_id==false){
             $this->error='添加失败';
@@ -40,6 +43,8 @@ class NewsModel extends Model implements Atc
         }
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
+        $cate_atc->uid = session('id');
+        //$cate_atc->author = session('id');
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;
 
@@ -65,31 +70,44 @@ class NewsModel extends Model implements Atc
 
     public function detail($id){
         //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
-        $atcInfo = $this->query("select * from cate_atc WHERE id={$id}");
-        //var_dump($atcInfo);
+        $teamIndex = $this->query("select * from cate_atc WHERE id={$id}");
+        //var_dump($teamIndex);
 
-        if($atcInfo[0]['status']==1){
-            $atcContent = $this->where('id=%d',$atcInfo[0]['atc_id'])->find();
+        if($teamIndex[0]['status']==1){  //状态确认
+            $teamContent = $this->where('id=%d',$teamIndex[0]['atc_id'])->find();
+            //var_dump($teamContent);
+            $userInfo = get_user_info($teamIndex[0]['uid'],['name']);
+
+            if($userInfo==null){
+                return false;
+            }
+            $teamContent+= $userInfo;
             //$atcInfo = $this->query("select title from {$this->trueTableName} WHERE id=$this->id");
-            $atcInfo[0]+=$atcContent;
-            return $atcInfo[0];
+            $teamIndex[0]+=$teamContent;
+            return $teamIndex[0];
         }else{
             return 'h';//$this->getDbError();
             //返回状态信息
         }
 
     }
-    public function listView(&$list,$modelInfo,$module = 'index'){
+
+    /**列表内容获取
+     * @param $list
+     */
+    public function listView(&$list,$modelInfo,$module = 'admin'){
         $listExtra = implode(',',$modelInfo['list_extra'][$module]); //列表附加项，如：user
         $reList =[];
+        //echo $listExtra;
         foreach($list as $k=>$v){
             if($this->mid==$v['model_id']){
                 $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
+//var_dump($raw);
                 if(mb_strlen($raw[0]['content'],'utf-8')>$this->strLimit){
                     $raw[0]['content']= mb_substr($raw[0]['content'],0,$this->strLimit,'utf-8');
                     $raw[0]['content'].='……';
                 }
-
+                //echo $raw['content'];
                 $reList[$k] = array_merge($v,$raw[0]);
 
                 unset($list[$k]);
@@ -97,5 +115,4 @@ class NewsModel extends Model implements Atc
         }
         return $reList;
     }
-
 }

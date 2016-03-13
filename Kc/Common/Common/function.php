@@ -94,16 +94,21 @@ function get_cate_info()
 
 function get_user_info($id,$field)
 {
-    $uindex = new \Admin\Model\Uindex();
+    $uindex = new \Admin\Model\UindexModel();
     $model =new \Think\Model();
-    $rowIndex = $model->query("select {$field} from uindex WHERE id = {$id}");
+    $fieldStr = implode(",",$field);
+
+    $rowIndex = $model->query("select {$fieldStr} from uindex WHERE id = {$id}");
+
     //$row = $uindex->field($field)->find($uid);
-    $detailField = array_diff(array_flip($field), $rowIndex[0]);
+    $detailField = array_diff_key(array_flip($field), $rowIndex[0]);
+    $detailFieldStr = implode(',',array_flip($detailField));
     $modelInfo = get_model_info($rowIndex[0]['mid']);
 
     if(!empty($detailField)){
-        $detail = $model->query("select {$detailField} from {$modelInfo['identity']} WHERE id = {$id}") ;//=
+        $detail = $model->query("select {$detailFieldStr} from {$modelInfo['identity']} WHERE id = {$id}") ;//=
         //$detail = D($model['identity']);
+
         return array_merge($rowIndex[0],$detail[0]);
     }
 

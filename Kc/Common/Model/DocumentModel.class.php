@@ -24,7 +24,7 @@ class DocumentModel extends Model implements Atc
     );*/
     public $mid=1; //模型id
 
-    public function editor(){
+    public function editor($id){
 
     }
 

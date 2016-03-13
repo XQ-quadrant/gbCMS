@@ -14,12 +14,12 @@ class ManagerModel extends Model implements User
     protected $tableName = 'manager';
     //protected $mid = '4';
 
-    public function register(){
+    public function register($map=[]){
         $uid = $this->add();
         if($uid){
             $uindex = D('uindex');
             $uindex->create();
-            $uContent =[$uid,I('get.mid'),date('y-m-d H:i:s'),3,1];
+            $uContent = [$uid,I('get.mid'),date('y-m-d H:i:s'),3,1];
             list($uindex->uid,
                 $uindex->mid,
                 $uindex->createtime,
@@ -43,7 +43,7 @@ class ManagerModel extends Model implements User
     /**
      * @return mixed ajax反馈信息
      */
-    public function login(){
+    public function login($map=[]){
         //$cookie =  cookie('id');
         $loginInfo = $this->find();
 

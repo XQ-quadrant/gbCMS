@@ -1,7 +1,7 @@
 <?php
-namespace Admin\Controller;
+namespace Home\Controller;
 use Admin\Model\AdminModel;
-use Admin\Model\UindexModel;
+use Common\Model\UindexModel;
 use Think\Controller;
 use Admin\Model\CateModel;
 
@@ -21,9 +21,10 @@ class EnterController extends Controller {
     /**统一登录入口
      * @param $uid
      */
-    public function login($mid = 4){
+    public function login($mid = 6){
 
         $modelInfo = get_model_info($mid);  //获取模型信息
+
         $uindex = new UindexModel();
         if(IS_POST){
             $reInfo = $uindex->login($mid);

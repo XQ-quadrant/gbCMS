@@ -38,7 +38,7 @@ class CateController extends Controller
                 //$this->ajaxreturn($cate->getError());
             }else{
                 $cate->model= json_encode($cate->model);
-                $cate->status=1;
+                //$cate->status=1;
                 if(!$cate->add()){          //插入数据表
                     $this->ajaxreturn($cate->getDbError());
                 }
@@ -62,7 +62,7 @@ class CateController extends Controller
         if(IS_POST){
             $cate->create();
             $cate->model= json_encode($cate->model);
-            $cate->status=1;
+            //$cate->status=1;
             //$this->ajaxreturn(['msg'=>$cate->where(['id'=>$id])->save()]);
             if($cate->where(['id'=>$id])->save()){
                 //return json_encode(['msg'=>'修改成功','status'=>1]);

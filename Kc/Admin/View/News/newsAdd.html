@@ -4,10 +4,9 @@
 
     <div class="xs">
         <h3>新闻添加</h3>
-
         <div class="tab-content">
             <div class="tab-pane active" id="horizontal-form">
-                <form class="form-horizontal form" >
+                <form class="form-horizontal form" id="form-submit">
                     <div class="form-group">
                         <label for="focusedinput" class="col-sm-2 control-label">标题</label>
 
@@ -26,17 +25,25 @@
                                    value={$author}>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="focusedinput" class="col-sm-2 control-label">摘要</label>
 
+                        <div class="col-sm-8">
+                            <input type="text" name="breviary" class="form-control1" id="breviary" value={$breviary}>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="help-block">70字以内</p>
+                        </div>
+                    </div>
 
                     <div class="form-group mb-n">
                         <label for="myEditor" class="col-sm-2 control-label label-input-lg">正文</label>
 
                         <div class="col-sm-8">
                             <!--<textarea id="myEditor">{$content}</textarea>-->
-                            <script id="myEditor" name="content" type="text/plain" style="width:100%;">
+                            <textarea id="myEditor" name="content" type="text/plain" style="width:100%;">
 
-
-                            </script>
+                            </textarea>
                         </div>
                     </div>
                     <hr>
@@ -68,32 +75,39 @@
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
         var ue = UE.getEditor('myEditor');
-        //UE.getEditor("myEditor",{serverUrl: '__PUBLIC__/editor/php/controller.php'});
-        /*uParse('.ccc', {
-            rootPath: '__PUBLIC__/editor/'
-        })*/
-
-
-        //ue.getEditor('myEditor', {serverUrl: '/server/ueditor/controller.php'})
-
-
     </script>
     <script>
         $('#submit').click(function() {
             //alert('kk');
             //var name = $('#name').val();
             //var password = $('#password').val();
-            var myForm = $('form');
+            var myForm = $('#form-submit');
+            //var myForm = $('#form-submit');
+            var data = new FormData(myForm[0]);
+            if($('#breviary').val()==''){
+                var breviary =  ue.getContentTxt();  //获取content纯文本
+                if(breviary.length>45){
+                    breviary = breviary.substr(0,45)+'...';
+                }
+            }else{
+                var breviary = $('#breviary').val();
+            }
+
+            //alert(breviary);
+            data.append('breviary',breviary);
             $.ajax({
                 url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
-                type: 'post',//提交的方式i
+                type: 'post',//提交的方式
                 dataType:'json',
-                data: myForm.serialize(),
-                success: function(data) {
-                    alert(data.msg);
-                   if(data.status==1){
-                       window.location.href=document.referrer;
-                   }
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(rdata) {
+                    alert(rdata.msg);
+                    if(rdata.status==1){
+                        window.location.href = '__MODULE__';//document.referrer;
+                    }
 
                     //这是成功返回的数据，写自己的逻辑
                 }

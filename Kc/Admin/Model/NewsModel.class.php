@@ -24,17 +24,21 @@ class NewsModel extends Model implements Atc
     );*/
     public $id;
     protected $mid = 2;
+    public $strLimit = 45;
 
     public function editor($id){
-        return $this->field(['content','author'])->find($id);
-
+        return $this->field(['content','author','breviary'])->find($id);
     }
 
     public function addAtc($cate){  //添加文档
 
         $title = $this->title ;
+        /*if($this->breviary == null){
+            $this->breviary = mb_substr(htmlspecialchars_decode($this->content),0,$this->strLimit,'utf-8');
+        }*/
+
         $atc_id =$this->add();
-        if($atc_id==false){
+        if($atc_id == false){
             $this->error='添加失败';
             return false;
         }

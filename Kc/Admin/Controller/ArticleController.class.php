@@ -59,7 +59,6 @@ class ArticleController extends Controller
         $model = new Model();
 
         $cateInfo = get_cate($cate);  //获取栏目信息
-//var_dump($cateInfo);
         $reList =[];
         //$yList = &$list;
         foreach($cateInfo['model'] as $k=>$v){
@@ -105,8 +104,10 @@ class ArticleController extends Controller
         //$article->id = $id;
         $atcInfo = $article->detail($id);
         if(!is_array($atcInfo)){
-            //$this->error($atcInfo);
-            //$this->ajaxreturn($article->getDbError());
+
+        }
+        if($atcInfo == null){
+            $this->error('看来没有这个了');
         }
         $atcInfo['content']=htmlspecialchars_decode($atcInfo['content']);
 
@@ -136,10 +137,7 @@ class ArticleController extends Controller
         $modelInfo=get_model_info($mid);  //获取模型信息
 
         if(IS_POST){
-
             $article = D($modelInfo['identity']);    //建立模型对象
-            //$article->createtime = date('y-m-d h:i:s');
-            //$article->model_id = $mid;
 
         if(!$article->validate($modelInfo['rules'])->create()){
 
@@ -204,10 +202,9 @@ class ArticleController extends Controller
                 $this->ajaxreturn(['msg'=>'修改成功','status'=>1]);
             }
         }else{
-
             //$atc->query("select author,editor, content from ")
             $listExtra = $modelInfo['list_extra']['admin']; //列表附加项，如：author
-            $atcInfo = array_merge($atcInfo,$atc->editor($atcInfo['id']));
+            $atcInfo = array_merge($atcInfo,$atc->editor($atcInfo['atc_id']));
             //$atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
             $this->assign($atcInfo);
             //echo $model['identity'];

@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <p id="msg"></p>
         <input name ='email' id ='email' type="text" class="text" value="" placeholder="Email" >
         <input name ='password' id = 'password' type="password" placeholder="密码" >
-        <div class="submit"><input id="login-buton" type="submit" value="登  录"></div>
+        <div class="submit"><input id="login-buton" type="submit" value="登s  录"></div>
         <!--<button id="submit" class="btn-success btn">提交</button>-->
     </form>
         <div class="login-social-link">

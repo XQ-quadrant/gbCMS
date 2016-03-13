@@ -1890,14 +1890,16 @@ class Model {
     /**列表内容获取
      * @param $list
      */
-    public function listView(&$list,$modelInfo){
-        $listExtra = implode(',',$modelInfo['list_extra']['admin']); //列表附加项，如：user
+    public function listView(&$list,$modelInfo,$module = 'admin'){
+        $listExtra = implode(',',$modelInfo['list_extra'][$module]); //主内容附加项，如：user
         $reList =[];
         //echo $listExtra;
         foreach($list as $k=>$v){
-            if($this->mid==$v['model_id']){
+            if($this->mid==$v['model_id']) //选择对应模型
+            {
                 $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
-                $reList[$k] = array_merge($v,$raw);
+
+                $reList[$k] = array_merge($v,$raw[0]);
 
                 unset($list[$k]);
             }

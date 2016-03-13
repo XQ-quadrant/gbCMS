@@ -94,7 +94,7 @@ class PicgridModel extends Model //implements Atc
     /**
      * @return mixed
      */
-    public function editor(){
+    public function editor($id){
 
     }
 

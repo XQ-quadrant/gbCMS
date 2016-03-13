@@ -20,6 +20,21 @@ use Home\Model\AritcleModel;
 class ArticleController extends Controller
 {
 
+    private $power = 1;
+    public function _initialize(){
+        if(isset($_GET['cate'])){
+            $cateInfo = get_cate($_GET['cate']);
+            $this->assign('cateName',$cateInfo['name']);
+        }
+
+//echo session('count');
+        if(!session('?count')){  //权限验证
+            $this->redirect("/Home/Enter/login/mid/6");
+        }
+        elseif(session('power')<$this->power){
+            $this->error('权限不足，无法访问');
+        }
+    }
     /**主控面板
      * @param $cate
      * @param $id
@@ -33,18 +48,18 @@ class ArticleController extends Controller
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
 
         $cateInfo = get_cate($cate);  //获取栏目信息
-//var_dump($cateInfo);
+
         $reList =[];
-        //$yList = &$list;
+
         foreach($cateInfo['model'] as $k=>$v){
             //var_dump($v['model_id']);
             //echo $v['id'];
             $modelInfo = get_model_info($v['id']);
 
             $model = D($modelInfo['identity']);            //建立内容模型对象
-            $reList = array_merge($reList,$model->listView($list,$modelInfo));
+            $reList = array_merge($reList,$model->listView($list,$modelInfo,'index'));
+
         }
-        echo count($list);
 
    /*     foreach($list as $k=>$v){
             $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
@@ -61,7 +76,6 @@ class ArticleController extends Controller
             $d = strtotime($v['createtime']);
             $list[$k]['createtime'] = '<h6>'.date("m/d",$d).'</h6>'; //编辑时间格式
         }*/
-
         $this->assign('page',$show);
         $this->assign('list',$reList);
         $this->assign('model_list',get_cate_Model($cate));

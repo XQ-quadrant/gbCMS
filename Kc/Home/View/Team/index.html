@@ -12,67 +12,109 @@
                     </span>
             </div>&lt;!&ndash; Input Group &ndash;&gt;
         </form>-->
-        <div class="modal-content-small" >
+        <ol class="breadcrumb" style="margin-bottom: 10px">
+            <li><a href="#">科创俱乐部</a></li>
+            <li><a href="#">竞赛</a></li>
+            <li class="active">团队组建</li>
+        </ol>
+        <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 8px">
+            <a role="button" class="btn btn-primary" href="__URL__/index/cate/10">组队信息</a>
+            <a role="button" class="btn btn-default" href="__URL__">科创招募</a>
+            <a role="button" class="btn btn-default" href="__URL__/addAtc/cate/10/mid/5">发起组队</a>
+        </div>
+        <!--<div class="modal-content-small" >
         <form class="navbar-middle">
             <input type="text" class="form-control-blue"  placeholder="信息搜索" style="border:1px solid #00bcd4 ;">
         </form>
+        </div>-->
+<style>
+    .media-list {
+        padding-left: 0;
+        list-style: none;
+    }
+    ul, ol {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .media:first-child {
+        margin-top: 0;
+    }
+    .media, .media .media {
+        margin-top: 15px;
+    }
+    .media, .media-body {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .chat-pop {
+        background-color: rgba(228, 247, 245, 0.76);
+        padding: 6px 8px;
+        border-radius: 4px;
+        position: relative;
+        height: 100px;
+        min-height: 105px;
+        color: #839aa1;
+        /*max-height: 100px;*/
+        /*width: 90%;*/
+    }
+    .chat-pop span{
+        font-size: larger;
+        color: #7191a3;
+    }
+
+
+
+    .pagination p{
+        text-align: center;
+    }
+
+
+
+</style>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- BOX -->
+                <div class="box border green chat-window">
+
+                    <div class="box-body big" style="padding:10px 0px">
+                        <!--<div class="scroller" data-height="450px" data-always-visible="1" data-rail-visible="1">-->
+                        <ul class="media-list chat-list">
+                            <volist name="list" id="vo">
+                            <li class="media ">
+                                <div class="portrait-list" >
+                                    <a class="" href="#" style="margin-bottom: 0px;display: block">
+                                        <img class="media-object" alt="hah" src="__PUBLIC__/default/default_f.png" style="width: 100%">
+                                    </a>
+                                    <p style="text-align: center;">{$vo.uname}</p>
+
+                                    <p style="text-align: center;">1/4</p>
+                                </div>
+                                <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}">
+                                <div class="media-body chat-pop " >
+                                    <p class="media-heading">{$vo.title}</p>
+                                    <span style="">{$vo.orienting}</span>
+                                    <p style="font-size: larger;">{$vo.content}</p>
+
+                                    <span class="pull-right">{$vo.createtime}</span>
+                                </div>
+                                </a>
+                            </li>
+                            </volist>
+
+
+                            <p style="text-align: center;color: darkgrey"><br>以下招募过期</p>
+
+
+                        </ul>
+                        <!--</div>-->
+                        <div class="divide-20"></div>
+
+                    </div>
+                </div>
+                <!-- /BOX -->
+            </div>
         </div>
 
-        <div class="bs-example4" data-example-id="contextual-table">
-
-                <table class="table table-condensed">
-                    <tbody>
-                    <volist name="list" id="vo">
-                        <tr class="unread checked">
-                        <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}" >
-
-                            <div class="avatar_left" style="width:100%">
-                                <span class="email-title">{$vo.title}</span>
-                                <p class="truncate grey-text ultra-small">{$list.description}</p>
-                            </div>
-                            <a href="" class="secondary-content"><span class="blue-text ultra-small">{$vo.createtime}</span></a>
-
-                            <div class="clearfix"> </div>
-                        </a>
-                        </tr>
-                    <!--<tr class="unread checked">
-                        <td class="hidden-xs">
-                            <input type="checkbox" class="checkbox" value={$vo.id}>
-                        </td>
-                        <td class="hidden-xs">
-                            <i class="fa fa-star icon-state-warning"></i>
-                        </td>
-                        <td class="hidden-xs">
-                            {$vo.author}
-                        </td>
-                        <td>
-                            <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}"  target="_blank">{$vo.title}</a>
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            {$vo.createtime}
-                        </td>
-                        <td class="hidden-xs">
-                            <a href="__URL__/editor/id/{$vo.id}" target="_blank">
-                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                            </a>
-                            <a class="excu" value={$vo.id} name="delete_h">
-                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </a>
-                        </td>
-                    </tr>-->
-                    </volist>
-
-
-                    </tbody>
-                </table>
-                <nav>
-                    <ul class="pagination">
-                        {$page}
-                    </ul>
-                </nav>
-        </div>
 
     </div>
     <script>

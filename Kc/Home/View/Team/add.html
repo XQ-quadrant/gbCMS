@@ -1,0 +1,179 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+
+    <div class="xs">
+        <!--<h4>团队组建</h4>-->
+        <ol class="breadcrumb" style="margin-bottom: 10px">
+            <li><a href="#">科创俱乐部</a></li>
+            <li><a href="__URL__/">竞赛</a></li>
+            <li class="active">团队组建</li>
+        </ol>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <a role="button" class="btn btn-default" href="__URL__/index/cate/10">组队信息</a>
+            <a role="button" class="btn btn-default" href="__URL__">科创招募</a>
+            <a role="button" class="btn btn-primary" href="__URL__/addAtc/cate/10/mid/5">发起组队</a>
+        </div>
+        <div class="tab-content">
+            <div class="col-md-8 inbox_right">
+                <div class="Compose-Message">
+                    <div class="panel panel-default">
+                        <!--<div class="panel-heading">
+                            <p>团队招募 项目组建</p>
+                        </div>-->
+                        <div class="panel-body">
+                            <!--<div class="alert alert-info">
+                                团队组建 项目发起 队友招募
+                            </div>
+                            <hr>-->
+                            <form class="form-horizontal form" id="form-submit" >
+                                <label>发起标题 : </label>
+                                <input name="title" type="text" class="form-control1 control3" placeholder="30字以内" maxlength="30">
+                                <label>目标比赛 :  </label>
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 40px">    选 择  <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">数学建模新秀杯</a></li>
+                                                <li><a href="#">全国大学生机器人大赛</a></li>
+                                                <li><a href="#">ACM国际大学生编程大赛</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">全国大学生广告大赛</a></li>
+                                                <li><a href="#">全国大学生电子商务大赛</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                        <input name="race" type="text" class="form-control1 control" >
+                                    </div><!-- /input-group -->
+
+                               <!-- <input name="race" type="text" class="form-control1 control3">-->
+                                <label>发起详情 : </label>
+                                <textarea name="content" rows="9" class="form-control1 control2"></textarea>
+                                <label>联系方式 : </label>
+                                <input name="connect" type="text" class="form-control1 control3" placeholder="qq or tel or wechat" maxlength="50">
+                                <hr>
+                            </form>
+                            <!--
+                                                                <a href="#" class="btn btn-success btn-warng1"><span class="glyphicon glyphicon-tags tag_01"></span> Save To Drafts </a>
+                            -->
+                            <a id="submit" class="btn btn-warning btn-warng1"><span class="glyphicon glyphicon-envelope tag_02"></span>  发  布  </a>&nbsp;
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane active" id="horizontal-form">
+                <div class="panel-footer">
+                    <div class="row">
+                        <!--<div class="col-sm-8 col-sm-offset-2">
+                            <button id="submit" class="btn-success btn">提交</button>
+                            <button class="btn-default btn">预览</button>
+                            &lt;!&ndash;<button class="btn-inverse btn">Reset</button>&ndash;&gt;
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="bs-example" data-example-id="form-validation-states">
+            <form>
+                <div class="form-group has-success">
+                    <label class="control-label" for="inputSuccess1">Input with success</label>
+                    <input type="text" class="form-control1" id="inputSuccess1">
+                </div>
+                <div class="form-group has-warning">
+                    <label class="control-label" for="inputWarning1">Input with warning</label>
+                    <input type="text" class="form-control1" id="inputWarning1">
+                </div>
+                <div class="form-group has-error">
+                    <label class="control-label" for="inputError1">Input with error</label>
+                    <input type="text" class="form-control1" id="inputError1">
+                </div>
+            </form>
+        </div>-->
+        <!--<hr>
+        <div class="bs-example" data-example-id="form-validation-states-with-icons">
+            <form>
+                &lt;!&ndash;<div class="form-group has-success has-feedback">
+                    <label class="control-label" for="inputSuccess2">Input with success</label>
+                    <input type="text" class="form-control1" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="control-label" for="inputWarning2">Input with warning</label>
+                    <input type="text" class="form-control1" id="inputWarning2" aria-describedby="inputWarning2Status">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputWarning2Status" class="sr-only">(warning)</span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label class="control-label" for="inputError2">Input with error</label>
+                    <input type="text" class="form-control1" id="inputError2" aria-describedby="inputError2Status">
+                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control1" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                    </div>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>&ndash;&gt;
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <button class="btn-success btn">提交</button>
+                            <button class="btn-default btn">预览</button>
+                            &lt;!&ndash;<button class="btn-inverse btn">Reset</button>&ndash;&gt;
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>-->
+    </div>
+
+
+</block>
+<block name="script">
+<!--    &lt;!&ndash; 配置文件 &ndash;&gt;
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+    &lt;!&ndash; 编辑器源码文件 &ndash;&gt;
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+&lt;!&ndash;
+    <script type="text/javascript" src="__PUBLIC__/editor/ueditor.parse.js"></script>
+&ndash;&gt;
+    &lt;!&ndash; 实例化编辑器 &ndash;&gt;
+    <script type="text/javascript">
+        var ue = UE.getEditor('myEditor');
+    </script>-->
+    <script>
+        $('#submit').click(function() {
+
+            var myForm = $('#form-submit');
+            var data = new FormData(myForm[0]);
+            //alert(data[1]);
+            $.ajax({
+                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
+                type: 'post',//提交的方式
+                dataType:'json',
+                data: data,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(rdata) {
+                    alert(rdata.msg);
+                    if(rdata.status==1){
+                        window.location.href = '__MODULE__';//document.referrer;
+                    }
+
+                    //这是成功返回的数据，写自己的逻辑
+                }
+            });
+        });
+    </script>
+</block>

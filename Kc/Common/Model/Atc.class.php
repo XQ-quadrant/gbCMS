@@ -25,7 +25,7 @@ interface Atc
     /**
      * @return mixed
      */
-    public function editor();       //改
+    public function editor($id);       //改
 
     /**
      * @param $cate
