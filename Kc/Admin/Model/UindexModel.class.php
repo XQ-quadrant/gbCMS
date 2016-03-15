@@ -59,6 +59,7 @@ class UindexModel extends Model
 
                 cookie("email",$loginInfo['email'],3600);
                 cookie("name",$loginInfo['name'],3600);
+                cookie("id",$loginInfo['id'],3600);
 
                 return ['msg'=>$loginInfo['name'].'登录成功','status'=>1];
                 break;
@@ -98,11 +99,6 @@ class UindexModel extends Model
             $this->error('注册失败');
             return false;
         }
-
-        //$this->count = $Info['user_id'];
-       // $this->name = $Info['name'];
-        //$this->name = $Info['password'];
-
 
 
     }

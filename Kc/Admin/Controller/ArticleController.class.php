@@ -56,7 +56,7 @@ class ArticleController extends Controller
         $show       = $Page->show();// 分页显示输出
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
-        $model = new Model();
+        //$model = new Model();
 
         $cateInfo = get_cate($cate);  //获取栏目信息
         $reList =[];

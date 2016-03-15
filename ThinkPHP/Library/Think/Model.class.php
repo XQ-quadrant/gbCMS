@@ -1893,7 +1893,6 @@ class Model {
     public function listView(&$list,$modelInfo,$module = 'admin'){
         $listExtra = implode(',',$modelInfo['list_extra'][$module]); //主内容附加项，如：user
         $reList =[];
-        //echo $listExtra;
         foreach($list as $k=>$v){
             if($this->mid==$v['model_id']) //选择对应模型
             {

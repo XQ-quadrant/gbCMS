@@ -115,3 +115,14 @@ function get_user_info($id,$field)
     return $rowIndex[0];
 }
 
+/**
+ * @param int $cate
+ * @param array $mid
+ * @param int $status
+ * @return int
+ */
+function get_count($cate=1,$model=1,$status=1){
+    $count =0;
+    return $count;
+}
+

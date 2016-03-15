@@ -1071,6 +1071,9 @@ button.note-color-btn {
 .badge-danger {
   background-color: #e51c23;
 }
+.badge-normal {
+  background-color: rgb(6, 217, 149);
+}
 .tab-container .tab-content {
   border-radius: 0 2px 2px 2px;
   border: 1px solid #e0e0e0;
@@ -1209,7 +1212,7 @@ select[multiple] {
   margin: 2em 0 0 0;
 }
 .panel-warning {
-  margin-top: 2em;
+ /* margin-top: 2em;*/
 }
 .panel.panel-midnightblue {
   border-color: #263238;
@@ -1220,12 +1223,12 @@ select[multiple] {
   border-color: #263238;
 }
 .panel.panel-warning {
-  border-color: #fdd835;
+  border-color: #32deba;
 }
 .panel.panel-warning .panel-heading {
   color: #fffde7;
-  background-color: #ffc107;
-  border-color: #fdd835;
+  background-color: #32deba;
+  border-color: #32deba;
 }
 .panel .panel-heading .panel-ctrls {
   margin-right: -8px;
@@ -1810,6 +1813,7 @@ h3.count.text-light {
   top: 37%;
   text-align: center;
   width: 100%;
+  color: #1a2424;
 }
 .doe h6 {
   color: #fff;
@@ -1822,7 +1826,7 @@ h3.count.text-light {
 .coffee-top i {
   position: absolute;
   top: 84%;
-  background: url(../images/1.png)no-repeat center;
+  /*background: url(../images/1.png)no-repeat center;*/
   width: 80px;
   height: 80px;
   display: block;
@@ -1830,7 +1834,7 @@ h3.count.text-light {
   left: 39%;
 }
 .follow {
-  padding: 3em 1em 1em;
+  padding: 3.1em 1em 1em;
   background: #fff;
 }
 .two p {
@@ -2758,4 +2762,12 @@ span.btn_7{
   padding: 5px 6px 0 0;
   float: left;
   font-size: 12px;
+}
+
+.person-page{
+
+}
+.person-page p{
+  margin: 20px 0px;
+  font-size:1.1em;
 }
