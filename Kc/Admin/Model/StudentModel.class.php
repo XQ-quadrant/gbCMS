@@ -15,6 +15,7 @@ use Think\Model;
 class StudentModel extends Model implements User
 {
     private $power =4;
+    private $mid = 6;
     public function login($map){
         $loginInfo = $this->where(['user_id'=>$map['count'],'password'=>$map['password']])->find();
 
@@ -113,6 +114,24 @@ class StudentModel extends Model implements User
         }
 
         //sssxxvar_dump($info);
+
+    }
+
+    public function listView(&$list, $modelInfo, $module = 'admin')
+    {
+        $listExtra = implode(',',$modelInfo['list_extra'][$module]); //主内容附加项，如：user
+        $reList =[];
+
+        foreach($list as $k=>$v){
+            if($this->mid==$v['model_id']) //选择对应模型
+            {
+                $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['uid']}");
+
+                $reList[$k] = array_merge($v,$raw[0]);
+                unset($list[$k]);
+            }
+        }
+        return $reList;
 
     }
 

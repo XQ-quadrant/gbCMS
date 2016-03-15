@@ -14,7 +14,7 @@ use Think\Controller;
 
 class UserController extends Controller
 {
-    public function index($id){
+    public function profile($id){
         $uindex = new UindexModel();
         $uindexInfo = $uindex->find($id);
         $modelInfo = get_model_info($uindexInfo['mid']);
@@ -31,8 +31,7 @@ class UserController extends Controller
         $Page       = new \Think\Page($count,16);    // 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();   // 分页显示输出
 
-        $list = $cate_atc->where(['mid'=>$mid])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
-        $model = new Model();
+        $list = $cate_atc->where(['mid'=>$mid])->order('id')->limit($Page->firstRow.','.$Page->listRows)->select();
 
        /* $cateInfo = get_cate($cate);  //获取栏目信息
         $reList =[];
@@ -45,12 +44,11 @@ class UserController extends Controller
        // }
 
 
-
         $this->assign('page',$show);
         $this->assign('list',$reList);
-        $this->assign('model_list',get_cate_Model($cate));
+        //$this->assign('model_list',get_cate_Model($cate));
         //$this->assign("cate_id",1);
-        $this->assign("cate",$cate);
+        //$this->assign("cate",$cate);
 
         $this->display();
     }

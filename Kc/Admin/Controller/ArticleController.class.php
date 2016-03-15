@@ -65,25 +65,11 @@ class ArticleController extends Controller
             //var_dump($v);
             $modelInfo = get_model_info($v['id']);
             $model = D($modelInfo['identity']);            //建立内容模型对象
+
             $reList = array_merge($reList,$model->listView($list,$modelInfo));  //合并
+
         }
 
-
-        /*foreach($list as $k=>$v){
-            $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
-
-            $listExtra = implode(',',$modelInfo['list_extra']['admin']); //列表附加项，如：author
-            //var_dump($modelInfo['list_extra']);
-
-            $raw = $model->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
-            $list[$k]['author'] = $raw[0]['author'];
-
-            $d = strtotime($v['createtime']);  //日期显示
-            $list[$k]['createtime'] = '<div>'.date("Y/m/d",$d).'</div>'.'<div>'.date("H:i:s",$d).'</div>'; //编辑时间格式
-        }*/
-        //var_dump($show);
-       /* $Page->setConfig('f_decorate','<li>');
-        $Page->setConfig('b_decorate','</li>');*/
 
         $this->assign('page',$show);
         $this->assign('list',$reList);

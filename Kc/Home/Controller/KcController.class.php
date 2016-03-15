@@ -16,7 +16,7 @@ class KcController extends Controller {
 
     public function kczm(){
         $post['type'] =2;
-        $post['page'] =1;
+        $post['page'] =3;
 
         $url= "http://202.115.71.135/iv/srtpHire_list.do";
         //$login_url = 'http://202.115.67.50/servlet/UserLoginSQLAction';//登陆地址
@@ -51,17 +51,25 @@ class KcController extends Controller {
 		<\/tr>.*发布人：(.*)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		  <\/td>/
 H;
-            $preg3 = "/面向学院：(.+)
+            $pregPage['orienting'] = "/面向学院：(.+)
 		  &nbsp;/U";
-            $preg4 = "/发布时间：(.+)&nbsp;/U";
-            $preg5 = '/<td width="650" id="content" style="line-height: 150%;">(.*)<\/td>/Us';
+            $pregPage['original_time'] = "/发布时间：(.+)&nbsp;/U";
+            $pregPage['content'] = '/<td width="650" id="content" style="line-height: 150%;">(.*)<\/td>/Us';
             //preg_match_all($preg3,$html,$infoList2);
-            preg_match_all($preg5,$html,$infoList3);
-            //var_dump($infoList2);
-            var_dump($infoList3);
-
+            $pregPage['author'] = "/发布人：(.+)&nbsp/U";
+            $pregPage['title'] = "/><strong>(.+)<\/strong>/U";
+            //preg_match($preg6,$html,$infoList3);
+            //var_dump($infoList3);
+            //preg_match($preg7,$html,$infoList3);
+            //var_dump($infoList3);
+            foreach($pregPage as $k=>$v){
+                preg_match($v,$html,$infoList3);
+                $srtpHire->$k=$infoList3[1];
+                //echo $srtpHire->$k;
+            }
+            $srtpHire->add();
         }
-        //var_dump($infoList);
+
     }
 
     /*

@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li class="dropdown-menu-header text-center">
                         <strong> 设 置 </strong>
                     </li>
-                    <li class="m_2"><a href="/kechuang4/index.php/Admin/User/index/id/<?php echo $_COOKIE['id']; ?>"><i class="fa fa-user"></i> 我的主页</a></li>
+                    <li class="m_2"><a href="/kechuang4/index.php/Admin/User/profile/id/<?php echo $_COOKIE['id']; ?>"><i class="fa fa-user"></i> 我的主页</a></li>
                     <li class="m_2"><a href="#"><i class="fa fa-wrench"></i> 设置</a></li>
                     <!--<li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span
                             class="label label-default">42</span></a></li>-->

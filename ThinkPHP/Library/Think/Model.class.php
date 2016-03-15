@@ -1894,6 +1894,7 @@ class Model {
         $listExtra = implode(',',$modelInfo['list_extra'][$module]); //主内容附加项，如：user
         $reList =[];
         foreach($list as $k=>$v){
+
             if($this->mid==$v['model_id']) //选择对应模型
             {
                 $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
