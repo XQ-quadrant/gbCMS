@@ -28,8 +28,8 @@ class UserController extends Controller
         $cate_atc= new UindexModel();
         $count      = $cate_atc->where(['status'=>$status,'mid'=>$mid])->count();
 
-        $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
-        $show       = $Page->show();// 分页显示输出
+        $Page       = new \Think\Page($count,16);    // 实例化分页类 传入总记录数和每页显示的记录数
+        $show       = $Page->show();   // 分页显示输出
 
         $list = $cate_atc->where(['mid'=>$mid])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
         $model = new Model();
