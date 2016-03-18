@@ -45,15 +45,14 @@ class ArticleController extends Controller
         $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
 
-        $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
+        $list = $cate_atc->where(['cate'=>$cate])->order('createtime desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
         $cateInfo = get_cate($cate);  //获取栏目信息
 
         $reList =[];
 
         foreach($cateInfo['model'] as $k=>$v){
-            //var_dump($v['model_id']);
-            //echo $v['id'];
+
             $modelInfo = get_model_info($v['id']);
 
             $model = D($modelInfo['identity']);            //建立内容模型对象
@@ -61,21 +60,6 @@ class ArticleController extends Controller
 
         }
 
-   /*     foreach($list as $k=>$v){
-            $modelInfo = get_model_info($v['model_id']);  //获每条数据的模型信息
-            $model = M($modelInfo['identity']);
-            $model->listView($modelInfo);
-
-            $listExtra = implode(',',$modelInfo['list_extra']['index']); //列表附加项，如：user
-
-            $raw = $model->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
-
-            //$list[$k]['author'] = $raw[0]['author'];
-            $list[$k]= array_merge($list[$k],$raw);
-
-            $d = strtotime($v['createtime']);
-            $list[$k]['createtime'] = '<h6>'.date("m/d",$d).'</h6>'; //编辑时间格式
-        }*/
         $this->assign('page',$show);
         $this->assign('list',$reList);
         $this->assign('model_list',get_cate_Model($cate));
@@ -134,7 +118,7 @@ class ArticleController extends Controller
         $this->assign($atcInfo);
         //var_dump($atcInfo);
         //var_dump($article->getError());
-        $this->display(T($modelInfo['view_detail']));
+        $this->display($modelInfo['view_detail']);
     }
 
     /**

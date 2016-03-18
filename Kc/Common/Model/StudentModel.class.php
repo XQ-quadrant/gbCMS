@@ -6,13 +6,13 @@
  * Time: 上午2:20
  */
 
-namespace Admin\Model;
+namespace Common\Model;
 
 
-use Common\Model\JiaowuModel;
+//use Common\Model\JiaowuModel;
 use Think\Model;
 
-class StudentModel extends Model implements User
+class StudentModel extends Model
 {
     private $power =4;
     private $mid = 6;
@@ -44,7 +44,7 @@ class StudentModel extends Model implements User
 
     /****第一次登录****/
 
-        $cookie_file =tempnam('./temp22','uu');   //创建临时文件保存cookie
+        $cookie_file =tempnam('./Public/temp22','uu');   //创建临时文件保存cookie
         $login_url = 'http://202.115.67.50/servlet/UserLoginSQLAction';//登陆地址
 //$post_fields = '__VIEWSTATE=dDwtMTk3MjM2MzU0MDs7Po+Vuw2g98nkvMhqN2OzPbC6DnbA&TextBox1='.$username&TextBox2='.$password;//POST参数
         $ch = curl_init($login_url);//初始化

@@ -22,17 +22,22 @@ class UindexModel extends Model
     public function login($mid){
         $modelInfo = get_model_info($mid);
         //$this->create();
-        $map = ['count'=>'20132195','password'=>'phibeta'];//I('post.');
+        $map = I('post.');
+        //return ['msg'=>$map['password'],'status'=>2];
+       //$map = ['count'=>20132195,'password'=>'phibeta'];
+
         if($modelInfo['status']==3){   //学生登录
             //$model = D($modelInfo['identity']);
             //$loginInfo = $model->login($map);
             $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
+
             if($loginInfo==null){
                 $this->register($mid,$map);
+
                 $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
 
                 if($loginInfo==false){
-                    return ['msg'=>'登录失败，请检查邮箱账号与密码','status'=>2];
+                    return ['msg'=>"登录失 败，请检查邮箱账号与密码",'status'=>2];
                 }
             }
 
@@ -48,16 +53,18 @@ class UindexModel extends Model
                 session(['expire'=>3600]);
                 session("id" , $loginInfo["id"]);
                 session("mid" , $mid);
-                //if($loginInfo['email']==null){
+                if($loginInfo['email']==null){
                     session("count" , $loginInfo['count']);
-                //}else{
+                }else{
                     session("email" , $loginInfo['email']);
-                //}
+
+                }
                 session("status" , $loginInfo['status']);
                 session("power",$loginInfo['power']);
 
                 cookie("email",$loginInfo['email'],3600);
                 cookie("name",$loginInfo['name'],3600);
+                cookie("id",$loginInfo['id'],3600);
 
                 return ['msg'=>$loginInfo['name'].'登录成功','status'=>1];
                 break;
@@ -74,17 +81,22 @@ class UindexModel extends Model
     }
 
     public function logout(){
-            session(null);
-            /*session("name",null);
-            session("status",null);*/
-            cookie(null);
+        session(null);
+        /*session("name",null);
+        session("status",null);*/
+        cookie(null);
         return 0;
-            //$this->redirect('login');
+        //$this->redirect('login');
     }
 
     public function register($mid,$map=[]){
+
         $modelInfo = get_model_info($mid);
+
         $model = D($modelInfo['identity']);
+       /* $model = D('student');
+        $model =new StudentModel();*/
+        //return $modelInfo['identity'];
 
         $Info = $model->register($map);
         if($this->create($Info)){
@@ -94,14 +106,9 @@ class UindexModel extends Model
 
         }
         else{
-            $this->error('注册失败');
+            //$this->error('注册失败');
             return false;
         }
-
-        //$this->count = $Info['user_id'];
-       // $this->name = $Info['name'];
-        //$this->name = $Info['password'];
-
 
 
     }

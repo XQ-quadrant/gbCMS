@@ -9,6 +9,7 @@
 namespace Admin\Controller;
 
 
+use Admin\Model\CateAtcModel;
 use Admin\Model\CateModel;
 use Admin\Model\ManagerModel;
 use Admin\Model\NewsModel;
@@ -16,7 +17,7 @@ use Admin\Model\StudentModel;
 use Admin\Model\TeamModel;
 use Admin\Model\Uindex;
 use Common\Model\JiaowuModel;
-use Common\Model\SrtpHireModel;
+use Common\Model\SrtphireModel;
 use Common\Model\UindexModel;
 use Home\Model\ArticleModel;
 use Think\Controller;
@@ -27,8 +28,8 @@ class TestController extends  Controller
         //$model =D('picgrid');
         //$model->delete($id);
         $a = [
-            'admin'=>['au','sex','major'],
-            'index'=>['magjor','sex','signature','intro'],
+            'admin'=>['author','original_time','orienting'],
+            'index'=>['breviary','author','original_time','orienting'],
             //'editor'=>['uid','content','race','limit_member','already_member'],
             //'add'=>[],
         ];
@@ -37,12 +38,14 @@ class TestController extends  Controller
     }
 
     public function jiao(){
-        $a =new StudentModel();
-        var_dump($a->login(['count'=>20132195,'password'=>'phibeta']));
+        $b = new UindexModel();
+        $b->register(6,['count'=>20132195,'password'=>'phibeta']);
+        //$a =new StudentModel();
+        //var_dump($a->login(['count'=>20132195,'password'=>'phibeta']));
     }
     public function jiao2(){
-        $a =new Uindex();
-        var_dump($a->login(6));
+        $a =new UindexModel();
+        var_dump($a->register(6,['count'=>20132195,'password'=>'phibeta']));
     }
 
     public function user(){
@@ -53,6 +56,11 @@ class TestController extends  Controller
     public function team(){
         $t = new TeamModel();
         var_dump($t->detail(133));
+    }
+    public function ss(){
+        //$modelInfo = get_model_info(6);
+        $model = D('student');
+
     }
 
     public function session(){
@@ -69,6 +77,20 @@ class TestController extends  Controller
         $d->addAtc(22,2);*/
         //$e->create(['content'=>'cccc']);
         $e->test();
+    }
+
+    public function de2(){
+        $e = new SrtphireModel();
+        $a = new CateAtcModel();
+        $h = $a->field(['id','atc_id','createtime'])->where(['cate'=>26])->select();
+        foreach($h as $v){
+            $p = $e->where(['id'=>$v['atc_id']])->find();
+            $t['createtime']=$p['original_time'];
+            $a->where(['id'=>$v['id']])->save($t);
+            echo $p['original_time'];
+        }
+
+
     }
     /**
      * @param $cate 文章所属类别ID

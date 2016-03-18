@@ -88,6 +88,11 @@ class UindexModel extends Model
         $modelInfo = get_model_info($mid);
         $model = D($modelInfo['identity']);
 
+        $Wcode = I('get.code');
+        if(!empty($Wcode)){
+            $map['code'] = $Wcode;
+        }
+
         $Info = $model->register($map);
         if($this->create($Info)){
             $this->count = $Info['user_id'];
