@@ -55,9 +55,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</ul>
 
   </div>
-   <div class="copy_layout login">
+   <!--<div class="copy_layout login">
       <p>Copyright © 2015 Modern. All Rights Reserved | Design by  </p>
-   </div>
+   </div>-->
 <script>
     //$('#login-button').click(function() {
         $('#login-button').click(function() {
@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             var myForm = $('#form-login');
             var data = new FormData(myForm[0]);
             $.ajax({
-                url: '__URL__/login/mid/{$mid}',
+                url: '__URL__/login/mid/{$mid}/code/{$code}',
                 type: 'post',//提交的方式i
                 dataType:'json',
                 data: data,
@@ -76,6 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 contentType: false,
                 success: function(rdata) {
                     alert(rdata.msg);
+                    //alert('{$code}');
                     if(rdata.status==1){
                         window.location.href = '__MODULE__';//document.referrer;
                     }

@@ -32,8 +32,10 @@ class TeamModel extends Model implements Atc
     public function addAtc($cate){  //添加文档
 
         $title = $this->title;
-
-        $userInfo = get_user_info(session('id'),['name']);
+        //$userId = empty($this->openid)?session('id'):$this->openid;
+        $userId['id'] = session('id');
+        $userId['openid'] = $this->openid;
+        $userInfo = get_user_info($userId,['name','id']);
         $this->uname = $userInfo['name'];
 
         $atc_id =$this->add();
@@ -43,7 +45,7 @@ class TeamModel extends Model implements Atc
         }
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
-        $cate_atc->uid = session('id');
+        $cate_atc->uid = $userInfo['id'];
         //$cate_atc->author = session('id');
         $cate_atc->cate = $cate ;
         $cate_atc->title = $title ;

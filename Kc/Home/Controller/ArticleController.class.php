@@ -21,19 +21,33 @@ class ArticleController extends Controller
 {
 
     private $power = 1;
+    private $openid ;
+    private $data ;
     public function _initialize(){
         if(isset($_GET['cate'])){
             $cateInfo = get_cate($_GET['cate']);
             $this->assign('cateName',$cateInfo['name']);
         }
+        $this->data = I('post.')+I('get.');
 
-//echo session('count');
-        if(!session('?count')){  //权限验证
+        if(!empty($_GET['code'])){
+
+            $this->openid = $_GET['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        if(!empty($_GET['code'])){
+            $wechat = new Wechat();    //微信对象
+            $wechatInfo = $wechat->getUserInfo(I('get.code'));   //获取用户微信信息
+
+            $info['openid'] = $wechatInfo->openid;  //$wechatInfo;//I('get.code');//
+            $info['headimgurl'] = $wechatInfo->headimgurl;
+        }
+        /*if(!session('?count')){  //权限验证
             $this->redirect("/Home/Enter/login/mid/6");
         }
         elseif(session('power')<$this->power){
             $this->error('权限不足，无法访问');
-        }
+        }*/
     }
     /**主控面板
      * @param $cate
@@ -43,7 +57,7 @@ class ArticleController extends Controller
         $cate_atc= M('cate_atc');
         $count      = $cate_atc->where(['status'=>1,'cate'=>$cate])->count();
         $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
-        $show       = $Page->show();// 分页显示输出
+        $show       = $Page->show();   // 分页显示输出
 
         $list = $cate_atc->where(['cate'=>$cate])->order('createtime desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 
@@ -135,6 +149,9 @@ class ArticleController extends Controller
      * @param $mid  文档模型
      */
     public function addAtc($cate=1,$mid=''){
+        if(empty($this->openid) || empty(session('count'))){
+            $this->redirect("/Home/Enter/login/mid/6");
+        }
         if($mid==''){
             $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
         }
@@ -146,11 +163,8 @@ class ArticleController extends Controller
             //$article =new $className();
 
             $article = D($modelInfo['identity']);    //建立模型对象
-            //$this->ajaxreturn(['msg'=>$_POST['title'],'status'=>2]);//;
-
-            //$article->createtime = date('y-m-d h:i:s');
-            //$article->model_id = $mid;
-            if(!$article->validate($modelInfo['rules'])->create()){  //建立数据
+            //$this->ajaxreturn(['msg'=>$_POST['title'],'status'=>2]);
+            if(!$article->validate($modelInfo['rules'])->create($this->data)){  //建立数据
 
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
 

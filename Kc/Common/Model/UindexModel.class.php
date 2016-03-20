@@ -37,7 +37,7 @@ class UindexModel extends Model
                 $loginInfo = $this->where(['count'=>$map['count'],'password'=>$map['password']])->find();
 
                 if($loginInfo==false){
-                    return ['msg'=>"登录失 败，请检查邮箱账号与密码",'status'=>2];
+                    return ['msg'=>" 登录失 败，请检查邮箱账号与密码",'status'=>2];
                 }
             }
 
@@ -97,13 +97,15 @@ class UindexModel extends Model
        /* $model = D('student');
         $model =new StudentModel();*/
         //return $modelInfo['identity'];
+        //$map =$map+ ['code'=>I('get.code')];
 
-        $Info = $model->register($map);
-        if($this->create($Info)){
-            $this->count = $Info['user_id'];
+        $info = $model->register($map);
+        if($this->create($info)){
+            $this->count = $info['user_id'];
             $this->mid = $mid;
+            //$this->openid = $info['openid'];
+            $this->pic = $info['headimgurl'];
             return $this->add();
-
         }
         else{
             //$this->error('注册失败');

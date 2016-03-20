@@ -10,6 +10,7 @@ namespace Admin\Model;
 
 
 use Common\Model\JiaowuModel;
+use Common\Model\Wechat;
 use Think\Model;
 
 class StudentModel extends Model implements User
@@ -107,10 +108,17 @@ class StudentModel extends Model implements User
         if(empty($info['name'])){
             return false;
         }else{
+            if(!empty($map['code'])){
+                $wechat = new Wechat();  //微信对象
+                $wechatInfo = $wechat->getUserInfo($map['code']);   //获取用户微信信息
+                $info['openid'] = $wechatInfo['openid'];
+                $info['headimgurl'] = $wechatInfo['headimgurl'];
+            }
+
             $id = $this->add($info);
             $info['uid'] = $id;
             $info['power'] = $this->power;
-            return $info;
+            return $info;   //返回给UindexModel
         }
 
         //sssxxvar_dump($info);

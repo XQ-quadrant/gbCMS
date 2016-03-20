@@ -11,6 +11,8 @@ namespace Common\Model;
 
 //use Common\Model\JiaowuModel;
 use Think\Model;
+//use Common\Model\Wechat;
+
 
 class StudentModel extends Model
 {
@@ -47,8 +49,8 @@ class StudentModel extends Model
         $cookie_file =tempnam('./Public/temp22','uu');   //创建临时文件保存cookie
         $login_url = 'http://202.115.67.50/servlet/UserLoginSQLAction';//登陆地址
 //$post_fields = '__VIEWSTATE=dDwtMTk3MjM2MzU0MDs7Po+Vuw2g98nkvMhqN2OzPbC6DnbA&TextBox1='.$username&TextBox2='.$password;//POST参数
-        $ch = curl_init($login_url);//初始化
-        curl_setopt($ch, CURLOPT_HEADER, 1);//0显示
+        $ch = curl_init($login_url);  //初始化
+        curl_setopt($ch, CURLOPT_HEADER, 1);  //0显示
         curl_setopt($ch, CURLOPT_REFERER, "http://202.115.67.50/service/login.jsp?user_type=student");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//1不显示
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -107,7 +109,17 @@ class StudentModel extends Model
         if(empty($info['name'])){
             return false;
         }else{
+
             $id = $this->add($info);
+            if(!empty($_GET['code'])){
+                $wechat = new Wechat();//Wechat();  //微信对象
+                $wechatInfo = $wechat->getUserInfo(I('get.code'));   //获取用户微信信息
+
+                $info['openid'] = $wechatInfo->openid;//$wechatInfo;//I('get.code');//
+                $info['headimgurl'] = $wechatInfo->headimgurl;
+            }else{
+                //$info['openid'] = '3cc';
+            }
             $info['uid'] = $id;
             $info['power'] = $this->power;
             return $info;

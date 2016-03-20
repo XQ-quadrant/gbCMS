@@ -92,6 +92,12 @@ class TestController extends  Controller
 
 
     }
+    public function getuser(){
+        //$userId['id'] = 76;//session('id');
+        $userId['openid'] = 'cc';//$this->openid;
+        $userInfo = get_user_info($userId,['name','id']);
+        var_dump($userInfo);
+    }
     /**
      * @param $cate 文章所属类别ID
      *              类型支持：cate_id

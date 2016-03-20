@@ -1,10 +1,31 @@
 <extend name="Layout/layout"/>
+<block name="cate">
+    <ul class="nav" id="side-menu"  >
+        <li>
+            <a href="/kechuang4/index.php/Home/Article/index/cate/10">组队&amp;招募<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level"  >
+                <li>
+                    <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">科创招募</a>
+                </li>
+                <li>
+                    <a href="/kechuang4/index.php/Home/Article/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
+                </li>
+                <li>
+                    <a href="/kechuang4/index.php/Home/Article/index/cate/10/openid/{$openid}">组队信息</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/kechuang4/index.php/Home/Article/index/cate/22/openid/{$openid}">科创消息</a>
+        </li>
+    </ul>
+</block>
 
 <block name="content">
     <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 8px">
-        <a role="button" class="btn btn-primary" href="__URL__/index/cate/10">组队信息</a>
-        <a role="button" class="btn btn-default" href="__MODULE__/Article/index/cate/26">科创招募</a>
-        <a role="button" class="btn btn-default" href="__URL__/addAtc/cate/10/mid/5">发起组队</a>
+        <a role="button" class="btn btn-primary" href="__URL__/index/cate/10/openid/{$openid}">组队信息</a>
+        <a role="button" class="btn btn-default" href="__MODULE__/Article/index/cate/26/openid/{$openid}">科创招募</a>
+        <a role="button" class="btn btn-default" href="__URL__/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
     </div>
     <div class="col_1">
         <div class="col-md-4 span_7" style="margin-bottom: 5px">
