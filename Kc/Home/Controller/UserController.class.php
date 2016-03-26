@@ -71,7 +71,7 @@ class UserController extends Controller
         $modelInfo = get_model_info($this->mid);
         $user = D($modelInfo['identity']);    //建立模型对象
         //$user->id = $id;
-        //$this->ajaxReturn(['msg'=>"fsd",'status'=>2]);
+        $this->ajaxReturn(['msg'=>"fsd",'status'=>2]);
 
         if (IS_POST) {
             if (!$user->validate($modelInfo['rules'])->create()) {

@@ -149,11 +149,11 @@ class StudentModel extends Model
     }
 
     public function alter($id){
-        if($this->where(['id'=>$id])->save()){
+       /* if($this->where(['id'=>$id])->save()){
             return '修改成功';
-        }else{
+        }else{*/
             return 'sorry ,小小问题出现了';
-        }
+        //}
     }
 
     public function getData($id){
