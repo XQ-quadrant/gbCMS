@@ -40,7 +40,7 @@
         </ol>
         <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 8px">
             <a role="button" class="btn btn-primary" href="__URL__/index/cate/10/openid/{$openid}">组队信息</a>
-            <a role="button" class="btn btn-default" href="__MODULE__/Article/index/cate/26/openid/{$openid}">科创招募</a>
+            <a role="button" class="btn btn-default" href="__MODULE__/Article/index/cate/26/openid/{$openid}">SRTP课题</a>
             <a role="button" class="btn btn-default" href="__URL__/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
         </div>
         <!--<div class="modal-content-small" >
@@ -68,19 +68,19 @@
         zoom: 1;
     }
     .chat-pop {
-        background-color: rgba(228, 247, 245, 0.76);
+        background-color: rgba(238, 252, 255, 0.76);
         padding: 6px 8px;
         border-radius: 4px;
         position: relative;
         height: 100px;
         min-height: 105px;
-        color: #839aa1;
+        color: #7191a3;
         /*max-height: 100px;*/
         /*width: 90%;*/
     }
     .chat-pop span{
-        font-size: larger;
-        color: #7191a3;
+        /*font-size: medium;*/
+        color: #81a5ba;
     }
 
 
@@ -102,23 +102,26 @@
                         <ul class="media-list chat-list">
                             <volist name="list" id="vo">
                             <li class="media ">
+
                                 <div class="portrait-list" >
-                                    <a class="" href="#" style="margin-bottom: 0px;display: block">
-                                        <img class="media-object" alt="hah" src="__PUBLIC__/default/default_f.png" style="width: 100%">
+                                    <a class="" href="__MODULE__/User/profile/id/{$vo.uid}" style="display: block">
+                                        <img class="media-object" alt="hah" src="__PUBLIC__/default/default_{$vo.sex}.png" style="width: 100%">
                                     </a>
                                     <p style="text-align: center;">{$vo.uname}</p>
 
-                                    <p style="text-align: center;">1/4</p>
+                                    <!--<p style="text-align: center;">1/4</p>-->
                                 </div>
-                                <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}">
-                                <div class="media-body chat-pop " >
-                                    <p class="media-heading">{$vo.title}</p>
-                                    <span style="">{$vo.orienting}</span>
-                                    <p style="font-size: larger;">{$vo.content}</p>
 
+                                <div class="media-body chat-pop" >
+                                    <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}">
+                                    <p class="media-heading">{$vo.title}</p>
+                                    <h6>{$vo.race}</h6>
+                                    <span>{$vo.orienting}</span>
+                                    <p>{$vo.content}</p>
+                                    </a>
                                     <span class="pull-right">{$vo.createtime}</span>
                                 </div>
-                                </a>
+
                             </li>
                             </volist>
 
@@ -138,94 +141,7 @@
 
 
     </div>
-    <script>
 
-    </script>
 
-    <script>
-        $('#submit').click(function() {
 
-            var myForm = $('form');
-            $.ajax({
-                url: '__URL__/addAtc',
-                type: 'post',//提交的方式
-                dataType:'json',
-                data: myForm.serialize(),
-                success: function(data) {
-                    alert(data.msg);
-                    if(data.status==1){
-                        window.location.href=document.referrer;
-                    }
-
-                    //这是成功返回的数据，写自己的逻辑
-                }
-            });
-        });
-
-        /*function excu(){
-            alert(12);
-            var status = $(this).attr('name'); //方法名
-            //var ch = arguments[0] ? arguments[0] : {};
-            //var ch={};   //方法接受的参数
-
-            if(arguments[0]){
-                var ch = arguments[0];
-            }else {
-                var i=0;
-                $('input:checkbox:checked').each(function(){
-                    ch[i]=$(this).val(); //attr('id');
-                    i++;
-                });
-            }
-
-            //var jch = JSON.stringify(ch);
-
-            //alert(jch);
-            $.ajax({
-                type:"POST",
-                url:"__URL__/excu",
-                data:{'status':status,'val':ch},//{'0':ch},
-                success: function(data) {
-                    alert(JSON.stringify(data));
-                    location.reload();
-                    //alert($.parseJSON(data));
-                }
-            });
-        };*/
-
-        $('.excu').bind('click',function(){
-
-            var status = $(this).attr('name'); //方法名
-            if(status=="delete_h"){
-                alert('是否删除该文档');
-            }
-            //var ch = arguments[0] ? arguments[0] : {};
-            var ch={};   //方法接受的参数
-
-            if($(this).attr('value')){
-                ch[0] = $(this).attr('value');
-            }else {
-                //ch={};
-                var i=0;
-                $('input:checkbox:checked').each(function(){
-                    ch[i]=$(this).val(); //attr('id');
-                    i++;
-                });
-            }
-
-            //var jch = JSON.stringify(ch);
-
-            //alert(jch);
-            $.ajax({
-                type:"POST",
-                url:"__URL__/excu",
-                data:{'status':status,'val':ch},//{'0':ch},
-                success: function(data) {
-                    alert(JSON.stringify(data));
-                    location.reload();
-                    //alert($.parseJSON(data));
-                }
-            });
-        });
-    </script>
 </block>

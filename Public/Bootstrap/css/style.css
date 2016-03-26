@@ -722,12 +722,12 @@ i.icon_13{
   background-color: #fff;
 }
 .panel .panel-heading {
-  padding: 20px;
+  padding: 12px;
   overflow: hidden;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border: 0!important;
-  height: 55px;
+  height: 40px;
   font-size: 14px;
   font-weight: 600;
 }
@@ -1241,7 +1241,7 @@ select[multiple] {
   line-height: 0;
 }
 .panel .panel-heading h2 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -1813,7 +1813,7 @@ h3.count.text-light {
   top: 37%;
   text-align: center;
   width: 100%;
-  color: #1a2424;
+  color: #fbfff6;
 }
 .doe h6 {
   color: #fff;
@@ -1881,7 +1881,7 @@ label.round {
   background: #f9f9f9;
 }
 .top-on1 span {
-  font-size: 1.25em;
+  font-size: 1em;
   color: #0d496f;
 }
 .top-on1 p {
@@ -2393,7 +2393,7 @@ h3.count.text-light {
   background-size: 70%;
 }
 .follow {
-  padding: 3em 0px 2em;
+  padding: 1em 0px 1.5em;
 }
 .two p {
   font-size: 12px;
@@ -2768,6 +2768,16 @@ span.btn_7{
 
 }
 .person-page p{
-  margin: 20px 0px;
+  margin: 10px 0px 22px;
   font-size:1.1em;
+}
+.profile-title{
+  color: #1ba096;
+}
+
+.kc-title{
+  color: #36698b;
+}
+.kc-title-info{
+  color: #537b81;
 }

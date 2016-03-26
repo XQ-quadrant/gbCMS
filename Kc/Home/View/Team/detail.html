@@ -5,7 +5,7 @@
             <a href="/kechuang4/index.php/Home/Article/index/cate/10">组队&amp;招募<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level"  >
                 <li>
-                    <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">科创招募</a>
+                    <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">SRTP课题</a>
                 </li>
                 <li>
                     <a href="/kechuang4/index.php/Home/Article/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
@@ -32,39 +32,27 @@
             <div class="activity_box"> <!--style="width: 750px;"-->
                 <div class="modal-header" style="border-bottom: 0px">
                     <div class="online-top" style="padding:0 0 11px 0">
+                        <a href="__MODULE__/User/profile/id/{$uid}">
                         <div class="top-at">
-                            <img class="img-responsive" src="__PUBLIC__/default/default_m.png" alt="">
+                            <img class="img-responsive" src="__PUBLIC__/default/default_{$sex}.png" alt="">
                         </div>
                         <div class="top-on">
-                            <div class="top-on1" style="padding-top: 20px">
+                            <div class="top-on1" style="padding-top: 10px">
                                 <span>{$uname}</span>
-
-                                <p>通信工程</p>
-
+                                <p>{$major}</p>
                             </div>
                             <!--<label class="round"> </label>-->
                             <!-- <div class="clearfix"> </div>-->
                         </div>
+                        </a>
                         <div class="clearfix"></div>
                     </div>
-                    <!--<div class="col-md-6">
-                        <div class="status-badge mrg10A">
-                            <img class="img-circle" width="40" src="__PUBLIC__/Bootstrap/images/1.png" alt="">
-                            <div class="small-badge bg-red"></div>
-                        </div>
-                        <ul class="list-unstyled list-inline" >
-                            <li><a href="#" class="text-muted">{$author}</a></li>
-                            <li><a href="" class="text-muted">{$createtime}</a></li>
-                            <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
-                            <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
 
-                        </ul>
-                    </div>
-                    <div class="clearfix"> </div>-->
-                    <!--<h2>{$title}</h2>-->
                 </div>
                 <div class="modal-body" style="min-height: 240px;padding:0px 15px">
                     <h5 class="modal-title" style="margin-bottom:8px;font-size: 1.2em">{$title}</h5>
+                    <h5>主题：{$race}</h5>
+                    <h5>面向：{$orienting}</h5>
 
                     <p>{$content}</p>
                     <br>
@@ -73,7 +61,7 @@
                 </div>
                 <div class="modal-footer">
                     <ul class="list-unstyled list-inline" style="margin:0">
-                        <li><a href="#" class="text-muted">{$author}</a></li>
+                        <!--<li><a href="#" class="text-muted">{$author}</a></li>-->
                         <li><a href="" class="text-muted">{$createtime}</a></li>
                         <!--<li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
                         <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>-->
@@ -86,7 +74,7 @@
             </div>
         </div>
 
-        <div class="col-md-4 span_7" style="margin-bottom: 5px">
+        <!--<div class="col-md-4 span_7" style="margin-bottom: 5px">
             <div class="row">
 
                 <div class="col-lg-12">
@@ -96,8 +84,8 @@
                             <button class="btn btn-default" type="button" style="height: 40px" >回应</button>
                         </span>
                     </div>
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
+                </div>&lt;!&ndash; /.col-lg-6 &ndash;&gt;
+            </div>&lt;!&ndash; /.row &ndash;&gt;
             <div class="activity_box" style="padding:10px 10px">
 
 
@@ -138,7 +126,7 @@
                         <div class="col-xs-2 activity-img "><img src="__PUBLIC__/default/default_f.png"
                                                                  class="img-responsive" alt=""></div>
                         <div class="col-xs-10 activity-desc">
-                            <h5><a href="#">perspiciatis</a> liked<p style="float: right;">3:20</p></h5><!---->
+                            <h5><a href="#">perspiciatis</a> liked<p style="float: right;">3:20</p></h5>&lt;!&ndash;&ndash;&gt;
                             <p>Lorem Ipsum is simply dummy</p>
                             <h6>8:03</h6>
                         </div>
@@ -146,7 +134,7 @@
                     </div>
 
             </div>
-        </div>
+        </div>-->
         <div class="clearfix"></div>
     </div>
 

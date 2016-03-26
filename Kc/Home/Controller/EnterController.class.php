@@ -15,8 +15,15 @@ class EnterController extends Controller {
         $this->data = I('post.')+I('get.');
 
         if(!empty($_GET['code'])){
-            //$this->openid = I('get.openid');
-            $this->assign('code',I('get.code'));
+            $wechat = new Wechat();    //微信对象
+            $wechatInfo = $wechat->getAccessToken(I('get.code'));   //获取用户微信openid
+            $this->openid = $wechatInfo['openid'];
+            $this->assign('openid',$this->openid);
+        }
+
+        if(!empty($_GET['openid'])){
+            $this->openid = $_GET['openid'];
+            $this->assign('openid',$this->openid);
         }
     }
 

@@ -9,9 +9,7 @@
 namespace Home\Controller;
 use Think\Controller;
 use Think\Model;
-//use Home\Model\CateModel;
-//use Home\Model;
-//use Admin\Model\D;
+use Common\Model\Wechat;
 use Admin\Model\ArticleModel;
 use Admin\Model\CateModel;
 use Admin\Model\CateAtcModel;
@@ -22,26 +20,35 @@ class ArticleController extends Controller
 
     private $power = 1;
     private $openid ;
-    private $data ;
+    private $data =[] ;
     public function _initialize(){
         if(isset($_GET['cate'])){
             $cateInfo = get_cate($_GET['cate']);
             $this->assign('cateName',$cateInfo['name']);
         }
-        $this->data = I('post.')+I('get.');
+
 
         if(!empty($_GET['code'])){
-
+            $wechat = new Wechat();    //微信对象
+            $wechatInfo = $wechat->getAccessToken(I('get.code'));   //获取用户微信openid
+            $this->openid = $wechatInfo['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        if(!empty($_GET['openid'])){
             $this->openid = $_GET['openid'];
             $this->assign('openid',$this->openid);
         }
-        if(!empty($_GET['code'])){
-            $wechat = new Wechat();    //微信对象
-            $wechatInfo = $wechat->getUserInfo(I('get.code'));   //获取用户微信信息
+        $this->data = I('post.')+I('get.');
+        //$this->ajaxreturn(['msg'=>implode($this->data),'status'=>2]);
+        //$this->data['openid'] = $this->openid;
+        //var_dump($this->data);
+        ///echo $this->openid;
+        /*if(!empty($_GET['code'])){
+
 
             $info['openid'] = $wechatInfo->openid;  //$wechatInfo;//I('get.code');//
             $info['headimgurl'] = $wechatInfo->headimgurl;
-        }
+        }*/
         /*if(!session('?count')){  //权限验证
             $this->redirect("/Home/Enter/login/mid/6");
         }
@@ -115,7 +122,7 @@ class ArticleController extends Controller
      */
     public function detail($mid,$id){
         $modelInfo=get_model_info($mid);  //获取模型信息
-        $article = D('Common/'.$modelInfo['identity']);
+        $article = D($modelInfo['identity']);
         //$article = new "Admin\\".$modelInfo['identity']."Model";
        // $modelName = "Admin\\Model\\".$modelInfo['identity']."Model";
         //$article = new $modelName();
@@ -149,7 +156,7 @@ class ArticleController extends Controller
      * @param $mid  文档模型
      */
     public function addAtc($cate=1,$mid=''){
-        if(empty($this->openid) || empty(session('count'))){
+        if(empty($this->openid) && !session('?count')){
             $this->redirect("/Home/Enter/login/mid/6");
         }
         if($mid==''){
@@ -158,23 +165,25 @@ class ArticleController extends Controller
         $modelInfo=get_model_info($mid);  //获取模型信息
 
         if(IS_POST){
-            //$className= ;//$modelInfo['identity'];
-            //$className   =   '\\Common\\'.'Model'.'\\'.$modelInfo['identity'].'Model';
-            //$article =new $className();
 
             $article = D($modelInfo['identity']);    //建立模型对象
-            //$this->ajaxreturn(['msg'=>$_POST['title'],'status'=>2]);
-            if(!$article->validate($modelInfo['rules'])->create($this->data)){  //建立数据
-
+            //$this->ajaxreturn(['msg'=>'ff'.$this->data['openid'],'status'=>2]);
+            //$temp =$this->data;
+            if(!$article->validate(json_decode($modelInfo['rules']))->create($this->data)){  //建立数据
+//echo $modelInfo['rules'];
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
 
             }else{
-                //$this->ajaxreturn(['msg'=>'f','status'=>2]);
+
+               /* $b= $article->title;
+                $this->ajaxreturn(['msg'=>$b.'||'.$temp['openidc'],'status'=>2]);
+                $a = ;
+                $this->ajaxreturn(['msg'=>$b,'status'=>2]);*/
                 if(!$article->addAtc($cate)){        //提交内容
 
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
                 }else{
-                    $this->ajaxreturn(['msg'=>'添加成功','status'=>2]);
+                    $this->ajaxreturn(['msg'=>'添加成功','status'=>1]);
                 }
 
             }

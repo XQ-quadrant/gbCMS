@@ -5,7 +5,7 @@
             <a href="/kechuang4/index.php/Home/Article/index/cate/10">组队&amp;招募<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level"  >
                 <li>
-                    <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">科创招募</a>
+                    <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">SRTP课题</a>
                 </li>
                 <li>
                     <a href="/kechuang4/index.php/Home/Article/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
@@ -53,13 +53,14 @@
                                        maxlength="30">
                                 <label>目标比赛 : </label>
 
-                                <div class="input-group">
+                                <div class="input-group race">
                                     <div class="input-group-btn">
                                         <button type="button" class="btn btn-default dropdown-toggle"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                                 style="height: 40px"> 选 择 <span class="caret"></span></button>
 
-                                        <ul class="dropdown-menu race">
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">大学生科研训练计划(SRTP)</a></li>
                                             <li><a href="#">全国大学生广告大赛</a></li>
                                             <li><a href="#">全国大学生电子商务大赛</a></li>
                                             <li><a href="#">全国大学生数学建模竞赛</a></li>
@@ -67,7 +68,7 @@
                                             <li><a href="#">全国大学生机械创新设计大赛</a></li>
                                             <li><a href="#">全国大学生电子设计嵌入式专题邀请赛</a></li>
                                             <li><a href="#">全国大学生结构设计竞赛</a></li>
-                                            <li><a href="#">>全国大学生物流设计大赛</a></li>
+                                            <li><a href="#">全国大学生物流设计大赛</a></li>
                                             <li><a href="#">全国周培源大学生力学竞赛</a></li>
                                             <li><a href="#">全国大学生广告艺术大赛</a></li>
                                             <li><a href="#">全国大学生智能车竞赛</a></li>
@@ -78,14 +79,45 @@
                                             <li><a href="#">全国大学生工程训练综合能力大赛</a></li>
                                             <li><a href="#">中国大学生服务外包创新创业大赛</a></li>
                                             <li><a href="#">ACM程序设计大赛</a></li>
-                                            <li><a href="#">大学生科研训练计划(SRTP)</a></li>
                                             <li><a href="#">国家大学生创新性实验计划</a></li>
                                             <li><a href="#">全国大学生电子商务“创新 创意 创业”挑战赛</a></li>
                                             <li role="separator" class="divider"></li>
                                         </ul>
                                     </div><!-- /btn-group -->
                                     <input name="race" id="race" type="text" class="form-control1 control">
-                                </div><!-- /input-group -->
+                                </div>
+                                <label>面向对象 : </label>
+
+                                <div class="input-group race">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                style="height: 40px"> 选 择 <span class="caret"></span></button>
+                                        <ul class="dropdown-menu race">
+                                                <li><a href="#">全校</a></li>
+                                                <li><a href="#">土木工程学院</a></li>
+                                                <li><a href="#">机械工程学院</a></li>
+                                                <li><a href="#">电气工程学院</a></li>
+                                                <li><a href="#">信息科学与技术学院</a></li>
+                                                <li><a href="#">交通运输与物流学院</a></li>
+                                                <li><a href="#">经济管理学院</a></li>
+                                                <li><a href="#">外国语学院</a></li>
+                                                <li><a href="#">建筑学院</a></li>
+                                                <li><a href="#">材料科学与工程学院</a></li>
+                                                <li><a href="#">力学与工程学院</a></li>
+                                                <li><a href="#">数学学院</a></li>
+                                                <li><a href="#">物理科学与技术学院</a></li>
+                                                <li><a href="#">生命科学与工程学院</a></li>
+                                                <li><a href="#">地球科学与环境工程学院</a></li>
+                                                <li><a href="#">艺术与传播学院</a></li>
+                                                <li><a href="#">公共管理学院</a></li>
+                                                <li><a href="#">政治学院</a></li>
+                                                <li><a href="#">茅以升学院</a></li>
+                                                <li><a href="#">心理研究与咨询中心</a></li>
+                                        </ul>
+                                    </div><!-- /btn-group -->
+                                    <input name="orienting" id="orienting" type="text" class="form-control1 control" >
+                                </div>
 
                                 <!-- <input name="race" type="text" class="form-control1 control3">-->
                                 <label>发起详情 : </label>
@@ -94,12 +126,14 @@
                                 <input name="connect" type="text" class="form-control1 control3"
                                        placeholder="qq or tel or wechat" maxlength="50">
                                 <hr>
+                                <input name="openidc" type="hidden" value="{$openid}">
+
                             </form>
                             <!--
                                                                 <a href="#" class="btn btn-success btn-warng1"><span class="glyphicon glyphicon-tags tag_01"></span> Save To Drafts </a>
                             -->
-                            <a id="submit" class="btn btn-warning btn-warng1"><span
-                                    class="glyphicon glyphicon-envelope tag_02"></span> 发 布 </a>&nbsp;
+                            <a id="submit" class="btn btn-warning btn-warng1">
+                                <span class="glyphicon glyphicon-envelope tag_02"></span> 发 布 </a>&nbsp;
 
                         </div>
                     </div>
@@ -124,12 +158,15 @@
 <block name="script">
     <script>
         $('#submit').click(function () {
-
+            var t = $(this);
             var myForm = $('#form-submit');
             var data = new FormData(myForm[0]);
-            //alert(data[1]);
+            //alert('{$openid}');
+            $(this).attr("disabled",true);
+            $('#submit').text('发布中……')
+
             $.ajax({
-                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
+                url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}/openid/{$openid}',
                 type: 'post',//提交的方式
                 dataType: 'json',
                 data: data,
@@ -138,18 +175,31 @@
                 contentType: false,
                 success: function (rdata) {
                     alert(rdata.msg);
+                    t.removeAttr("disabled");
                     if (rdata.status == 1) {
-                        window.location.href = '__MODULE__';//document.referrer;
+                        window.location.href = '__URL__/index/cate/10/openid/{$openid}';//document.referrer;
+                    }
+                    if(rdata.status != 1){
+                        //$(this).removeAttr("disabled");
+
+                        $('#submit').text('发布')
+                        //$(this).removeAttr("disabled");
                     }
 
-                    //这是成功返回的数据，写自己的逻辑
+
+                },
+                error:function(){
+                    $(this).removeAttr("disabled");
+
                 }
             });
         });
 
-        $('.race li a').click(function(){
+        $('.race div ul li a').click(function(){
             //alert($(this).text());
-            $('#race').val($(this).text());
+            var race = $(this).parents('.race');
+            race.children('input').val($(this).text());
+            //$('#race').val($(this).text());
         })
     </script>
 </block>

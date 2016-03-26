@@ -16,7 +16,7 @@ use Think\Model;
 
 class StudentModel extends Model
 {
-    private $power =4;
+    private $power =2;
     private $mid = 6;
     public function login($map){
         $loginInfo = $this->where(['user_id'=>$map['count'],'password'=>$map['password']])->find();
@@ -121,6 +121,7 @@ class StudentModel extends Model
                 //$info['openid'] = '3cc';
             }
             $info['uid'] = $id;
+            //$info['status'] = 2;
             $info['power'] = $this->power;
             return $info;
         }
@@ -145,6 +146,20 @@ class StudentModel extends Model
         }
         return $reList;
 
+    }
+
+    public function alter($id){
+        if($this->where(['id'=>$id])->save()){
+            return '修改成功';
+        }else{
+            return 'sorry ,小小问题出现了';
+        }
+    }
+
+    public function getData($id){
+        $uindex = get_user_info(['id'=>$id],['major','signature','intro','skill']);
+
+        return $uindex;//$this->find($uindex['uid']);
     }
 
 }

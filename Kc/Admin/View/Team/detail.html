@@ -11,11 +11,13 @@
                                 <img class="img-responsive" src="__PUBLIC__/Bootstrap/images/3.png" alt="">
                             </div>
                             <div class="top-on">
+                                <a href="__MODULE__/User/profile/id/<?php echo $_COOKIE['id']; ?>/openid/{$openid}">
                                 <div class="top-on1">
                                     <span>{$uname}</span>
                                     <p>通信工程</p>
 
                                 </div>
+                                </a>
                                 <!--<label class="round"> </label>-->
                                 <!-- <div class="clearfix"> </div>-->
                             </div>
@@ -41,7 +43,7 @@
                         <h5 class="modal-title" style="margin-bottom:8px;font-size: 1.2em">{$title}</h5>
                         <p>{$content}</p>
                         <br>
-                        <p>联系方式：<a>{$connect}</a></p>
+                        <p>联系方式：<a href="tel:{$connect}">{$connect}</a></p>
                     </div>
                     <div class="modal-footer">
                         <ul class="list-unstyled list-inline" style="margin:0" >

@@ -1,0 +1,213 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+
+    <ol class="breadcrumb" style="margin-bottom: 10px">
+        <li><a href="#">科创俱乐部</a></li>
+        <li><a href="__URL__/">{$name}</a></li>
+        <li class="active">个人主页</li>
+    </ol>
+    <div class="widget_4">
+        <div class="col-md-4 widget_1_box1">
+            <div class="coffee">
+                <div class="coffee-top">
+                    <a href="#"><img class="img-responsive" src="__PUBLIC__/default/pbg.jpg" alt="">
+
+                        <div class="doe">
+                            <h3>{$name}</h3>
+                            <p>Web 开发</p>
+                        </div>
+                        <i><img class="img-responsive" src="__PUBLIC__/default/default_{$sex}.png" alt=""></i></a>
+                </div>
+                <div class="follow">
+                    <!--<div class="col-xs-4 two">
+                        <p>关注</p>
+                        <span>10</span>
+                    </div>
+                    <div class="col-xs-4 two">
+                        <p>状态</p>
+                        <span>学生</span>
+                    </div>
+                    <div class="col-xs-4 two">
+                        <p>关注者</p>
+                        <span>367</span>
+                    </div>-->
+                    <div class="clearfix"></div>
+                    <div class="profile">
+                        <div style="margin: 15px 0px" class="row person-page">
+                            <div class="col-xs-12 col-sm-11 profile" >
+                                <p>
+                                    <span class="profile-title"> 专 业：</span> {$major}</p>
+                                <p>
+                                    <span class="profile-title"> 简 介：</span> 呵呵呵发</p>
+                                <p>
+                                    <span class="mrs profile-title">技 能:</span>
+                                    <span class="label label-green mrs badge-normal">软件开发</span>
+                                    <span class="label label-green mrs badge-normal">Python</span>
+                                    <span class="label label-green mrs badge-normal">傲娇</span>
+                                </p>
+                            </div>
+                            <!--<div class="col-xs-12 col-sm-4 text-center">
+                                <figure><img src="images/avatar/128.jpg" alt="" style="display: inline-block" class="img-responsive img-circle">
+                                    <figcaption class="ratings"><p><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star"></span></a><a href="#"><span class="fa fa-star-o"></span></a></p></figcaption>
+                                </figure>
+                            </div>-->
+                        </div>
+                        <div class="row text-center divider">
+                            <div class="col-xs-12 col-sm-4 emphasis">
+                                <!--<h2>
+                                    <strong>20,7K</strong></h2>
+                                <p>
+                                    <small>Followers</small>
+                                </p>-->
+                                <button type="button" class="btn btn-xs btn-info">
+                                    <span class="fa fa-plus-circle"></span> 添加技能
+                                </button>
+                                <!--<button class="btn btn-yellow btn-block">
+
+                                </button>-->
+                            </div>
+                            <div class="col-xs-12 col-sm-4 emphasis">
+                                <!--<h2>
+                                    <strong>245</strong></h2>
+                                <p>
+                                    <small>Following</small>
+                                </p>-->
+                                <button  type="button" class="btn btn-xs btn-info">
+                                    <span class="fa fa-user"></span> 修改资料
+                                </button>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 emphasis">
+                                <div class="btn-group dropup">
+                                    <button type="button" data-toggle="dropdown"  class="btn btn-xs btn-default">
+                                        <span class="fa fa-gear"></span>&nbsp; 设 置
+                                    </button>
+                                    <ul role="menu" class="dropdown-menu pull-right text-left">
+                                        <li><a href="#"><span class="fa fa-envelope"></span>&nbsp; Send an email</a></li>
+                                        <li><a href="#"><span class="fa fa-list"></span>&nbsp; Add or remove from a list</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><span class="fa fa-warning"></span>&nbsp; Report this user for spam</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#" role="button" class="btn disabled">Unfollow</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-8 stats-info3">
+            <div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+                <div class="panel-heading">
+                    <h2>我的成果，项目，成绩</h2>
+                    <div class="panel-ctrls" data-actions-container="" data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i class="ti ti-angle-down"></i></span></div>
+                </div>
+                <div class="panel-body no-padding" style="display: block;">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr class="info">
+                            <th>#</th>
+                            <th>时间</th>
+                            <th>活动</th>
+                            <th>荣誉</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bs-example4" data-example-id="contextual-table">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Column heading</th>
+                        <th>Column heading</th>
+                        <th>Column heading</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="active">
+                        <th scope="row">1</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr >
+                        <th scope="row">3</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr class="info">
+                        <th scope="row">5</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr >
+                        <th scope="row">7</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    <tr >
+                        <th scope="row">9</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+    </div>
+</block>

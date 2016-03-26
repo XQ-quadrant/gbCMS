@@ -34,15 +34,20 @@ class TeamModel extends Model implements Atc
         $title = $this->title;
         //$userId = empty($this->openid)?session('id'):$this->openid;
         $userId['id'] = session('id');
-        $userId['openid'] = $this->openid;
+        $userId['openid'] = I('get.openid');//$this->openid;
+
         $userInfo = get_user_info($userId,['name','id']);
+
         $this->uname = $userInfo['name'];
 
         $atc_id =$this->add();
+
+        //return true;
         if($atc_id==false){
-            $this->error='添加失败';
+            //$this->setError('添加失败');
             return false;
         }
+
         $cate_atc = M('cate_atc');
         $cate_atc->atc_id = $atc_id;
         $cate_atc->uid = $userInfo['id'];
@@ -59,7 +64,7 @@ class TeamModel extends Model implements Atc
             return true;
         }else{
             $this->delete($atc_id);
-            $this->error='添加失败';
+            //$this->setError('添加失败');
             return false;
         }
     }
@@ -73,12 +78,11 @@ class TeamModel extends Model implements Atc
     public function detail($id){
         //$status = $this->query("select status from {$this->trueTableName} WHERE id=$this->id");
         $teamIndex = $this->query("select * from cate_atc WHERE id={$id}");
-        //var_dump($teamIndex);
 
         if($teamIndex[0]['status']==1){  //状态确认
             $teamContent = $this->where('id=%d',$teamIndex[0]['atc_id'])->find();
             //var_dump($teamContent);
-            $userInfo = get_user_info($teamIndex[0]['uid'],['name']);
+            $userInfo = get_user_info(['id'=>$teamIndex[0]['uid']],['name','major','sex']);
 
             if($userInfo==null){
                 return false;
@@ -105,12 +109,16 @@ class TeamModel extends Model implements Atc
             if($this->mid==$v['model_id']){
                 $raw = $this->query("select {$listExtra} from {$modelInfo['identity']} where id = {$v['atc_id']}");
 //var_dump($raw);
+                $userInfo = get_user_info(['id'=>$v['uid']],['sex']);
+
                 if(mb_strlen($raw[0]['content'],'utf-8')>$this->strLimit){
                     $raw[0]['content']= mb_substr($raw[0]['content'],0,$this->strLimit,'utf-8');
                     $raw[0]['content'].='……';
                 }
+                $raw[0]['createtime'] = date('m-d',$raw[0]['createtime']);
                 //echo $raw['content'];
                 $reList[$k] = array_merge($v,$raw[0]);
+                $reList[$k] = $reList[$k]+$userInfo;
 
                 unset($list[$k]);
             }

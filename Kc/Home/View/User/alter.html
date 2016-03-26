@@ -1,0 +1,95 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>个人信息修改</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="__PUBLIC__/Bootstrap/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="__PUBLIC__/Bootstrap/css/style.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/Bootstrap/css/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="__PUBLIC__/Bootstrap/js/jquery.min.js"></script>
+	<!----webfonts--->
+	<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+	<!---//webfonts--->
+	<!-- Bootstrap Core JavaScript -->
+	<script src="__PUBLIC__/Bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body id="login">
+<div class="login-logo">
+	<a href="index.html"><img src="__PUBLIC__/Bootstrap/images/logo.png" alt=""/></a>
+</div>
+<h2 class="form-heading">个人信息修改</h2>
+<form class="form-signin app-cam" >
+	<!--<p>微信号绑定教务账号</p>
+	<input type="text" class="form-control1" placeholder="教务账号" autofocus="">
+	<input type="text" class="form-control1" placeholder="教务密码" autofocus="">
+	<input type="text" class="form-control1" placeholder="邮箱" autofocus="">
+
+	<div class="radios">
+      <label for="radio-01" class="label_radio">
+          <input type="radio" id="radio-01" checked=""> Male
+      </label>
+      <label for="radio-02" class="label_radio">
+          <input type="radio" id="radio-02"> Female
+      </label>
+    </div>-->
+	<label>签名档：</label>
+	<input type="text" name="signature" class="form-control1" placeholder="" autofocus="" maxlength="15">
+	<label>专业：</label>
+	<input type="text" class="form-control1" placeholder="{$major}" autofocus=""  disabled="disabled">
+	<label>个人简介：</label>
+	<input type="text" name="intro" class="form-control1" placeholder="让大家认识下呗～" maxlength="100">
+	<!--<label class="checkbox-custom check-success">
+		<input type="checkbox" value="agree this condition" id="checkbox1"> <laxieybel for="checkbox1">遵守《科创俱乐部用户协议》</laxieybel>
+	</label>-->
+	<button class="btn btn-lg btn-success1 btn-block" id = "submit" type="button">保 存</button>
+	<!--<div class="registration">
+		已注册？
+		<a class="" href="login.html">
+			登录
+		</a>
+	</div>-->
+</form>
+<!--<div class="copy_layout login register">
+	<p>Copyright © 2015 Modern. All Rights Reserved | Design by <a href="http://www.mycodes.net/" target="_blank">源码之家</a> </p>
+</div>-->
+<script>
+	$('#submit').click(function() {
+		//alert('kk');
+		//var name = $('#name').val();
+		//var password = $('#password').val();
+		var myForm = $('form');
+		//var myForm = $('#form-submit');
+		var data = new FormData(myForm[0]);
+
+		$.ajax({
+			url: '__URL__/alter/id/{$id}',
+			type: 'post',  //提交的方式
+			dataType:'json',
+			data: data,
+			success: function(rdata) {
+
+				alert(rdata.msg);
+				if(rdata.status==1){
+					window.location.href=document.referrer;
+				}
+
+				//这是成功返回的数据，写自己的逻辑
+			}
+		});
+	});
+</script>
+</body>
+</html>

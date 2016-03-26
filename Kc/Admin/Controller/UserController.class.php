@@ -14,9 +14,41 @@ use Think\Controller;
 
 class UserController extends Controller
 {
-    public function profile($id){
+    private $power = 1;
+    private $openid ;
+    private $data =[] ;
+    public function _initialize(){
+        if(isset($_GET['cate'])){
+            $cateInfo = get_cate($_GET['cate']);
+            $this->assign('cateName',$cateInfo['name']);
+        }
+
+
+        if(!empty($_GET['code'])){
+            $wechat = new Wechat();    //微信对象
+            $wechatInfo = $wechat->getAccessToken(I('get.code'));   //获取用户微信openid
+            $this->openid = $wechatInfo['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        if(!empty($_GET['openid'])){
+            $this->openid = $_GET['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        $this->data = I('post.')+I('get.');
+
+    }
+
+    public function profile($index){
         $uindex = new UindexModel();
-        $uindexInfo = $uindex->find($id);
+        //$uindexInfo = $uindex->find($id);
+        if(!empty($_GET['id'])){     //按id查询
+            $uindexInfo = $uindex->find($index['id']);        }
+        elseif(!empty($this->openid)){     //按openid查询
+            $uindexInfo = $uindex->where(['openid'=>$this->openid])->find();
+        }else{
+            $this->redirect("/Home/Enter/login/mid/6");
+        }
+
         $modelInfo = get_model_info($uindexInfo['mid']);
         $user = D($modelInfo['identity']);
         $userInfo = $user->find($uindexInfo['uid']);

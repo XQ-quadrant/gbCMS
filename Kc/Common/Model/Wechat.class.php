@@ -16,8 +16,8 @@ class Wechat
 //https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx304dc5ac6934543d&redirect_uri=http://xq1024.com/kechuang4/index.php/Home/Article/addAtc/cate/10/mid/5&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect
 
 
-    protected $accessApi    = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx304dc5ac6934543d&secret=e4346a2d12812b8eb4ed808d2e41b97d";
-    protected $usertokenApi = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx304dc5ac6934543d&secret=e4346a2d12812b8eb4ed808d2e41b97d&code=%s&grant_type=authorization_code";
+    protected $accessApi    = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx171315687834f6e5&secret=2f42837d18229da9a4535011817292b8";
+    protected $usertokenApi = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx171315687834f6e5&secret=2f42837d18229da9a4535011817292b8&code=%s&grant_type=authorization_code";
     protected $userApi = "https://api.weixin.qq.com/sns/userinfo?access_token=%s&openid=%s&lang=zh_CN";
     protected $accessRefreshApi = "https://api.weixin.qq.com/sns/oauth2/refresh_token?appid=APPID&grant_type=refresh_token&refresh_token=REFRESH_TOKEN";
     protected $openId;

@@ -97,29 +97,31 @@ function get_cate_info()
  * @param $field 内容表字段
  * @return array
  */
-function get_user_info($index,$field)
+function get_user_info($index,$field=[])
 {
     $uindex = new \Admin\Model\UindexModel();
     $model =new \Think\Model();
     $fieldStr = implode(",",$field);
 //sprintf("select {$fieldStr} from uindex WHERE id = {$id}",$index[])
     if(!empty($index['id'])){  //按id查询
-        $rowIndex = $model->query("select {$fieldStr} from uindex WHERE id = {$index['id']}");
+        $rowIndex = $model->query("select * from uindex WHERE id = {$index['id']}");
     }
     elseif(!empty($index['openid'])){  //按openid查询
-        $rowIndex = $model->query("select {$fieldStr} from uindex WHERE openid = '{$index['openid']}'");
+        $rowIndex = $model->query("select * from uindex WHERE openid = '{$index['openid']}'");
     }
 
     //$row = $uindex->field($field)->find($uid);
-    $detailField = array_diff_key(array_flip($field), $rowIndex[0]);  //对比所需内容表字段 与 引索表的查询字段
-    $detailFieldStr = implode(',',array_flip($detailField));  //内容表查询字段，数组转字符串
-    $modelInfo = get_model_info($rowIndex[0]['mid']);
+    if(!empty($field)) {
+        $detailField = array_diff_key(array_flip($field), $rowIndex[0]);  //对比所需内容表字段 与 引索表的查询字段
+        $detailFieldStr = implode(',', array_flip($detailField));  //内容表查询字段，数组转字符串
+        $modelInfo = get_model_info($rowIndex[0]['mid']);
 
-    if(!empty($detailField)){
-        $detail = $model->query("select {$detailFieldStr} from {$modelInfo['identity']} WHERE id = {$rowIndex[0]['uid']}") ;//=
-        //$detail = D($model['identity']);
+        if (!empty($detailField)) {
+            $detail = $model->query("select {$detailFieldStr} from {$modelInfo['identity']} WHERE id = {$rowIndex[0]['uid']}");//=
+            //$detail = D($model['identity']);
 
-        return array_merge($rowIndex[0],$detail[0]);
+            return array_merge($rowIndex[0], $detail[0]);
+        }
     }
 
     return $rowIndex[0];
