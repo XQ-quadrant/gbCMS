@@ -1,29 +1,31 @@
-<extend name="Layout/layout" />
+<extend name="Layout/layout"/>
 
 <block name="content">
     <div class="row">
-            <div class="col-md-10">
+        <div class="col-md-9">
             <div class="modal-content"> <!--style="width: 750px;"-->
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h3 class="modal-title">{$title}</h3>
+
                     <div>
                         <div class="row">
                             <div class="col-md-6 grid_box1"></div>
                             <div class="col-md-5">
-                                <ul class="list-unstyled list-inline" >
+                                <ul class="list-unstyled list-inline">
                                     <li><a href="" class="text-muted">{$author}</a></li>
                                     <li><a href="" class="text-muted">{$createtime}</a></li>
                                     <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
                                     <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
 
-                                </ul>                            </div>
-                            <div class="clearfix"> </div>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
 
                     </div>
                 </div>
-                <div class="modal-body"  >
+                <div class="modal-body">
 
                     {$content}
 
@@ -33,11 +35,110 @@
                     <button type="button" class="btn btn-primary">Save changes</button>-->
                 </div>
             </div><!-- /.modal-content -->
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="row  graphs">
+        <div class="col-md-8 span_7 well1 white" style="margin-bottom: 5px">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control1 comments" name="content" placeholder="问点什么吧">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" id="comment-submit" type="button" style="height: 40px">回应</button>
+                            </span>
+                        <script>
+                            $("#comment-submit").click(function(){
+                                $(this).attr("disabled",true);
+                                var $this= $(this);
+                                var data= $('.comments').val();
+                                $.ajax({
+                                    url: '__URL__/addComment/id/{$id}',
+                                    type: 'post',
+                                    dataType:'json',
+                                    data: {content:data},
+                                    //cache: false,
+                                    //processData: false,
+                                    //contentType: false,
+                                    success: function(rdata) {
+                                        $this.attr("disabled",false);
+                                        alert(rdata.msg);
+                                        if(rdata.status==1){
+                                            commentLoad();
+                                            //$('#id').append();
+                                            /*$.ajax({
+                                                url:"__URL__/shortSingle/id/"+rdata.id,
+                                                dataType:'html',
+                                                success:function(data){
+                                                    $('#comment').append(data);
+                                                }
+                                            })*/
+                                        }
+                                        //这是成功返回的数据，写自己的逻辑
+                                    }
+                                });
+                            })
+                        </script>
+                    </div>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="" id="comment" >
+                <script>
+                    function commentLoad(){
+                        $.ajax({
+                            url:"__URL__/shortList/id/{$id}",
+                            dataType:'html',
+                            success:function(data){
+                                $('#comment').html(data);
+                            }
+                        })
+                    }
+                    commentLoad();
+
+                </script>
+                <!--<div class="activity-row">
+                    <div class="col-xs-2 activity-img"><img src="__PUBLIC__/default/default_f.png"
+                                                            class="img-responsive img-circle" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">Lorem Ipsum</a> liked <a href="#">random</a></h5>
+
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="activity-row">
+                    <div class="col-xs-2 activity-img"><img src="__PUBLIC__/default/default_f.png"
+                                                            class="img-responsive" alt=""></div>
+                    <div class="col-xs-8 activity-desc">
+                        <h5><a href="#">simply random</a> liked <a href="#">passages</a></h5>
+
+                        <p>Lorem Ipsum is simply dummy</p>
+                        <h6>8:03</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>-->
+                <div class="activity-row">
+                    <div class="col-xs-2 activity-img "><img src="__PUBLIC__/default/default_f.png" class="img-responsive short" alt=""></div>
+                    <div class="col-xs-10 activity-desc row">
+                        <h5 class="col-xs-9"><a href="#">张逊桥</a></h5> <p class="col-xs-3" >3:20</p><!---->
+                        <p class="col-xs-12">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummyLorem Ipsum is simply dummyLorem Ipsum is simply dummyLorem Ipsum is simply dummy</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="activity-row">
+                    <div class="col-xs-2 activity-img "><img src="__PUBLIC__/default/default_f.png" class="img-responsive short" alt=""></div>
+                    <div class="col-xs-10 activity-desc row">
+                        <h5 class="col-xs-9"><a href="#">张逊桥</a></h5> <p class="col-xs-3" >3:20</p><!---->
+                        <p class="col-xs-12">Lorem Ipsum is simply dummy Lorem Ipsum is simply dummyLorem Ipsum is simply dummyLorem Ipsum is simply dummyLorem Ipsum is simply dummy</p>
+                        <!--<h6>8:03</h6>-->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
             </div>
         </div>
-
-
+    </div>
     <!--<div class="row">&lt;!&ndash;class="modal-dialog"&ndash;&gt;
         <div class="modal-content" style="width: 750px;">
             <div class="modal-header">
@@ -89,7 +190,7 @@
         var ue = UE.getEditor('container');
     </script>
     <script>
-        $('#submit').click(function() {
+        $('#submit').click(function () {
             //alert('kk');
             //var name = $('#name').val();
             //var password = $('#password').val();
@@ -97,12 +198,12 @@
             $.ajax({
                 url: '__URL__/addAtc',
                 type: 'post',//提交的方式
-                dataType:'json',
+                dataType: 'json',
                 data: myForm.serialize(),
-                success: function(data) {
+                success: function (data) {
                     alert(data.msg);
-                    if(data.status==1){
-                        window.location.href=document.referrer;
+                    if (data.status == 1) {
+                        window.location.href = document.referrer;
                     }
 
                     //这是成功返回的数据，写自己的逻辑

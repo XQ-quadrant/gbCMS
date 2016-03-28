@@ -2,26 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: xq
- * Date: 15-12-10
- * Time: 下午11:18
+ * Date: 16-3-26
+ * Time: 下午10:00
  */
 
 namespace Admin\Controller;
-use Admin\Model\ArticleModel;
-use Admin\Model\CateModel;
-use Admin\Model\CateAtcModel;
-use Admin\Model\ShortModel;
-use Home\Model\AritcleModel;
+
+
 use Think\Controller;
-use Think\Model;
 
-
-class ArticleController extends Controller
+class ShortController extends Controller
 {
-    //public $cate_id = 1;
-    /*public function _initialize(){
-        $this->assign("cate_id",$this->cate_id);
-    }*/
     private $power = 2;
     public function _initialize(){
         if(isset($_GET['cate'])){
@@ -35,7 +26,6 @@ class ArticleController extends Controller
         }
         elseif(session('power')<$this->power){
             $this->error('权限不足，无法访问');
-//echo session('power');
         }
     }
     /**主控面板
@@ -50,8 +40,9 @@ class ArticleController extends Controller
     /**列表展示
      * @param $cate
      */
-    public function listView($cate){
-        $cate_atc= M('cate_atc');
+    public function listView($cate,$atc_id){
+
+        $cate_atc   = M('cate_atc');
         $count      = $cate_atc->where(['status'=>1,'cate'=>$cate])->count();
         $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
         $show       = $Page->show();// 分页显示输出
@@ -126,10 +117,10 @@ class ArticleController extends Controller
         if(IS_POST){
             $article = D($modelInfo['identity']);    //建立模型对象
 
-        if(!$article->validate($modelInfo['rules'])->create()){
+            if(!$article->validate($modelInfo['rules'])->create()){
 
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
-        }else{
+            }else{
                 if(!$article->addAtc($cate)){        //提交内容
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
                 }else{
@@ -137,9 +128,9 @@ class ArticleController extends Controller
                 }
             }
         }else{
-                $this->assign("cate",$cate);
-                $this->assign("mid",$mid);
-                $this->display($modelInfo['view_add']);
+            $this->assign("cate",$cate);
+            $this->assign("mid",$mid);
+            $this->display($modelInfo['view_add']);
         }
     }
 
@@ -227,36 +218,6 @@ class ArticleController extends Controller
         $c=[1,2];
         $alarm = "成功修改".$success."个，失败".$fail."个";
         $this->ajaxReturn($alarm);
-    }
-
-    public function shortList($id,$mid= 0){
-        $modelInfo=get_model_info($mid);  //获取模型信息
-
-        $short = M('short');
-        $comment = $short->where(['atc_id'=>$id])->select();
-        /*foreach($comment as $k=>$v){
-            $comment[$k]['createtime'] =date('m-d',$v['createtime']);
-        }*/
-        $this->assign('comment',$comment);
-
-        $this->display('Short/listView');
-    }
-
-    public function shortSingle($id){
-        $short = M('short');
-        $comment = $short->where(['atc_id'=>$id])->find();
-        $this->assign('comment',$comment);
-    }
-
-    public function addComment($id){
-        $comment = new ShortModel();
-        if(!$comment->create()){
-            $this->ajaxReturn(['msg'=>$comment->getError(),'status'=>2]);
-        }else{
-            $msg = $comment->addComment($id);
-            $this->ajaxReturn($msg);
-        }
-
     }
 
 }

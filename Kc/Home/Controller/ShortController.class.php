@@ -2,27 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: xq
- * Date: 15-12-10
- * Time: 下午11:18
+ * Date: 16-3-26
+ * Time: 下午9:59
  */
 
-namespace Admin\Controller;
-use Admin\Model\ArticleModel;
-use Admin\Model\CateModel;
-use Admin\Model\CateAtcModel;
-use Admin\Model\ShortModel;
-use Home\Model\AritcleModel;
-use Think\Controller;
-use Think\Model;
+namespace Home\Controller;
 
 
-class ArticleController extends Controller
+class ShortController extends Controller
+
 {
-    //public $cate_id = 1;
-    /*public function _initialize(){
-        $this->assign("cate_id",$this->cate_id);
-    }*/
-    private $power = 2;
+
+    private $power = 1;
+    private $openid ;
+    private $data =[] ;
     public function _initialize(){
         if(isset($_GET['cate'])){
             $cateInfo = get_cate($_GET['cate']);
@@ -30,55 +23,92 @@ class ArticleController extends Controller
         }
 
 
-        if(!session('?email') && !session('?count')){  //权限验证
-            $this->redirect("/Admin/Enter/login/mid/{$_GET['mid']}");
+        if(!empty($_GET['code'])){
+            $wechat = new Wechat();    //微信对象
+            $wechatInfo = $wechat->getAccessToken(I('get.code'));   //获取用户微信openid
+            $this->openid = $wechatInfo['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        if(!empty($_GET['openid'])){
+            $this->openid = $_GET['openid'];
+            $this->assign('openid',$this->openid);
+        }
+        $this->data = I('post.')+I('get.');
+        //$this->ajaxreturn(['msg'=>implode($this->data),'status'=>2]);
+        //$this->data['openid'] = $this->openid;
+        //var_dump($this->data);
+        ///echo $this->openid;
+        /*if(!empty($_GET['code'])){
+
+
+            $info['openid'] = $wechatInfo->openid;  //$wechatInfo;//I('get.code');//
+            $info['headimgurl'] = $wechatInfo->headimgurl;
+        }*/
+        /*if(!session('?count')){  //权限验证
+            $this->redirect("/Home/Enter/login/mid/6");
         }
         elseif(session('power')<$this->power){
             $this->error('权限不足，无法访问');
-//echo session('power');
-        }
+        }*/
     }
     /**主控面板
      * @param $cate
      * @param $id
      */
-    public function index($cate,$id){
-        //$article =
-        //$this->display();
+    public function index($cate){
+        $cate_atc= M('cate_atc');
+        $count      = $cate_atc->where(['status'=>1,'cate'=>$cate])->count();
+        $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show       = $Page->show();   // 分页显示输出
+
+        $list = $cate_atc->where(['cate'=>$cate])->order('createtime desc')->limit($Page->firstRow.','.$Page->listRows)->select();
+
+        $cateInfo = get_cate($cate);  //获取栏目信息
+
+        $reList =[];
+
+        foreach($cateInfo['model'] as $k=>$v){
+
+            $modelInfo = get_model_info($v['id']);
+
+            $model = D($modelInfo['identity']);            //建立内容模型对象
+            $reList = array_merge($reList,$model->listView($list,$modelInfo,'index'));
+
+        }
+
+        $this->assign('page',$show);
+        $this->assign('list',$reList);
+        $this->assign('model_list',get_cate_Model($cate));
+        $this->assign("cate",$cate);
+
+
+        $this->display($cateInfo['view_index']);
     }
 
     /**列表展示
      * @param $cate
      */
-    public function listView($cate){
-        $cate_atc= M('cate_atc');
-        $count      = $cate_atc->where(['status'=>1,'cate'=>$cate])->count();
-        $Page       = new \Think\Page($count,16);// 实例化分页类 传入总记录数和每页显示的记录数
-        $show       = $Page->show();// 分页显示输出
-
-        $list = $cate_atc->where(['cate'=>$cate])->order('createtime')->limit($Page->firstRow.','.$Page->listRows)->select();
-        //$model = new Model();
-
-        $cateInfo = get_cate($cate);  //获取栏目信息
-        $reList =[];
-        //$yList = &$list;
-        foreach($cateInfo['model'] as $k=>$v){
-            //var_dump($v);
-            $modelInfo = get_model_info($v['id']);
-            $model = D($modelInfo['identity']);            //建立内容模型对象
-
-            $reList = array_merge($reList,$model->listView($list,$modelInfo));  //合并
-
+    public function listView($cate=1,$mid=''){
+        if($mid==''){
+            $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
         }
+        $modelInfo=get_model_info($mid);  //获取模型信息
+        //$article = D($modelInfo['identity']);
+        $this->display('Picgrid/index');
+    }
 
+    public function PicView($cate=15,$mid='',$author){
+        if($mid==''){
+            $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
+        }
+        $modelInfo=get_model_info($mid);  //获取模型信息
+        $article = D($modelInfo['identity']);
+        $pic =$article->where(['author'=>$author])->select();
+        /*foreach(){
 
-        $this->assign('page',$show);
-        $this->assign('list',$reList);
-        $this->assign('model_list',get_cate_Model($cate));
-        //$this->assign("cate_id",1);
-        $this->assign("cate",$cate);
-
-        $this->display();
+        }*/
+        $this->assign('pic',$pic);
+        $this->display('Picgrid/index');
     }
 
     /**详细信息展示
@@ -88,20 +118,23 @@ class ArticleController extends Controller
     public function detail($mid,$id){
         $modelInfo=get_model_info($mid);  //获取模型信息
         $article = D($modelInfo['identity']);
+        //$article = new "Admin\\".$modelInfo['identity']."Model";
+        // $modelName = "Admin\\Model\\".$modelInfo['identity']."Model";
+        //$article = new $modelName();
+
+        //echo $modelInfo['identity'];
         //$article->id = $id;
         $atcInfo = $article->detail($id);
         if(!is_array($atcInfo)){
-
-        }
-        if($atcInfo == null){
-            $this->error('看来没有这个了');
+            //$this->error($atcInfo);
+            //$this->ajaxreturn($article->getDbError());
         }
         $atcInfo['content']=htmlspecialchars_decode($atcInfo['content']);
 
         $this->assign($atcInfo);
         //var_dump($atcInfo);
         //var_dump($article->getError());
-        $this->display(T($modelInfo['view_detail']));
+        $this->display($modelInfo['view_detail']);
     }
 
     /**
@@ -118,28 +151,41 @@ class ArticleController extends Controller
      * @param $mid  文档模型
      */
     public function addAtc($cate=1,$mid=''){
+        if(empty($this->openid) && !session('?count')){
+            $this->redirect("/Home/Enter/login/mid/6");
+        }
         if($mid==''){
             $mid = get_cate_Model($cate)[0]['id']; //获取栏目对应的模型
         }
         $modelInfo=get_model_info($mid);  //获取模型信息
 
         if(IS_POST){
+
             $article = D($modelInfo['identity']);    //建立模型对象
-
-        if(!$article->validate($modelInfo['rules'])->create()){
-
+            //$this->ajaxreturn(['msg'=>'ff'.$this->data['openid'],'status'=>2]);
+            //$temp =$this->data;
+            if(!$article->validate(json_decode($modelInfo['rules']))->create($this->data)){  //建立数据
+//echo $modelInfo['rules'];
                 $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);//;
-        }else{
+
+            }else{
+
+                /* $b= $article->title;
+                 $this->ajaxreturn(['msg'=>$b.'||'.$temp['openidc'],'status'=>2]);
+                 $a = ;
+                 $this->ajaxreturn(['msg'=>$b,'status'=>2]);*/
                 if(!$article->addAtc($cate)){        //提交内容
+
                     $this->ajaxreturn(['msg'=>$article->getError(),'status'=>2]);
                 }else{
                     $this->ajaxreturn(['msg'=>'添加成功','status'=>1]);
                 }
+
             }
         }else{
-                $this->assign("cate",$cate);
-                $this->assign("mid",$mid);
-                $this->display($modelInfo['view_add']);
+            $this->assign("cate",$cate);
+            $this->assign("mid",$mid);
+            $this->display($modelInfo['view_add']);
         }
     }
 
@@ -164,10 +210,9 @@ class ArticleController extends Controller
     public function editor($id){
         $cate_atc = new CateAtcModel();//D('cate_atc');
         //$atcInfo = $cate_atc->find($id);
-        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,status,createtime")->find($id); //引索表信息
-        $modelInfo = get_model_info($atcInfo['model_id']); //获取模型信息
-
-        $atc = D($modelInfo['identity']);    //建立模型对象
+        $atcInfo = $cate_atc->field("id,title,model_id,cate,atc_id,status,createtime")->find($id);
+        $model = get_model_info($atcInfo['model_id']); //获取模型信息
+        $atc = D($model['identity']);    //建立模型对象
 
         if(IS_POST){
             $c = $atc->create();
@@ -182,20 +227,19 @@ class ArticleController extends Controller
                 //$atc->status=1;
                 //
                 $a = $cate_atc->where(['id'=>$cate_atc->id])->save();
-                $b = $atc->where(['id'=>$atc->id])->validate($modelInfo['rules'])->save();
+                $b = $atc->where(['id'=>$atc->id])->validate($model['rules'])->save();
                 if(!$a&&!$b){        //提交内容
                     $this->ajaxreturn(['msg'=>$atc->getError().$cate_atc->getError(),'status'=>2]);
                 }
                 $this->ajaxreturn(['msg'=>'修改成功','status'=>1]);
             }
         }else{
+
             //$atc->query("select author,editor, content from ")
-            $listExtra = $modelInfo['list_extra']['admin']; //列表附加项，如：author
-            $atcInfo = array_merge($atcInfo,$atc->editor($atcInfo['atc_id']));
-            //$atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
+            $atcInfo = array_merge($atcInfo, $atc->field("author,content")->find($atcInfo['atc_id']));
             $this->assign($atcInfo);
             //echo $model['identity'];
-            $this->display($modelInfo['view_edit']);
+            $this->display($model['view_edit']);
         }
     }
 
@@ -227,36 +271,6 @@ class ArticleController extends Controller
         $c=[1,2];
         $alarm = "成功修改".$success."个，失败".$fail."个";
         $this->ajaxReturn($alarm);
-    }
-
-    public function shortList($id,$mid= 0){
-        $modelInfo=get_model_info($mid);  //获取模型信息
-
-        $short = M('short');
-        $comment = $short->where(['atc_id'=>$id])->select();
-        /*foreach($comment as $k=>$v){
-            $comment[$k]['createtime'] =date('m-d',$v['createtime']);
-        }*/
-        $this->assign('comment',$comment);
-
-        $this->display('Short/listView');
-    }
-
-    public function shortSingle($id){
-        $short = M('short');
-        $comment = $short->where(['atc_id'=>$id])->find();
-        $this->assign('comment',$comment);
-    }
-
-    public function addComment($id){
-        $comment = new ShortModel();
-        if(!$comment->create()){
-            $this->ajaxReturn(['msg'=>$comment->getError(),'status'=>2]);
-        }else{
-            $msg = $comment->addComment($id);
-            $this->ajaxReturn($msg);
-        }
-
     }
 
 }

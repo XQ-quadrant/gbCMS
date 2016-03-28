@@ -1,0 +1,10 @@
+<foreach name="comment" item="vo">
+    <div class="activity-row">
+        <div class="col-xs-2 activity-img "><img src="__PUBLIC__/default/default_f.png" class="img-responsive short" alt=""></div>
+        <div class="col-xs-10 activity-desc row">
+            <h5 class="col-xs-9"><a href="">{$vo.uname}</a></h5> <p class="col-xs-3" >{$vo.createtime}</p><!---->
+            <p class="col-xs-12">{$vo.content}</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</foreach>

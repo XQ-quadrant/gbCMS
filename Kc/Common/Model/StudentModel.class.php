@@ -149,11 +149,13 @@ class StudentModel extends Model
     }
 
     public function alter($id){
-       /* if($this->where(['id'=>$id])->save()){
+        $uindex = get_user_info(['id'=>$id],['major','signature','intro','skill']);
+
+        if($this->where(['id'=>$uindex['uid']])->save()){
             return '修改成功';
-        }else{*/
+        }else{
             return 'sorry ,小小问题出现了';
-        //}
+        }
     }
 
     public function getData($id){
