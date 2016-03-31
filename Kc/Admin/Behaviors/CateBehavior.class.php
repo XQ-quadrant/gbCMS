@@ -21,6 +21,7 @@ class CateBehavior extends Behavior
     protected $model ;
 
     //public $ul_class= "nav";
+    //public $ul_class= "nav";
     //public $ul_id= "side-menu";
     public $css= ['class'=>"nav",'id'=>'side-menu']; //<ul>的 css
 
